@@ -164,7 +164,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
- 
+
   height: 60%;
 }
 
@@ -211,8 +211,7 @@ a {
   text-transform: uppercase;
 }
 
-.anthropometry-button {
-  width: 30%;
+.button-next {
   margin: 0 auto;
   display: block;
   margin-bottom: 10px;
@@ -239,18 +238,22 @@ a {
   height: 100%;
   background: rgba(128, 128, 128, 0.418);
 }
-
+.button-form {
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+}
 /* ------------------modal-data-birthday */
 .modal-data-birthday {
-  /* display: flex; */
-  /* flex-direction: column; */
-
   flex-wrap: wrap;
   width: 300px;
   height: 300px;
   background: white;
   padding: 20px;
-  /* position: absolute; */
 }
 
 .modal-data-birthday p {
@@ -270,21 +273,9 @@ a {
   text-align: center;
 }
 
-.input-data-birthday::placeholder {
-}
-
 .box-confirm-birthday {
   text-align: right;
   margin-top: 80px;
-}
-
-.button-birthday {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: rgb(48, 46, 46);
 }
 
 /* -----modal data height */
@@ -321,14 +312,6 @@ a {
   display: flex;
   text-align: right;
   margin-top: 80px;
-}
-
-.button-height {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: rgb(48, 46, 46);
 }
 
 .metrics-fut {
@@ -372,14 +355,6 @@ a {
   display: flex;
   text-align: right;
   margin-top: 80px;
-}
-
-.button-weight {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: rgb(48, 46, 46);
 }
 
 .metrics-funt {
