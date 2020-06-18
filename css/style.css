@@ -376,10 +376,6 @@ a {
 }
 
 .totalKkal-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
   text-align: center;
 }
 
@@ -394,34 +390,33 @@ a {
   font-weight: 400;
 }
 
-.box-result-Kkal {
+.box-footer-totalKkal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+}
+.box-circle-totalKkal {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
   width: 150px;
   height: 150px;
-  margin-bottom: 150px;
   border-radius: 50%;
   border: 5px solid#24db00;
   text-align: center;
 }
-
-.result {
+.result-totalKkal {
   width: 100%;
   font-size: 3rem;
 }
-
-.box-footer-totalKkal {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.box-footer-totalKkal span {
+.box-kkal-wrap span {
   margin-bottom: 10px;
   color: gray;
+  font-size: 1.2rem;
 }
 
 /* style for handler js */
