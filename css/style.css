@@ -1,0 +1,454 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+a:visited {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 540px;
+}
+
+.header-balance-bg {
+  background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-fixed {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background: #1b8506;
+
+  padding: 10px;
+}
+
+.header-g {
+  color: white;
+}
+
+.header-time {
+  color: white;
+}
+
+/* ========1 page-image====== */
+.first-page-balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-balance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 40%;
+
+  font-size: 2.5rem;
+  color: green;
+}
+
+.box-balance span {
+  font-size: 2.5rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.box-balance p {
+  letter-spacing: 10px;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.box-choose-title {
+  text-align: center;
+}
+
+.box-choose-title p {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.box-choose-title span {
+  font-weight: 600;
+}
+
+.box-choose-balance {
+  text-align: center;
+}
+
+.balance-choose-button {
+  width: 100%;
+  border: none;
+  background: #24db00;
+  background: radial-gradient(ellipse at center, #24db00 0%, #38bc00 100%);
+  margin-top: 30px;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* =============2 page-image =====*/
+.section-anthropometry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-back-anthropometry {
+  align-self: start;
+  margin-top: 50px;
+  color: #1b8506;
+  cursor: pointer;
+}
+
+.anthropometry-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 40%; */
+  width: 100%;
+  text-align: center;
+}
+
+.anthropometry-title p {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.anthropometry-title span {
+  font-weight: 400;
+}
+
+.box-anthropometry {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+ 
+  height: 60%;
+}
+
+.form-param {
+}
+
+.user-icon {
+  text-align: left;
+  margin-bottom: 20px;
+  color: grey;
+  transition: 0.9s;
+}
+
+.user-icon span {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+  transition: 0.9s;
+}
+
+.user-icon i {
+  vertical-align: middle;
+  transition: color 0.3s;
+}
+
+.user-icon i:hover,
+.user-icon i:hover + span {
+  color: #5db5ef;
+  cursor: pointer;
+}
+
+.input-param {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(175, 168, 168);
+}
+
+.input-param::placeholder {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.anthropometry-button {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  border: none;
+  background: #24db00;
+  background: radial-gradient(ellipse at center, #24db00 0%, #38bc00 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.418);
+}
+
+/* ------------------modal-data-birthday */
+.modal-data-birthday {
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  background: white;
+  padding: 20px;
+  /* position: absolute; */
+}
+
+.modal-data-birthday p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input-data-birthday {
+  border: none;
+  border-top: 1px solid #1b8506;
+  border-bottom: 1px solid #1b8506;
+  width: 60px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.input-data-birthday::placeholder {
+}
+
+.box-confirm-birthday {
+  text-align: right;
+  margin-top: 80px;
+}
+
+.button-birthday {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+}
+
+/* -----modal data height */
+.modal-data-height {
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  background: white;
+  padding: 20px;
+  /* position: absolute; */
+}
+
+.modal-data-height p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input-data-height {
+  border: none;
+  border-top: 1px solid #1b8506;
+  border-bottom: 1px solid #1b8506;
+  width: 60px;
+  height: 40px;
+  margin-left: 70px;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.input-data-height::placeholder {
+}
+
+.box-confirm-height {
+  display: flex;
+  text-align: right;
+  margin-top: 80px;
+}
+
+.button-height {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+}
+
+.metrics-fut {
+  margin-right: auto;
+}
+
+/* modal-weight */
+.modal-data-weight {
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  background: white;
+  padding: 20px;
+  /* position: absolute; */
+}
+
+.modal-data-weight p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.input-data-weight {
+  border: none;
+  border-top: 1px solid #1b8506;
+  border-bottom: 1px solid #1b8506;
+  width: 60px;
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.input-data-weight::placeholder {
+}
+
+.box-confirm-weight {
+  display: flex;
+  text-align: right;
+  margin-top: 80px;
+}
+
+.button-weight {
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(48, 46, 46);
+}
+
+.metrics-funt {
+  margin-right: auto;
+}
+
+/* 3 ============page-image=== */
+
+.section-totalKkal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.button-back-anthropometry {
+}
+
+.totalKkal-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.totalKkal-title p {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.totalKkal-title span {
+  font-weight: 400;
+}
+
+.box-result-Kkal {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 150px;
+  border-radius: 50%;
+  border: 5px solid#24db00;
+  text-align: center;
+}
+
+.result {
+  width: 100%;
+  font-size: 3rem;
+}
+
+.box-footer-totalKkal {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-footer-totalKkal span {
+  margin-bottom: 10px;
+  color: gray;
+}
+
+/* style for handler js */
+.hide {
+  display: flex;
+}

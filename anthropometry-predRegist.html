@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-fixed">
+        <span class="header-g">G</span> <span class="header-time">11:30</span>
+      </div>
+      <div class="container">
+        <div class="section-anthropometry">
+          <div class="button-back-anthropometry">
+            <a href="./index-predRegist.html"
+              ><i class="fas fa-arrow-left"></i
+            ></a>
+          </div>
+          <div class="anthropometry-title">
+            <p>Достигнем цели вместе!</p>
+            <span>Hачнем с простого</span>
+          </div>
+
+          <div class="box-anthropometry">
+            <form action="" class="form-param">
+              <div class="user-icon">
+                <i class="far fa-2x fa-user-circle"></i><span>мужской</span>
+                <i class="far fa-2x fa-user-circle"></i><span>женский</span>
+              </div>
+              <input
+                data-birthday="modal-data-birthday"
+                type="text"
+                name="person-birthday"
+                placeholder="дата рождения "
+                class="input-param"
+              />
+              <input
+                data-height="modal-data-height"
+                type="text"
+                placeholder="рост"
+                name="person-height"
+                class="input-param"
+              />
+              <input
+                data-weight="modal-data-weight"
+                type="text"
+                name="person-weight"
+                placeholder="текущий вес"
+                class="input-param"
+              />
+            </form>
+            <button class="anthropometry-button"><a href="./totalKkal-predRegist.html">подолжить</a> </button>
+          </div>
+        </div>
+      </div>
+      <!-- modal-data-birthday -->
+      <div class="overlay">
+        <div class="modal-data-birthday">
+          <p>Дата рождения</p>
+          <input class="input-data-birthday" type="number" placeholder="14" />
+          <input class="input-data-birthday" type="number" placeholder="мая" />
+          <input class="input-data-birthday" type="number" placeholder="1995" />
+          <div class="box-confirm-birthday">
+            <button class="button-birthday button-chancel">отменa</button>
+            <button class="button-birthday button-confirm">выбрать</button>
+          </div>
+        </div>
+      </div>
+      <!-- modal-height -->
+      <div class="overlay">
+        <div class="modal-data-height">
+          <p>Рост</p>
+          <input class="input-data-height" type="number" placeholder="14" />
+          <span class="metrics-sm">СМ</span>
+
+          <div class="box-confirm-height">
+            <button class="button-height metrics-fut">ФУТЫ</button>
+            <button class="button-height button-chancel">отменa</button>
+            <button class="button-height button-confirm">выбрать</button>
+          </div>
+        </div>
+      </div>
+      <!-- modal-weight -->
+      <div class="overlay">
+        <div class="modal-data-weight">
+          <p>Вес</p>
+          <input class="input-data-weight" type="number" placeholder="60" />
+          <input class="input-data-weight" type="number" placeholder="60" />
+          <span class="metrics-kg">кг</span>
+          <div class="box-confirm-weight">
+            <button class="button-weight metrics-funt">ФУНТЫ</button>
+            <button class="button-weight button-chancel">отменa</button>
+            <button class="button-weight button-confirm">выбрать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/main.js
+  "></script>
+</html>
