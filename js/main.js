@@ -2,7 +2,6 @@ const btnChancel = document.querySelectorAll('.button-chancel');
 const overlay = document.querySelector('.overlay');
 const personBirthday = document.querySelector('[ name="person-birthday"]');
 const personHeight = document.querySelector('[name="person-height"]');
-
 const personWeight = document.querySelector('[name="person-weight"]');
 
 personBirthday.addEventListener('click', function (e) {
