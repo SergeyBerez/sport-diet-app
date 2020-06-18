@@ -431,7 +431,13 @@ a {
 
 /* -----index-page  */
 .header-index-bg {
-  background-image: url('../img/index-bg.jpg');
+  background: grey;
+  background-image: linear-gradient(
+      to top,
+      rgba(68, 62, 62, 0.678),
+      rgba(58, 54, 54, 0.623)
+    ),
+    url('../img/index-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -457,11 +463,25 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
   flex-basis: 40%;
   font-size: 2.5rem;
   color: white;
+}
+.logo {
+  background-image: url('../img/4202037adidaslogosocialsocialmedia-115651_115650.svg');
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  width: 60px;
+  height: 50px;
+  border-right: 2px solid rgb(236, 229, 229);
+}
+/* .logo img {
+  width: 100%;
+} */
+.logo-tille {
 }
 .box-index-title span {
   font-size: 2rem;
@@ -474,8 +494,6 @@ a {
   margin-bottom: 5px;
 }
 
-.logo {
-}
 .section-index-auth {
   display: flex;
   width: 100%;
@@ -505,6 +523,14 @@ a {
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: background, color, 0.5s;
+}
+.button-regist:hover {
+  background: rgb(17, 81, 200);
+  color: white;
+}
+.button-regist:hover .fa-facebook-f {
+  color: white;
 }
 .google-button {
   color: rgb(104, 97, 97);
@@ -513,6 +539,9 @@ a {
 .facebook-button {
   color: rgb(17, 81, 200);
   width: 45%;
+}
+.fa-facebook-f {
+  color: rgb(17, 81, 200);
 }
 .register-button {
   color: rgb(17, 81, 200);
