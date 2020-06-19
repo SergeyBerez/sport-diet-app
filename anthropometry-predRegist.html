@@ -23,9 +23,7 @@
       <div class="container">
         <div class="section-anthropometry">
           <div class="button-back-anthropometry">
-            <a href="./index.html"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
+            <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
           </div>
           <div class="anthropometry-title">
             <p>Достигнем цели вместе!</p>
@@ -35,8 +33,16 @@
           <div class="box-anthropometry">
             <form action="" class="form-param">
               <div class="user-icon">
-                <i class="far fa-2x fa-user-circle"></i><span>мужской</span>
-                <i class="far fa-2x fa-user-circle"></i><span>женский</span>
+                <input id="inp-man" name="user-icon" type="radio" />
+                <label for="inp-man">
+                  <i class="far fa-2x fa-user-circle"></i
+                  ><span>мужской</span></label
+                >
+                <input type="radio" name="user-icon" id="inp-female" />
+                <label for="inp-female">
+                  <i class="far fa-2x fa-user-circle"></i
+                  ><span>женский</span></label
+                >
               </div>
               <input
                 data-birthday="modal-data-birthday"
@@ -60,7 +66,9 @@
                 class="input-param"
               />
             </form>
-            <button class="button-next "><a href="./totalKkal-predRegist.html">подолжить</a> </button>
+            <button class="button-next">
+              <a href="./totalKkal-predRegist.html">подолжить</a>
+            </button>
           </div>
         </div>
       </div>
@@ -85,9 +93,9 @@
           <span class="metrics-sm">СМ</span>
 
           <div class="box-confirm-height">
-            <button class="button-form  metrics-fut">ФУТЫ</button>
+            <button class="button-form metrics-fut">ФУТЫ</button>
             <button class="button-form button-chancel">отменa</button>
-            <button class="button-form  button-confirm">выбрать</button>
+            <button class="button-form button-confirm">выбрать</button>
           </div>
         </div>
       </div>
@@ -100,8 +108,12 @@
           <span class="metrics-kg">кг</span>
           <div class="box-confirm-weight">
             <button class="button-form metrics-funt">ФУНТЫ</button>
-            <button class="button-form button-weight button-chancel">отменa</button>
-            <button class="button-form button-weight button-confirm">выбрать</button>
+            <button class="button-form button-weight button-chancel">
+              отменa
+            </button>
+            <button class="button-form button-weight button-confirm">
+              выбрать
+            </button>
           </div>
         </div>
       </div>
