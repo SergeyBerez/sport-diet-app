@@ -46,10 +46,8 @@
               </div>
               <input
                 data-birthday="modal-data-birthday"
-                type="date"
+                type="text"
                 value="2020-07-22"
-                min="1970-01-01"
-                max="2010-12-31"
                 name="person-birthday"
                 placeholder="дата рождения "
                 class="input-param"
@@ -85,9 +83,19 @@
       <div class="overlay">
         <div class="modal-data-birthday">
           <p>Дата рождения</p>
-          <input class="input-data-birthday" type="number" placeholder="14" />
+          <input
+            input-data-birthday
+            data-birthday="modal-data-birthday"
+            type="data"
+            value="2020-07-22"
+            min="1970-01-01"
+            max="2010-12-31"
+            name="person-birthday"
+            class="input-param input-data-birthday"
+          />
+          <!-- <input class="input-data-birthday" type="number" placeholder="14" />
           <input class="input-data-birthday" type="number" placeholder="мая" />
-          <input class="input-data-birthday" type="number" placeholder="1995" />
+          <input class="input-data-birthday" type="number" placeholder="1995" /> -->
           <div class="box-confirm-birthday">
             <button class="button-form button-chancel">отменa</button>
             <button class="button-form button-confirm">выбрать</button>
@@ -127,7 +135,7 @@
         </div>
       </div>
     </div>
-    <!-- <script src="./js/main.js
-  "></script> -->
+    <script src="./js/main.js
+  "></script>
   </body>
 </html>
