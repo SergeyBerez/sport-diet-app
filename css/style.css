@@ -5,6 +5,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 *,
@@ -31,6 +32,8 @@ a {
 }
 
 .header-balance-bg {
+  width: 100%;
+  height: 100vh;
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -44,10 +47,11 @@ a {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  background: #1b8506;
   padding: 10px;
 }
-
+.fixed--green {
+  background: #1b8506;
+}
 .header-g {
   color: white;
 }
@@ -208,7 +212,7 @@ a {
 }
 
 .input-param {
-  display: block;
+  display: inline-block;
   margin-top: 10px;
   width: 100%;
   height: 30px;
@@ -439,6 +443,8 @@ a {
 
 /* -----index-page  */
 .header-index-bg {
+  width: 100%;
+  height: 100vh;
   background: grey;
   background-image: linear-gradient(
       to top,
@@ -450,15 +456,8 @@ a {
   background-position: center;
   background-size: cover;
 }
-.header-index-fixed {
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
+.index--gray {
   background: rgba(128, 128, 128, 0.527);
-  padding: 10px;
 }
 .index-page {
   display: flex;
@@ -524,9 +523,10 @@ a {
 .section-index-auth .log-in {
   margin-right: auto;
   font-size: 1.6rem;
+
   font-weight: 900;
   margin-top: 20px;
-  color: blue;
+  color: rgb(17, 81, 200);
 }
 .button-regist {
   border: none;
@@ -535,7 +535,7 @@ a {
   border-radius: 20px;
   padding: 10px;
   font-weight: bold;
-  letter-spacing: 1px;
+
   cursor: pointer;
   transition: background, color, 0.5s;
 }
@@ -560,4 +560,64 @@ a {
 .register-button {
   color: rgb(17, 81, 200);
   width: 45%;
+}
+/* ----- regist page --- */
+.regist--blue {
+  background: rgb(17, 81, 200);
+}
+
+.wrap-regist {
+  /* padding: 20px; */
+}
+.legend-titile-form {
+  margin-top: 30px;
+  background: rgb(37, 100, 218);
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+}
+.legend-titile-form a {
+  margin-right: 10px;
+}
+.form-regist {
+  padding: 20px;
+}
+input[name='surname'],
+input[name='name'] {
+  margin-left: 60px;
+  width: 82%;
+}
+.form-regist label {
+  position: relative;
+}
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline;
+  padding: 20px;
+  background-color: rgba(128, 128, 128, 0.308);
+  border-radius: 50%;
+}
+.avatar i {
+  color: grey;
+}
+/* ========login-page */
+.container-login {
+  display: flex;
+  height: 100vh;
+}
+.login-page {
+  padding: 20px;
+  margin-top: 20px;
+}
+.login-page .input-param {
+  background: transparent;
+}
+.login-page .input-param::placeholder {
+  color: rgb(233, 233, 214);
+}
+.login-page .input-param.font::placeholder {
+  font-size: 1rem;
 }
