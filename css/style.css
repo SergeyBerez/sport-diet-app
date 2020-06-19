@@ -245,11 +245,22 @@ a {
 }
 input[type='date'],
 input[type='number'] {
+  height: 30px;
+  border: none;
   color: grey;
+  border-bottom: 1px solid rgb(175, 168, 168);
+
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
 }
+input[type='date']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 250px;
+
+  /* background: transparent; */
+}
+
 .button-next {
   margin: 0 auto;
   display: block;
