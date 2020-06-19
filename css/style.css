@@ -479,28 +479,33 @@ a {
 .logo {
   width: 70px;
   height: 70px;
-  background-image: url('../img/adidas.svg');
-  background-position: left center;
-  background-size: 40px;
+  background-color: white;
+  -webkit-mask: url('../img/adidas.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: left center;
+  -webkit-mask-size: 100%;
+  mask: url('../img/adidas.svg');
+  mask-repeat: no-repeat;
+  mask-position: left center;
+  mask-size: 100%;
   background-repeat: no-repeat;
   margin-right: 20px;
+}
 
-  border-right: 2px solid rgb(236, 229, 229);
-}
-/* .logo img {
-  width: 100%;
-} */
 .logo-tille {
+  padding-left: 20px;
+  border-left: 2px solid white;
 }
-.box-index-title span {
+.logo-tille span {
+  display: block;
   font-size: 2rem;
   font-style: italic;
-  margin-bottom: 5px;
+  padding-bottom: 10px;
+  letter-spacing: 0.5rem;
 }
-.box-index-title p {
+.logo-tille p {
   font-size: 2.5rem;
-  letter-spacing: 10px;
-  margin-bottom: 5px;
+  letter-spacing: 1rem;
 }
 
 .section-index-auth {
