@@ -243,23 +243,6 @@ a {
   font-weight: bold;
   text-transform: uppercase;
 }
-input[type='date'],
-input[type='number'] {
-  height: 30px;
-  border: none;
-  color: grey;
-  border-bottom: 1px solid rgb(175, 168, 168);
-
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-input[type='date']::-webkit-calendar-picker-indicator {
-  position: absolute;
-  left: 250px;
-
-  /* background: transparent; */
-}
 
 .button-next {
   margin: 0 auto;
@@ -281,6 +264,23 @@ input[type='date']::-webkit-calendar-picker-indicator {
   height: 100%;
   background: rgba(128, 128, 128, 0.418);
 }
+.modal-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  background: white;
+  padding: 10px;
+}
+.modal-data p {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
 .button-form {
   font-size: 1.2rem;
   background: transparent;
@@ -290,119 +290,31 @@ input[type='date']::-webkit-calendar-picker-indicator {
   font-weight: bold;
   color: rgb(48, 46, 46);
 }
-/* ------------------modal-data-birthday */
-.modal-data-birthday {
+.modal-data-footer {
   display: flex;
-
-  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  background: white;
-  padding: 10px;
-}
-
-.modal-data-birthday p {
-  /* width: 100%; */
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.input-data-birthday {
-  border: none;
-  border-top: 1px solid #1b8506;
-  border-bottom: 1px solid #1b8506;
-
-  text-align: center;
-}
-
-.box-confirm-birthday {
-  text-align: right;
-  /* margin-top: 80px; */
-}
-
-/* -----modal data height */
-.modal-data-height {
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  background: white;
-  padding: 20px;
-  text-align: center;
-  /* position: absolute; */
-}
-
-.modal-data-height p {
-  text-align: left;
   width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
 }
-
-.input-data-height {
+input[type='date'],
+input[type='number'] {
   border: none;
   border-top: 1px solid #1b8506;
   border-bottom: 1px solid #1b8506;
-  width: 60px;
-  height: 40px;
-
-  margin-top: 30%;
   text-align: center;
+  height: 30px;
+  color: grey;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
+/* -----modal-data-birthday */
 
-.input-data-height::placeholder {
-}
-
-.box-confirm-height {
-  display: flex;
-  text-align: right;
-  margin-top: 80px;
-}
-
+/* -----modal-data height */
 .metrics-fut {
   margin-right: auto;
 }
 
-/* modal-weight */
-.modal-data-weight {
-  /* display: flex; */
-  /* flex-direction: column; */
-
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  background: white;
-  padding: 20px;
-  /* position: absolute; */
-}
-
-.modal-data-weight p {
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.input-data-weight {
-  border: none;
-  border-top: 1px solid #1b8506;
-  border-bottom: 1px solid #1b8506;
-  width: 60px;
-  height: 40px;
-  margin-left: 40px;
-  margin-top: 30%;
-  text-align: center;
-}
-
-.input-data-weight::placeholder {
-}
-
-.box-confirm-weight {
-  display: flex;
-  text-align: right;
-  margin-top: 80px;
-}
-
+/* ----modal-data-weight */
 .metrics-funt {
   margin-right: auto;
 }
