@@ -384,7 +384,7 @@ input[type='number'] {
   margin-bottom: 10px;
   line-height: 30px;
   color: gray;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 /* style for handler js */
@@ -394,6 +394,7 @@ input[type='number'] {
 
 /* -----index-page  */
 .header-index-bg {
+  height: 100vh;
   background: grey;
   background-image: linear-gradient(
       to top,
