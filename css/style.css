@@ -33,7 +33,7 @@ a {
 
 .header-balance-bg {
   width: 100%;
-  height: 100vh;
+  
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -41,11 +41,11 @@ a {
 }
 
 .header-fixed {
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   padding: 10px;
 }
@@ -394,7 +394,6 @@ input[type='number'] {
 
 /* -----index-page  */
 .header-index-bg {
-  height: 100vh;
   background: grey;
   background-image: linear-gradient(
       to top,
@@ -528,6 +527,7 @@ input[type='number'] {
   margin-right: 10px;
 }
 .form-regist {
+ 
   padding: 20px;
 }
 input[name='surname'],
