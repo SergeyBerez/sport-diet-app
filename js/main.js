@@ -81,7 +81,7 @@ if (inpMan !== null) {
   });
 
   //  ========== render  select Height
-  for (let i = 100; i < 200; i++) {
+  for (let i = 100; i < 220; i++) {
     let op = document.createElement('option');
     op.value = i;
     op.textContent = i;

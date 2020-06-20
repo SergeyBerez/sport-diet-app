@@ -578,7 +578,10 @@ input[name='name'] {
   color: white;
   margin-top: 10px;
 }
-/* =========index -appp */
+/* =========index -app=======*/
+.active {
+  color: green;
+}
 .block-news-bg {
   background: rgba(212, 207, 207, 0.993);
 }
