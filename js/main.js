@@ -18,6 +18,8 @@ const inpFemale = document.querySelector('#inp-female');
 const buttonAntrop = document.querySelector('.button-antrop a');
 //select
 const selectHeight = document.querySelector('#input-data-height');
+const selectWeight = document.querySelector('#input-data-weight');
+const selecWeightgr = document.querySelector('#input-data-weight-gr');
 //  handlers inpunts from page anthropometry
 //render select
 
@@ -60,9 +62,9 @@ if (inpMan !== null) {
 
   // set value height:
   buttonHight.addEventListener('click', function (e) {
+    inpPersonHeight.value = '';
+    inpPersonHeight.value = `${selectHeight.value} cm`;
     selectHeight.value;
-    // inpPersonHeight.value = '';
-    inpPersonHeight.value = selectHeight.value;
     if (selectHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('hide');
     }
@@ -71,9 +73,9 @@ if (inpMan !== null) {
   // set value weight
   buttonWeight.addEventListener('click', function (e) {
     inpPersonWeight.value = '';
-    inpPersonWeight.value = inputWeight.value;
-
-    if (inpPersonWeight.value != '') {
+    //inpPersonWeight.value = inputWeight.value;
+    inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
+    if (selectHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('hide');
     }
   });
@@ -85,6 +87,19 @@ if (inpMan !== null) {
     op.textContent = i;
 
     selectHeight.insertAdjacentElement('afterbegin', op);
+  }
+  for (let i = 40; i < 170; i++) {
+    let op = document.createElement('option');
+    op.value = i;
+    op.textContent = i;
+    selectWeight.insertAdjacentElement('afterbegin', op);
+  }
+  for (let i = 1; i < 9; i++) {
+    let op = document.createElement('option');
+    let j = i + '00';
+    op.value = +j;
+    op.textContent = +j;
+    selecWeightgr.insertAdjacentElement('afterbegin', op);
   }
 
   // validation   ===========checked box
