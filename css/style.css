@@ -33,7 +33,7 @@ a {
 
 .header-balance-bg {
   width: 100%;
-  
+
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -41,13 +41,13 @@ a {
 }
 
 .header-fixed {
-  /* top: 0;
-  left: 0; */
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
 }
 .fixed--green {
   background: #1b8506;
@@ -515,19 +515,18 @@ input[type='number'] {
   background: rgb(17, 81, 200);
 }
 
-.legend-titile-form {
-  margin-top: 30px;
+.header-title-regist {
+  margin-top: 20px;
   background: rgb(37, 100, 218);
   width: 100%;
   padding: 20px;
   color: white;
   font-weight: 600;
 }
-.legend-titile-form a {
+.header-title-regist a {
   margin-right: 10px;
 }
 .form-regist {
- 
   padding: 20px;
 }
 input[name='surname'],
@@ -578,4 +577,71 @@ input[name='name'] {
 .form-login-page span {
   color: white;
   margin-top: 10px;
+}
+/* =========index -appp */
+.block-news-bg {
+  background: rgba(212, 207, 207, 0.993);
+}
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-menu {
+  margin-top: 25px;
+  background: rgb(66, 163, 22);
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+}
+.header-article {
+  line-height: 50px;
+  height: 50px;
+}
+.fa-slack {
+  margin: 0 10px;
+  color: blue;
+}
+.box-article {
+  margin: 10px 0;
+  background-color: white;
+}
+.img-article img {
+  width: 100%;
+  box-shadow: 0 0 3px rgb(95, 92, 92);
+}
+.article {
+  padding: 20px;
+  margin-top: 20px;
+}
+.article p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.article span {
+  font-size: 1rem;
+}
+.menu-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+
+  background: white;
+}
+.mav-menu {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+}
+.mav-menu a {
+  text-align: center;
+}
+.mav-menu a p {
+  text-align: center;
+  font-size: 1rem;
+  color: grey;
 }
