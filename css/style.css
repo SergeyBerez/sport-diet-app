@@ -613,11 +613,10 @@ input[name='name'] {
 }
 .article {
   padding: 20px;
-  margin-top: 20px;
 }
 .article p {
   font-weight: bold;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   font-size: 1.2rem;
 }
 .article span {
@@ -629,7 +628,6 @@ input[name='name'] {
   bottom: 0;
   left: 0;
   padding: 10px;
-
   background: white;
 }
 .mav-menu {
