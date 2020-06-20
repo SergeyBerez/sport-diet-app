@@ -16,8 +16,10 @@ const inpPersonWeight = document.querySelector('[name="person-weight"]');
 const inpMan = document.querySelector('#inp-man');
 const inpFemale = document.querySelector('#inp-female');
 const buttonAntrop = document.querySelector('.button-antrop a');
-
+//select
+const selectHeight = document.querySelector('#input-data-height');
 //  handlers inpunts from page anthropometry
+//render select
 
 if (inpMan !== null) {
   inptPersonBirthday.addEventListener('click', function (e) {
@@ -58,9 +60,10 @@ if (inpMan !== null) {
 
   // set value height:
   buttonHight.addEventListener('click', function (e) {
-    inpPersonHeight.value = '';
-    inpPersonHeight.value = inputHeight.value;
-    if (inpPersonHeight.value != '') {
+    selectHeight.value;
+    // inpPersonHeight.value = '';
+    inpPersonHeight.value = selectHeight.value;
+    if (selectHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('hide');
     }
   });
@@ -75,7 +78,16 @@ if (inpMan !== null) {
     }
   });
 
-  // checked box
+  //  ========== render  select Height
+  for (let i = 100; i < 200; i++) {
+    let op = document.createElement('option');
+    op.value = i;
+    op.textContent = i;
+
+    selectHeight.insertAdjacentElement('afterbegin', op);
+  }
+
+  // validation   ===========checked box
   inpMan.addEventListener('click', function (e) {
     console.log(inpMan.checked);
   });
