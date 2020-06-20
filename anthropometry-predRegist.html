@@ -66,7 +66,7 @@
                 class="input-param"
               />
             </form>
-            <button class="button-total button-next">
+            <button class="button-total button-next button-antrop">
               <a href="./totalKkal-predRegist.html">подолжить</a>
             </button>
           </div>
@@ -76,10 +76,9 @@
       <div class="overlay">
         <div class="modal-data modal-data-birthday">
           <p>Дата рождения</p>
-<input
+          <input
             data-birthday="modal-data-birthday"
             type="date"
-            value="dd-mm-yy"
             min="1970-01-01"
             max="2010-12-31"
             name="person-birthday"
@@ -87,7 +86,9 @@
           />
           <div class="box-confirm-birthday">
             <button class="button-form button-chancel">отменa</button>
-            <button class="button-form button-birthday button-confirm">выбрать</button>
+            <button class="button-form button-birthday button-confirm">
+              выбрать
+            </button>
           </div>
         </div>
       </div>
@@ -98,7 +99,6 @@
           <div class="modal-data-main">
             <input
               class="input-data-height"
-              value="рост"
               min="140"
               max="200"
               type="number"
@@ -110,7 +110,9 @@
           <div class="modal-data-footer box-confirm-height">
             <button class="button-form metrics-fut">ФУТЫ</button>
             <button class="button-form button-chancel">отменa</button>
-            <button class="button-form button-confirm">выбрать</button>
+            <button class="button-form button-height button-confirm">
+              выбрать
+            </button>
           </div>
         </div>
       </div>
@@ -123,7 +125,6 @@
               class="input-data-weight"
               type="number"
               placeholder="60"
-              value="вес"
               min="40"
               max="170"
             />
@@ -132,16 +133,15 @@
               class="input-data-weight"
               type="number"
               placeholder="500"
-              value="вес"
               min="100"
               max="900"
             />
-             <span class="metrics-kg">гp</span>
+            <span class="metrics-kg">гp</span>
           </div>
 
           <div class="modal-data-footer box-confirm-weight">
             <button class="button-form metrics-funt">ФУНТЫ</button>
-            <button class="button-form button-weight button-chancel">
+            <button class="button-form button-chancel">
               отменa
             </button>
             <button class="button-form button-weight button-confirm">
@@ -150,6 +150,7 @@
           </div>
         </div>
       </div>
+      <!-- modal end -->
     </div>
     <script src="./js/main.js
   "></script>
