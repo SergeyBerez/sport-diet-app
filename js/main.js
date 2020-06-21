@@ -21,8 +21,17 @@ const buttonAntrop = document.querySelector('.button-antrop a');
 const selectHeight = document.querySelector('#input-data-height');
 const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
+
+// page total ccacl
+const resultTotalKkal = document.querySelector('.result-totalKkal');
 //  handlers inpunts from page anthropometry
 
+let objCcal = {};
+if (resultTotalKkal) {
+  let str = JSON.parse(localStorage.getItem('user'));
+
+  resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
+}
 if (inpMan !== null) {
   inputsAntrop.forEach(elem => {
     elem.addEventListener('click', function (e) {
@@ -72,6 +81,7 @@ if (inpMan !== null) {
     );
     inptPersonBirthday.value = str;
     inptPersonBirthday.classList.remove('error');
+    objCcal.birthday = str;
     inptPersonBirthday.previousElementSibling.textContent = '';
     if (inptPersonBirthday.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
@@ -82,6 +92,7 @@ if (inpMan !== null) {
   buttonHight.addEventListener('click', function (e) {
     inpPersonHeight.value = '';
     inpPersonHeight.value = `${selectHeight.value} cm`;
+    objCcal.height = +selectHeight.value;
     inpPersonHeight.classList.remove('error');
     inpPersonHeight.previousElementSibling.textContent = '';
     if (selectHeight.value != '') {
@@ -94,6 +105,7 @@ if (inpMan !== null) {
     inpPersonWeight.value = '';
     //inpPersonWeight.value = inputWeight.value;
     inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
+    objCcal.weight = +selectWeight.value;
     inpPersonWeight.classList.remove('error');
     inpPersonWeight.previousElementSibling.textContent = '';
     if (selectHeight.value != '') {
@@ -126,25 +138,32 @@ if (inpMan !== null) {
   }
 
   // validation   ===========checked box
-  // inpMan.addEventListener('click', function (e) {
-  //   console.log(inpMan.checked);
-  // });
-  // inpFemale.addEventListener('click', function (e) {
-  //   console.log(inpFemale.checked);
-  // });
+  inpMan.addEventListener('click', function (e) {
+    objCcal.male = true;
+    objCcal.Female = false;
+  });
+  inpFemale.addEventListener('click', function (e) {
+    objCcal.Female = true;
+    objCcal.male = false;
+  });
 
   // ======calculate  user kkcal day  // ang go next page
 
   buttonAntrop.addEventListener('click', function (e) {
+    console.log(objCcal);
     if (!inpMan.checked && !inpFemale.checked) {
       e.preventDefault();
       inpMan.addEventListener('click', function (e) {
+        objCcal.male = true;
         if (!inpFemale.checked) {
+          objCcal.Female = false;
           inpFemale.nextElementSibling.classList.remove('error-icon');
         }
       });
       inpFemale.addEventListener('click', function (e) {
+        objCcal.Female = true;
         if (!inpMan.checked) {
+          objCcal.male = false;
           inpMan.nextElementSibling.classList.remove('error-icon');
         }
       });
@@ -166,5 +185,7 @@ if (inpMan !== null) {
         elem.previousElementSibling.textContent = '';
       }
     });
+
+    localStorage.setItem('user', JSON.stringify(objCcal));
   });
 }
