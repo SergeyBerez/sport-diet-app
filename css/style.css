@@ -576,23 +576,24 @@ input[name='name'] {
   color: white;
   margin-top: 10px;
 }
-/* =========index -app=======*/
-.active {
+/* =========news-page=======*/
+.active-link {
   color: green;
 }
 .block-news-bg {
-  background: rgba(212, 207, 207, 0.993);
-}
-.header-menu {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  background: rgba(212, 207, 207, 0.993);
 }
 
 .header-menu {
+  display: flex;
+  justify-content: space-between;
   margin-top: 25px;
   background: rgb(66, 163, 22);
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   color: white;
   font-weight: 600;
 }
@@ -645,6 +646,103 @@ input[name='name'] {
   color: grey;
 }
 
+/* =======notation-page */
+.block-notation-bg {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 50px;
+}
+
+.grey-row-line {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  margin: 10px 0;
+}
+.box-circle-notation {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.block-notation {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.block-notation-item {
+  text-align: left;
+  border-radius: 2px;
+}
+.block-notation-item::after {
+  position: relative;
+  display: block;
+  content: '';
+  width: 100px;
+  height: 5px;
+  background: rgb(158, 150, 150);
+  border-radius: 10px;
+}
+.block-notation-item p {
+  color: grey;
+}
+.block-notation-item span {
+  display: inline-block;
+  margin: 5px 0;
+}
+.data-list {
+  width: 100%;
+  padding: 5px;
+  background-color: rgb(66, 163, 22);
+  color: white;
+  font-size: 1.3rem;
+}
+.data-list li {
+  display: flex;
+  justify-content: space-between;
+}
+.block-meal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.block-meal p {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.block-meal span {
+  color: gray;
+  font-size: 1.3rem;
+}
+.icon-meal {
+  text-align: center;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  color: rgb(66, 163, 22);
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid rgb(66, 163, 22);
+}
+.add-prod-icon {
+  margin-left: auto;
+  color: rgb(66, 163, 22);
+}
+.rest-header-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.block-rest-kkal > p {
+  font-size: 1.3rem;
+}
+.block-rest-kkal span {
+  font-size: 1rem;
+}
+.add-train {
+  color: rgb(66, 163, 22);
+}
 /*====== ======style for handler js====== */
 .show-modal {
   display: flex;
