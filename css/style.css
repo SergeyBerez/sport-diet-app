@@ -237,7 +237,10 @@ a {
   font-weight: bold;
   border-bottom: 1px solid rgb(175, 168, 168);
 }
-
+label[for='input'] {
+  color: red;
+  font-size: 1.6rem;
+}
 .input-param::placeholder {
   font-size: 1.6rem;
   font-weight: bold;
@@ -385,11 +388,6 @@ input[type='number'] {
   line-height: 30px;
   color: gray;
   font-size: 1.2rem;
-}
-
-/* style for handler js */
-.hide {
-  display: flex;
 }
 
 /* -----index-page  */
@@ -645,4 +643,16 @@ input[name='name'] {
   text-align: center;
   font-size: 1rem;
   color: grey;
+}
+
+/*====== ======style for handler js====== */
+.show-modal {
+  display: flex;
+}
+
+.error {
+  border-bottom: 1px solid red;
+}
+.error-icon {
+  color: red;
 }
