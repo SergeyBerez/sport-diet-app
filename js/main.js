@@ -189,3 +189,9 @@ if (inpMan !== null) {
     localStorage.setItem('user', JSON.stringify(objCcal));
   });
 }
+// var progress = 30;
+// var progressEl = document.querySelector('.progress');
+// var increaseProgress = function () {
+//   progress = progress + 10;
+//   progressEl.style.transform = 'rotate(' + progress + 'deg)';
+// }; 

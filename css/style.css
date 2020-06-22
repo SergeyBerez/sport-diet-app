@@ -368,6 +368,53 @@ input[type='number'] {
   align-items: center;
   height: 60%;
 }
+/* ===== */
+
+.circle-out {
+  position: relative;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+  overflow: hidden;
+}
+.circle-in {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  margin: 2px;
+
+  border-radius: 50%;
+  background: white;
+}
+.progress {
+  height: 110px;
+  width: 220px;
+  background: #24db00;
+  position: absolute;
+  top: -110px;
+  left: -60px;
+  transform: rotate(0deg);
+  transform-origin: 110px 110px;
+  animation-name: xxx;
+  animation-duration: 4s;
+}
+@keyframes xxx {
+  0% {
+  }
+  100% {
+  
+   transform: rotate(180deg);
+  }
+}
+
+/* ====== */
 .box-circle-totalKkal {
   display: flex;
   align-content: center;
@@ -650,7 +697,7 @@ input[name='name'] {
 .block-notation-bg {
   display: flex;
   flex-direction: column;
- 
+
   padding-bottom: 50px;
 }
 
@@ -668,13 +715,12 @@ input[name='name'] {
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  
+  /* align-items: center; */
 }
 .block-notation-item {
   text-align: left;
   border-radius: 2px;
-  }
+}
 .block-notation-item::after {
   position: relative;
   display: block;
