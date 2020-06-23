@@ -189,31 +189,33 @@ if (inpMan !== null) {
     localStorage.setItem('user', JSON.stringify(objCcal));
   });
 }
-// amount kkal in circle
+//=============== amount kkal in circle
+
 const circle = document.querySelector('.progress-ring-circle');
-const radius = circle.r.baseVal.value;
-const circumference = radius * 2 * Math.PI;
+if (circle) {
+  const radius = circle.r.baseVal.value;
+  const circumference = radius * 2 * Math.PI;
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = `${circumference}`;
 
-circle.style.strokeDasharray = `${circumference} ${circumference}`;
-circle.style.strokeDashoffset = `${circumference}`;
-
-function setProgress(percent) {
-  const offset = circumference - (percent / 100) * circumference;
-  circle.style.strokeDashoffset = offset;
-let str = JSON.parse(localStorage.getItem('user'));
-resultTotalKkal.textContent = `${
-    (((str.weight * str.height) / 10) * percent) / 10
-  }`;
-}
-let i = 0;
-const interV = setInterval(function () {
-  i += 10;
-  if (i == 100) {
-    clearInterval(interV);
+  function setProgress(percent) {
+    const offset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+    let str = JSON.parse(localStorage.getItem('user'));
+    resultTotalKkal.textContent = `${
+      (((str.weight * str.height) / 10) * percent) / 10
+    }`;
   }
-  
-  setProgress(i);
-}, 100);
+  let i = 0;
+  const interV = setInterval(function () {
+    i += 10;
+    if (i == 100) {
+      clearInterval(interV);
+    }
+
+    setProgress(i);
+  }, 100);
+}
 
 // var progress = 30;
 // var progressEl = document.querySelector('.progress');

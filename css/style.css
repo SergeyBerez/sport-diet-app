@@ -238,8 +238,9 @@ a {
   border-bottom: 1px solid rgb(175, 168, 168);
 }
 label[for='input'] {
+  position: absolute;
   color: red;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 .input-param::placeholder {
   font-size: 1.6rem;
@@ -617,6 +618,7 @@ input[name='name'] {
   width: 100%;
   padding: 10px;
   color: white;
+  padding: 10px;
   font-weight: 600;
 }
 .header-article {
