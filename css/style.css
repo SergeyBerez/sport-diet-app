@@ -25,7 +25,16 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-
+.p {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 10px 0;
+}
+.span {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
 .container {
   margin: 0 auto;
   width: 90%;
@@ -103,30 +112,21 @@ a {
 }
 
 .box-balance span {
-  font-size: 2.5rem;
   font-style: italic;
-  margin-bottom: 5px;
+
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 .box-balance p {
-  letter-spacing: 10px;
-  font-size: 3rem;
+  letter-spacing: 1rem;
+  font-size: 2.5rem;
   font-weight: 300;
+  margin: 0;
 }
 
 .box-choose-title {
   text-align: center;
-}
-
-.box-choose-title p {
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  margin-bottom: 20px;
-}
-
-.box-choose-title span {
-  font-weight: 600;
 }
 
 .box-choose-balance {
@@ -213,17 +213,6 @@ a {
   text-align: center;
 }
 
-.anthropometry-title p {
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-}
-
-.anthropometry-title span {
-  font-weight: 400;
-}
-
 .box-anthropometry {
   width: 100%;
   display: -webkit-box;
@@ -289,7 +278,7 @@ a {
 
 .input-param {
   display: inline-block;
- 
+
   width: 100%;
   height: 30px;
   border: none;
@@ -301,7 +290,7 @@ a {
 
 label[for='input'] {
   color: red;
- 
+
   font-size: 1.2rem;
 }
 
@@ -385,8 +374,6 @@ label[for='input'] {
 
 .modal-data p {
   width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
   text-align: left;
 }
 
@@ -467,17 +454,6 @@ input[type='number'] {
   text-align: center;
 }
 
-.totalKkal-title p {
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-}
-
-.totalKkal-title span {
-  font-weight: 400;
-}
-
 .box-footer-totalKkal {
   width: 100%;
   display: -webkit-box;
@@ -520,7 +496,14 @@ input[type='number'] {
   text-align: center;
   position: absolute;
 }
-
+.pos-abs p {
+  margin: 0;
+  font-weight: normal;
+}
+.progress-ring {
+  width: 100%;
+  height: 100%;
+}
 .progress-ring-circle {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
@@ -531,7 +514,7 @@ input[type='number'] {
 }
 
 /* ====== */
-.box-circle-totalKkal {
+/* .box-circle-totalKkal {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +530,7 @@ input[type='number'] {
   border-radius: 50%;
   border: 5px solid #24db00;
   text-align: center;
-}
+} */
 
 .result-totalKkal {
   width: 100%;
@@ -558,10 +541,9 @@ input[type='number'] {
   margin-bottom: 10px;
   line-height: 30px;
   color: gray;
-  font-size: 1.2rem;
 }
 
-/* -----index-page  */
+/* -----index-page-auth  */
 .header-index-bg {
   background: grey;
   background-image: -webkit-gradient(
@@ -657,14 +639,16 @@ input[type='number'] {
 .logo-tille span {
   display: block;
   font-size: 2rem;
+  font-weight: normal;
   font-style: italic;
-  padding-bottom: 10px;
   letter-spacing: 0.5rem;
 }
 
 .logo-tille p {
   font-size: 2.5rem;
   letter-spacing: 1rem;
+  font-weight: 300;
+  margin: 0;
 }
 
 .section-index-auth {
@@ -680,18 +664,22 @@ input[type='number'] {
   margin-bottom: 30px;
 }
 
-.section-index-auth p {
+.section-index-auth .p {
   margin-left: auto;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  margin-top: 10px;
   color: white;
   margin-right: 10px;
+  font-weight: normal;
 }
 
 .section-index-auth .log-in {
+  margin-top: 10px;
   margin-right: auto;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
   font-weight: 900;
-  margin-top: 20px;
+
   color: #1151c8;
 }
 
@@ -911,7 +899,7 @@ input[name='name'] {
 }
 
 .article span {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .menu-footer {
@@ -943,7 +931,7 @@ input[name='name'] {
   color: grey;
 }
 
-/* =======notation-page */
+/* ============notation-page */
 .block-notation-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,6 +982,7 @@ input[name='name'] {
 
 .block-notation-item p {
   color: grey;
+  font-weight: 700;
 }
 
 .block-notation-item span {
@@ -1032,13 +1021,12 @@ input[name='name'] {
 }
 
 .block-meal p {
-  font-weight: bold;
-  font-size: 1.6rem;
+  margin: 0;
 }
 
 .block-meal span {
   color: gray;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .icon-meal {
@@ -1064,21 +1052,71 @@ input[name='name'] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-weight: bold;
 }
 
-.block-rest-kkal > p {
+.block-rest-kkal > span {
+  display: block;
+  font-weight: normal;
+  line-height: 1.6rem;
+  margin: 10px 0;
   font-size: 1.3rem;
 }
 
-.block-rest-kkal span {
-  font-size: 1rem;
-}
-
-.add-train {
+.add-train-link {
   color: #42a316;
 }
+.block-purpose {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.block-purpose p {
+  margin-bottom: 5px;
+}
+.header-purpose {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-middle-purpose {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.box-middle-purpose span {
+  font-weight: normal;
+  line-height: 1.6rem;
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
 
+.fa-ellipsis-v {
+  color: grey;
+}
+.current :nth-of-type(2),
+.current-goal :nth-of-type(2) {
+  font-size: 2rem;
+  color: grey;
+}
+.current-goal p,
+.current p {
+  font-weight: normal;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+}
+.current {
+  text-align: left;
+
+  min-width: 20%;
+}
+
+.current-goal {
+  text-align: left;
+  min-width: 20%;
+}
+.purpose-weigth {
+  width: 100%;
+}
 /* ===========  select =====*/
 /*====== ======style for handler js====== */
 .show-modal {

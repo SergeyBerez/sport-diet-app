@@ -38,39 +38,39 @@
 
       <div class="container">
         <div class="box-circle-notation">
-           <div class="svg-flex">
-              <svg class="progress-ring" withd="120" height="120">
-                <circle
-                  class="progress-ring-circle"
-                  stroke="green"
-                  stroke-width="4"
-                  cx="60"
-                  cy="60"
-                  r="58"
-                  fill="white"
-                />
-              </svg>
-              <div class="pos-abs">
-                <p class="result-totalKkal">0</p>
-                <p>ккал</p>
-              </div>
+          <div class="svg-flex">
+            <svg class="progress-ring" withd="120" height="120">
+              <circle
+                class="progress-ring-circle"
+                stroke="green"
+                stroke-width="4"
+                cx="60"
+                cy="60"
+                r="58"
+                fill="white"
+              />
+            </svg>
+            <div class="pos-abs">
+              <p class="result-totalKkal">0</p>
+              <p class="p">ккал</p>
             </div>
+          </div>
         </div>
         <!--==========  -->
 
         <!-- ============= -->
         <div class="block-notation">
           <div class="block-notation-item block-carbo">
-            <p>белки</p>
-            <span>0/</span>
+            <p class="p">белки</p>
+            <span class="span">0/</span>
           </div>
           <div class="block-notation-item block-protein">
-            <p>жиры</p>
-            <span>0/</span>
+            <p class="p">жиры</p>
+            <span class="span">0/</span>
           </div>
           <div class="block-notation-item block-fat">
-            <p>углеводы</p>
-            <span>0/</span>
+            <p class="p">углеводы</p>
+            <span class="span">0/</span>
           </div>
         </div>
       </div>
@@ -80,32 +80,32 @@
           <div class="block-meal">
             <div class="icon-meal"><i class="fas fa-egg"></i></div>
             <div>
-              <p>Завтрак</p>
-              <span>Для тебя оптимально</span>
+              <p class="p">Завтрак</p>
+              <span class="span">Для тебя оптимально</span>
             </div>
             <i class="fas fa-plus add-prod-icon"></i>
           </div>
           <div class="block-meal">
             <div class="icon-meal"><i class="fas fa-utensils"></i></div>
             <div>
-              <p>Обед</p>
-              <span>Для тебя оптимально</span>
+              <p class="p">Обед</p>
+              <span class="span">Для тебя оптимально</span>
             </div>
             <i class="fas fa-plus add-prod-icon"></i>
           </div>
           <div class="block-meal">
             <div class="icon-meal"><i class="fas fa-cookie-bite"></i></div>
             <div>
-              <p>Ужин</p>
-              <span>Для тебя оптимально</span>
+              <p class="p">Ужин</p>
+              <span class="span">Для тебя оптимально</span>
             </div>
             <i class="fas fa-plus add-prod-icon"></i>
           </div>
           <div class="block-meal">
             <div class="icon-meal"><i class="fas fa-apple-alt"></i></div>
             <div>
-              <p>Перекусы</p>
-              <span>Для тебя оптимально</span>
+              <p class="p">Перекусы</p>
+              <span class="span">Для тебя оптимально</span>
             </div>
             <i class="fas fa-plus add-prod-icon"></i>
           </div>
@@ -115,17 +115,39 @@
       <div class="container">
         <div class="block-rest-kkal">
           <div class="rest-header-title">
-            <p>Потраченные каллории</p>
-            <span>0 kkal</span>
+            <p class="p">Потраченные каллории</p>
+            <span class="span">0 kkal</span>
           </div>
-          <p>тренируйся вместе Rustatic или добавляй активности вручную</p>
-          <a href="№" class="add-train">добавить тренировку</a>
+          <span class="span">
+            тренируйся вместе Rustatic или добавляй активности вручную что бы
+            позволить себе больше калорий
+          </span>
+          <a href="#" class="add-train-link">добавить тренировку</a>
         </div>
       </div>
       <div class="grey-row-line"></div>
       <div class="container">
         <div class="block-purpose">
-          <div class="box-purpose"></div>
+          <div class="header-purpose">
+            <p class="p">Цель</p>
+            <span class="span"><i class="fas fa-ellipsis-v"></i></span>
+          </div>
+          <div class="box-middle-purpose">
+            <span class="span">Правильно питаться</span>
+          </div>
+          <div class="current">
+            <p>текущий</p>
+            <p>75</p>
+          </div>
+          <div class="current-goal">
+            <p>цель</p>
+            <p>75</p>
+          </div>
+          <div class="purpose-weigth"><span class="span">вес в кг</span></div>
+
+          <button class="button-total balance-choose-button">
+            <a href="#s">обновить вес</a>
+          </button>
         </div>
       </div>
       <!-- =======================footet fixed -->
@@ -133,24 +155,24 @@
         <nav class="mav-menu">
           <a href="./page-app-news.html"
             ><i class="fas fa-newspaper"></i>
-            <p>новости</p></a
+            <p class="p">новости</p></a
           >
           <a href="#" class="active-link"
             ><i class="fas fa-file-alt"></i>
-            <p>журнал</p>
+            <p class="p">журнал</p>
           </a>
           <a href=""><i class="fas fa-plus"></i></a>
           <a href="./page-app-porgramm.html"
             ><i class="fas fa-calendar-check"></i>
-            <p>программы</p>
+            <p class="p">программы</p>
           </a>
           <a href="./page-app-profile.html">
             <i class="fas fa-user-alt"></i>
-            <p>профиль</p></a
+            <p class="p">профиль</p></a
           >
         </nav>
       </div>
     </div>
-    <script src="./js/main.js" ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
