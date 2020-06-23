@@ -1,3 +1,5 @@
+//== block fixed time
+const time = document.querySelector('.header-time');
 //======= for  modal  element
 const btnChancelAll = document.querySelectorAll('.button-chancel');
 const btnBirthd = document.querySelector('.button-birthday');
@@ -24,6 +26,13 @@ const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
 // page total ccacl
 const resultTotalKkal = document.querySelector('.result-totalKkal');
+
+//=====time
+
+setInterval(function () {
+  time.textContent = new Date().toLocaleTimeString();
+}, 1000);
+
 //  handlers inpunts from page anthropometry
 
 let objCcal = {};
@@ -207,7 +216,7 @@ if (circle) {
     }`;
   }
   let i = 0;
-  
+
   const interV = setInterval(function () {
     i += 10;
     if (i == 100) {
