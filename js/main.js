@@ -207,6 +207,7 @@ if (circle) {
     }`;
   }
   let i = 0;
+  
   const interV = setInterval(function () {
     i += 10;
     if (i == 100) {

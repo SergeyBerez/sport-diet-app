@@ -38,13 +38,23 @@
 
       <div class="container">
         <div class="box-circle-notation">
-          <div class="circle-out">
-            <div class="progress"></div>
-            <div class="circle-in">
-              <p class="result-totalKkal">1491</p>
-              <p>ккал</p>
+           <div class="svg-flex">
+              <svg class="progress-ring" withd="120" height="120">
+                <circle
+                  class="progress-ring-circle"
+                  stroke="green"
+                  stroke-width="4"
+                  cx="60"
+                  cy="60"
+                  r="58"
+                  fill="white"
+                />
+              </svg>
+              <div class="pos-abs">
+                <p class="result-totalKkal">0</p>
+                <p>ккал</p>
+              </div>
             </div>
-          </div>
         </div>
         <!--==========  -->
 
@@ -141,5 +151,6 @@
         </nav>
       </div>
     </div>
+    <script src="./js/main.js" ></script>
   </body>
 </html>
