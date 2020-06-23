@@ -27,11 +27,11 @@ const resultTotalKkal = document.querySelector('.result-totalKkal');
 //  handlers inpunts from page anthropometry
 
 let objCcal = {};
-if (resultTotalKkal) {
-  let str = JSON.parse(localStorage.getItem('user'));
+// if (resultTotalKkal) {
+//   let str = JSON.parse(localStorage.getItem('user'));
 
-  resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
-}
+//   resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
+// }
 if (inpMan !== null) {
   inputsAntrop.forEach(elem => {
     elem.addEventListener('click', function (e) {
@@ -189,9 +189,35 @@ if (inpMan !== null) {
     localStorage.setItem('user', JSON.stringify(objCcal));
   });
 }
+// amount kkal in circle
+const circle = document.querySelector('.progress-ring-circle');
+const radius = circle.r.baseVal.value;
+const circumference = radius * 2 * Math.PI;
+
+circle.style.strokeDasharray = `${circumference} ${circumference}`;
+circle.style.strokeDashoffset = `${circumference}`;
+
+function setProgress(percent) {
+  const offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
+let str = JSON.parse(localStorage.getItem('user'));
+resultTotalKkal.textContent = `${
+    (((str.weight * str.height) / 10) * percent) / 10
+  }`;
+}
+let i = 0;
+const interV = setInterval(function () {
+  i += 10;
+  if (i == 100) {
+    clearInterval(interV);
+  }
+  
+  setProgress(i);
+}, 100);
+
 // var progress = 30;
 // var progressEl = document.querySelector('.progress');
 // var increaseProgress = function () {
 //   progress = progress + 10;
 //   progressEl.style.transform = 'rotate(' + progress + 'deg)';
-// }; 
+// };
