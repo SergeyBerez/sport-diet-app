@@ -227,9 +227,15 @@ if (circle) {
   }, 100);
 }
 
-// var progress = 30;
-// var progressEl = document.querySelector('.progress');
-// var increaseProgress = function () {
-//   progress = progress + 10;
-//   progressEl.style.transform = 'rotate(' + progress + 'deg)';
-// };
+var Circle = function (sel) {
+  var circle = document.querySelector(sel);
+  var valEl = parseFloat(25);
+  console.log(valEl);
+  valEl = (valEl * 408) / 100;
+  circle.innerHTML =
+    '<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:' +
+    valEl +
+    'px 408px;" r="65" cx="-80" cy="80" /></svg>';
+        
+};
+Circle('.circle');
