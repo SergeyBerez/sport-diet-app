@@ -1097,16 +1097,18 @@ input[name='name'] {
 }
 
 /* ========page-program */
-
+.h5 {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
 .section-program-diagram {
   display: flex;
-  border: 1px solid #000;
+  align-items: center;
 }
 .box-circle-program {
-  border: 1px solid #000;
 }
 .box-nutrients-program {
-  border: 1px solid #000;
 }
 .box-nutrients-program p {
 }
@@ -1136,22 +1138,49 @@ input[name='name'] {
 }
 
 .circle {
-  transition: 0.3s;
+ 
 }
 circle {
   fill: rgba(0, 0, 0, 0);
   stroke: rgb(155, 141, 141);
   stroke-width: 5;
   stroke-dasharray: 408px 408px;
-  transition: 0.3s;
+  
 }
 circle:nth-child(2n) {
   fill: rgba(0, 0, 0, 0);
   stroke: #30e73f;
   stroke-width: 5;
-   transition: 0.3s;
+ 
 }
 
+/* .container-svg{
+   width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+.sector {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: left bottom;
+    background: #000;
+}
+
+.container-svg:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 50%;
+  top: 25%;
+  left: 25%;
+} */
 /* ===========  select =====*/
 /*====== ======style for handler js====== */
 .show-modal {

@@ -223,3 +223,71 @@ if (circle) {
    `;
   }, 100);
 }
+
+// 
+// var dataset = [
+//   {
+//     value: 5,
+//     color: '#dc3912',
+//   },
+//   {
+//     value: 40,
+//     color: '#ff9900',
+//   },
+//   {
+//     value: 30,
+//     color: '#109618',
+//   },
+//   {
+//     value: 25,
+//     color: '#990099',
+//   },
+// ];
+
+// var maxValue = 25;
+// var container = document.querySelector('.container-svg');
+
+// var addSector = function (data, startAngle, collapse) {
+//   var sectorDeg = 3.6 * data.value;
+//   var skewDeg = 90 + sectorDeg;
+//   var rotateDeg = startAngle;
+//   if (collapse) {
+//     skewDeg++;
+//   }
+//   let sector = document.querySelector('.sector');
+  
+//   sector.style.background = data.color;
+//   sector.style.transform ='rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)';
+//   var sector = $('<div>', {
+//     class: 'sector',
+//   }).css({
+//     background: data.color,
+//     transform: 
+//   });
+//   container.append(sector);
+
+//   return startAngle + sectorDeg;
+// };
+
+// dataset.reduce(function (prev, curr) {
+//   return (function addPart(data, angle) {
+//     if (data.value <= maxValue) {
+//       return addSector(data, angle, false);
+//     }
+
+//     return addPart(
+//       {
+//         value: data.value - maxValue,
+//         color: data.color,
+//       },
+//       addSector(
+//         {
+//           value: maxValue,
+//           color: data.color,
+//         },
+//         angle,
+//         true,
+//       ),
+//     );
+//   })(curr, prev);
+// }, 0);
