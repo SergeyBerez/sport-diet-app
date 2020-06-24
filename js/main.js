@@ -25,7 +25,7 @@ const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
 // page total ccacl
-const resultTotalKkal = document.querySelector('.result-totalKkal');
+const resultTotalKkal = document.querySelector('.progress-ring text');
 
 //=====time
 

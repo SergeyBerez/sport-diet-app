@@ -61,6 +61,7 @@ a {
   position: fixed;
   width: 100%;
   padding: 5px;
+  z-index: 1;
 }
 
 .fixed--green {
@@ -488,12 +489,10 @@ input[type='number'] {
   align-items: center;
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  background: grey;
+  /* border: 1px solid #000; */
 }
 
 .pos-abs {
-  text-align: center;
   position: absolute;
 }
 .pos-abs p {
@@ -501,8 +500,13 @@ input[type='number'] {
   font-weight: normal;
 }
 .progress-ring {
-  width: 100%;
-  height: 100%;
+  /* text-align: center; */
+  /* width: 100%;
+  height: 100%; */
+}
+.progress-ring .svg-text {
+  font-size: 3rem;
+  fill: black;
 }
 .progress-ring-circle {
   -webkit-transform: rotate(-90deg);
