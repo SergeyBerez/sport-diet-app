@@ -504,37 +504,12 @@ input[type='number'] {
   /* width: 100%;
   height: 100%; */
 }
-.progress-ring .svg-text {
+svg .svg-text {
   font-size: 3rem;
   fill: black;
 }
-.progress-ring-circle {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
 
 /* ====== */
-/* .box-circle-totalKkal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 5px solid #24db00;
-  text-align: center;
-} */
 
 .result-totalKkal {
   width: 100%;
@@ -1131,7 +1106,6 @@ input[name='name'] {
   border: 1px solid #000;
 }
 .box-nutrients-program {
- 
   border: 1px solid #000;
 }
 .box-nutrients-program p {
@@ -1162,19 +1136,20 @@ input[name='name'] {
 }
 
 .circle {
-  display: block;
-  float: left;
+  transition: 0.3s;
 }
 circle {
   fill: rgba(0, 0, 0, 0);
-  stroke: #eee;
+  stroke: rgb(155, 141, 141);
   stroke-width: 5;
   stroke-dasharray: 408px 408px;
+  transition: 0.3s;
 }
 circle:nth-child(2n) {
   fill: rgba(0, 0, 0, 0);
-  stroke: #30bae7;
+  stroke: #30e73f;
   stroke-width: 5;
+   transition: 0.3s;
 }
 
 /* ===========  select =====*/

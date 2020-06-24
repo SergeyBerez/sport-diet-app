@@ -199,43 +199,30 @@ if (inpMan !== null) {
   });
 }
 //=============== amount kkal in circle
+let circle = document.querySelector('.circle');
 
-const circle = document.querySelector('.progress-ring-circle');
 if (circle) {
-  const radius = circle.r.baseVal.value;
-  const circumference = radius * 2 * Math.PI;
-  circle.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle.style.strokeDashoffset = `${circumference}`;
-
-  function setProgress(percent) {
-    const offset = circumference - (percent / 100) * circumference;
-    circle.style.strokeDashoffset = offset;
-    let str = JSON.parse(localStorage.getItem('user'));
-    resultTotalKkal.textContent = `${
-      (((str.weight * str.height) / 10) * percent) / 10
-    }`;
-  }
   let i = 0;
-
-  const interV = setInterval(function () {
+  let int = setInterval(function () {
+    console.log(i);
     i += 10;
     if (i == 100) {
-      clearInterval(interV);
+      clearInterval(int);
     }
 
-    setProgress(i);
-  }, 100);
-}
+ let valEl = parseFloat(i);
 
-var Circle = function (sel) {
-  var circle = document.querySelector(sel);
-  var valEl = parseFloat(25);
-  console.log(valEl);
-  valEl = (valEl * 408) / 100;
-  circle.innerHTML =
-    '<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:' +
-    valEl +
-    'px 408px;" r="65" cx="-80" cy="80" /></svg>';
-        
-};
-Circle('.circle');
+ valEl = (valEl * 408) / 100;
+ let str = JSON.parse(localStorage.getItem('user'));
+ circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray: 
+    ${valEl}px 408px;" r="65" cx="-80" cy="80" />
+    <text class="svg-text" text-anchor="middle" x="80" y="80" >${
+      ((str.weight * str.height) / 100) * i
+    }</text>
+                <text text-anchor="middle" x="80" y="100">kkal</text>
+    </svg>
+   `;
+
+  }, 100);
+ 
+}
