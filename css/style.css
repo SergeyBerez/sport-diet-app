@@ -487,8 +487,7 @@ input[type='number'] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+
   /* border: 1px solid #000; */
 }
 
@@ -880,7 +879,10 @@ input[name='name'] {
 .article span {
   font-size: 1.2rem;
 }
-
+.line-bottom {
+  width: 100%;
+  margin-bottom: 80px;
+}
 .menu-footer {
   width: 100%;
   position: fixed;
@@ -923,7 +925,9 @@ input[name='name'] {
 }
 
 .grey-row-line {
-  border-bottom: 1px solid grey;
+  height: 1px;
+  background: grey;
+  /* border-bottom: 1px solid grey; */
   width: 100%;
   margin: 10px 0;
 }
@@ -1045,7 +1049,7 @@ input[name='name'] {
   color: #42a316;
 }
 .block-purpose {
-  margin-bottom: 20px;
+  /* margin-bottom: 80px; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -1106,8 +1110,7 @@ input[name='name'] {
   display: flex;
   align-items: center;
 }
-.box-circle-program {
-}
+
 .box-nutrients-program {
 }
 .box-nutrients-program p {
@@ -1138,20 +1141,38 @@ input[name='name'] {
 }
 
 .circle {
- 
 }
 circle {
   fill: rgba(0, 0, 0, 0);
   stroke: rgb(155, 141, 141);
   stroke-width: 5;
   stroke-dasharray: 408px 408px;
-  
 }
 circle:nth-child(2n) {
   fill: rgba(0, 0, 0, 0);
   stroke: #30e73f;
   stroke-width: 5;
- 
+}
+.box-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-products-item{
+  
+}
+.box-products-item > div {
+  text-align: center;
+  /* width: calc(20% - 5px / 5); */
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+.box-products-item > div > img {
+  width: 30px;
 }
 
 /* .container-svg{
