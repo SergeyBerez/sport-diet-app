@@ -1102,7 +1102,7 @@ input[name='name'] {
 
 /* ========page-program */
 .h5 {
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -1156,24 +1156,40 @@ circle:nth-child(2n) {
 .box-products {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-.box-products-item{
-  
+.box-products-item {
+  width: calc(20% - 5px / 5);
+  margin: 5px;
+
+  text-align: center;
 }
 .box-products-item > div {
-  text-align: center;
-  /* width: calc(20% - 5px / 5); */
-  width: 30px;
-  height: 30px;
-  margin: 5px;
+  width: 100%;
   border-radius: 50%;
-  border: 1px solid #000;
   overflow: hidden;
 }
 .box-products-item > div > img {
-  width: 30px;
+  width: 150%;
+  margin-left: -10px;
 }
+.box-products-item .span {
+  font-size: 1rem;
+}
+
+.list-item-products {
+  margin: 10px 0;
+}
+.list-item-products i {
+  color: #1b8506;
+  vertical-align: middle;
+}
+.list-item-products span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
 
 /* .container-svg{
    width: 300px;
