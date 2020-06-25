@@ -1179,7 +1179,7 @@ circle:nth-child(2n) {
 .list-item-products {
   margin: 10px 0;
 }
-.list-item-products i {
+.fa-smile {
   color: #1b8506;
   vertical-align: middle;
 }
@@ -1189,8 +1189,19 @@ circle:nth-child(2n) {
   font-size: 1.3rem;
   font-weight: 700;
 }
-
-
+.fa-sad-tear {
+  vertical-align: middle;
+  color: red;
+}
+.section-advanced-programm {
+  padding: 10px 0;
+  border-bottom: 2px solid rgb(83, 80, 80);
+}
+.section-advanced-programm-block {
+}
+.section-advanced-programm-img img {
+  width: 100%;
+}
 /* .container-svg{
    width: 300px;
     height: 300px;
