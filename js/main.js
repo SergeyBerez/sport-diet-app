@@ -29,9 +29,9 @@ const resultTotalKkal = document.querySelector('.progress-ring text');
 
 //=====time
 
-setInterval(function () {
-  time.textContent = new Date().toLocaleTimeString();
-}, 1000);
+// setInterval(function () {
+//   time.textContent = new Date().toLocaleTimeString();
+// }, 1000);
 
 //  handlers inpunts from page anthropometry
 
@@ -216,7 +216,7 @@ if (circle) {
     circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray: 
     ${valEl}px 408px;" r="65" cx="-80" cy="80" />
     <text class="svg-text" text-anchor="middle" x="80" y="80" >${
-      ((str.weight * str.height) / 100) * i
+      ((str.weight * str.height) / 1000) * i
     }</text>
                 <text text-anchor="middle" x="80" y="100">kkal</text>
     </svg>

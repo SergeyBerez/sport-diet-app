@@ -1,11 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap'); */
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
-  overflow-x: hidden;
+  font-family: 'robotobold', sans-serif;
+
+  color: #4b4b4b;
 }
 
 *,
@@ -28,12 +37,12 @@ a {
 .p {
   text-transform: uppercase;
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: bold;
   margin: 10px 0;
 }
 .span {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: normal;
 }
 .container {
   margin: 0 auto;
@@ -114,9 +123,7 @@ a {
 
 .box-balance span {
   font-style: italic;
-
   font-size: 2rem;
-  font-weight: normal;
 }
 
 .box-balance p {
@@ -836,7 +843,6 @@ input[name='name'] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  
 
   width: 100%;
 
@@ -844,10 +850,9 @@ input[name='name'] {
   font-weight: 600;
 }
 .header-menu-title {
-  color: black;
 }
-.header-menu-title i {
-  color:grey;
+.header-menu-icon {
+  color: grey;
 }
 
 .header-article {
@@ -930,8 +935,8 @@ input[name='name'] {
 }
 
 .grey-row-line {
-  height: 1px;
-  background: grey;
+  height: 2px;
+  background: rgba(172, 169, 169, 0.678);
   /* border-bottom: 1px solid grey; */
   width: 100%;
   margin: 10px 0;
@@ -973,20 +978,24 @@ input[name='name'] {
   font-weight: 700;
 }
 
-.block-notation-item span {
+.block-notation-item .span {
   display: inline-block;
-  margin: 5px 0;
+  margin: 5px 5px 5px 0;
+}
+.equal-gr {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: grey;
 }
 
 .data-list {
   width: 100%;
   padding: 10px;
- 
   /* color: white; */
   font-size: 1.3rem;
 }
 
-.data-list li {
+.data-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1262,7 +1271,7 @@ circle:nth-child(2n) {
   width: 100%;
   padding: 3px 0;
   background-color: white;
-  box-shadow: inset 1px 0 2px 0.5px grey;
+  box-shadow: inset 1px 1px 4px 0.5px grey;
   margin: 10px 0;
 }
 /* .container-svg{
