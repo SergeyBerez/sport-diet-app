@@ -1202,6 +1202,64 @@ circle:nth-child(2n) {
 .section-advanced-programm-img img {
   width: 100%;
 }
+
+/* ====page-profile-user */
+.block-user {
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-user-logo {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+.box-user-logo img {
+  width: 100%;
+}
+.logo-country {
+  margin-bottom: 10px;
+}
+.logo-country::before {
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  content: '';
+  background-image: url('../img/flag.jpg');
+  background-size: 100%;
+  width: 15px;
+  height: 10px;
+}
+.block-user-kkal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.change-link {
+  color: #1b8506;
+}
+.total-norm-kkal {
+  margin: 20px 0;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: left;
+}
+.total-norm-kkal + span {
+  color: grey;
+}
+.grey-row-line-profile {
+  width: 100%;
+  padding: 3px 0;
+  background-color: white;
+  box-shadow: inset 1px 0 2px 0.5px grey;
+  margin: 10px 0;
+}
 /* .container-svg{
    width: 300px;
     height: 300px;
