@@ -193,7 +193,7 @@ a {
   -ms-flex-item-align: start;
   -ms-grid-row-align: start;
   align-self: start;
-  margin-top: 50px;
+  margin-top: 10px;
   color: #1b8506;
   cursor: pointer;
 }
@@ -836,13 +836,18 @@ input[name='name'] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-top: 25px;
-  background: #42a316;
+  
+
   width: 100%;
 
-  color: white;
-  padding: 20px;
+  padding: 20px 0;
   font-weight: 600;
+}
+.header-menu-title {
+  color: black;
+}
+.header-menu-title i {
+  color:grey;
 }
 
 .header-article {
@@ -976,8 +981,8 @@ input[name='name'] {
 .data-list {
   width: 100%;
   padding: 10px;
-  background-color: #42a316;
-  color: white;
+ 
+  /* color: white; */
   font-size: 1.3rem;
 }
 
