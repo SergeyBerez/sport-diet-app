@@ -206,14 +206,10 @@ if (inpMan !== null) {
 if (setKkal) {
   setKkal.addEventListener('click', function (e) {
     document.querySelector('.overlay').classList.toggle('show-modal');
-    console.log(document.querySelector('.overlay'));
-    console.log(1);
-    // e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
   });
 
   btnProfile.addEventListener('click', function (e) {
-     document.querySelector('.overlay').classList.toggle('show-modal');
-    // body
+    document.querySelector('.overlay').classList.toggle('show-modal');
   });
 }
 
