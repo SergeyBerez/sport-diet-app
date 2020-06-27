@@ -25,7 +25,8 @@ const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
 // page total ccacl
-const resultTotalKkal = document.querySelector('.progress-ring text');
+const resultTotalKkal = document.querySelector('.insert-ccal-circle');
+console.log(resultTotalKkal);
 
 //=====time
 
@@ -36,11 +37,11 @@ const resultTotalKkal = document.querySelector('.progress-ring text');
 //  handlers inpunts from page anthropometry
 
 let objCcal = {};
-// if (resultTotalKkal) {
-//   let str = JSON.parse(localStorage.getItem('user'));
+if (resultTotalKkal) {
+  let str = JSON.parse(localStorage.getItem('user'));
 
-//   resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
-// }
+  resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
+}
 if (inpMan !== null) {
   inputsAntrop.forEach(elem => {
     elem.addEventListener('click', function (e) {

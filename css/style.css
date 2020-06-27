@@ -776,8 +776,7 @@ input[name='name'] {
   position: absolute;
   top: 10;
   left: 0;
-  
- 
+
   padding: 20px;
   background-color: rgba(128, 128, 128, 0.308);
   border-radius: 50%;
@@ -1156,36 +1155,6 @@ input[name='name'] {
   display: flex;
   align-items: center;
 }
-
-.box-nutrients-program {
-}
-.box-nutrients-program p {
-}
-.box-nutrients-program p:nth-of-type(1)::before {
-  display: inline-block;
-  margin-right: 10px;
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: red;
-}
-.box-nutrients-program p:nth-of-type(2)::before {
-  display: inline-block;
-  margin-right: 10px;
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: rgb(21, 105, 201);
-}
-.box-nutrients-program p:nth-of-type(3)::before {
-  display: inline-block;
-  margin-right: 10px;
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: rgb(231, 190, 4);
-}
-
 .circle {
 }
 circle {
@@ -1199,6 +1168,75 @@ circle:nth-child(2n) {
   stroke: #30e73f;
   stroke-width: 5;
 }
+.canvas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 200px;
+  position: relative;
+}
+.canvas .insert-ccal-circle {
+  position: absolute;
+  font-size: 3rem;
+  font-family: 'Roboto-Bold';
+  margin: auto;
+  left: 35%;
+}
+
+.unit {
+  fill: none;
+  stroke-width: 5;
+}
+
+.unit:nth-child(1) {
+  stroke: red;
+  stroke-dasharray: 50 100;
+  stroke-dashoffset: 0;
+}
+
+.unit:nth-child(2) {
+  stroke: blue;
+  stroke-dasharray: 20 100;
+  stroke-dashoffset: -80;
+}
+
+.unit:nth-child(3) {
+  stroke: yellow;
+  stroke-dasharray: 30 100;
+  stroke-dashoffset: -50;
+}
+.box-nutrients-program span {
+  margin: 0 5px;
+}
+.box-nutrients-program p {
+  position: relative;
+  line-height: 20px;
+}
+.box-nutrients-program p:nth-of-type(1)::before {
+  display: inline-block;
+ 
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+.box-nutrients-program p:nth-of-type(2)::before {
+  display: inline-block;
+
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: rgb(21, 105, 201);
+}
+.box-nutrients-program p:nth-of-type(3)::before {
+  display: inline-block;
+
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: rgb(231, 190, 4);
+}
+
 .box-products {
   display: flex;
   justify-content: space-between;
@@ -1241,7 +1279,7 @@ circle:nth-child(2n) {
 }
 .section-advanced-programm {
   padding: 10px 0;
-  border-bottom: 2px solid rgb(83, 80, 80);
+  border-bottom: 2px solid rgb(126, 120, 120);
 }
 .section-advanced-programm-block {
 }
