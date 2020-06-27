@@ -29,6 +29,7 @@ const resultTotalKkal = document.querySelector('.insert-ccal-circle');
 const btnProfile = document.querySelector('.button-profile');
 
 // ==== for modal-page-profile-user
+const settingUser = document.querySelector('.fa-cog');
 const setKkal = document.querySelector('.change-kkal-link');
 //=====time
 
