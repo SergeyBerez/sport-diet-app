@@ -1214,7 +1214,7 @@ circle:nth-child(2n) {
 }
 .box-nutrients-program p:nth-of-type(1)::before {
   display: inline-block;
- 
+
   content: '';
   width: 10px;
   height: 10px;
@@ -1222,7 +1222,6 @@ circle:nth-child(2n) {
 }
 .box-nutrients-program p:nth-of-type(2)::before {
   display: inline-block;
-
   content: '';
   width: 10px;
   height: 10px;
