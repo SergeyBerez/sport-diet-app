@@ -26,8 +26,10 @@ const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
 // page total ccacl
 const resultTotalKkal = document.querySelector('.insert-ccal-circle');
-console.log(resultTotalKkal);
+const btnProfile = document.querySelector('.button-profile');
 
+// ==== for modal-page-profile-user
+const setKkal = document.querySelector('.change-kkal-link');
 //=====time
 
 // setInterval(function () {
@@ -198,7 +200,23 @@ if (inpMan !== null) {
 
     localStorage.setItem('user', JSON.stringify(objCcal));
   });
+
+  // ==========setkkal in page profile
 }
+if (setKkal) {
+  setKkal.addEventListener('click', function (e) {
+    document.querySelector('.overlay').classList.toggle('show-modal');
+    console.log(document.querySelector('.overlay'));
+    console.log(1);
+    // e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
+  });
+
+  btnProfile.addEventListener('click', function (e) {
+     document.querySelector('.overlay').classList.toggle('show-modal');
+    // body
+  });
+}
+
 //=============== amount kkal in circle
 let circle = document.querySelector('.circle');
 
@@ -225,7 +243,7 @@ if (circle) {
   }, 100);
 }
 
-// 
+//
 // var dataset = [
 //   {
 //     value: 5,
@@ -256,14 +274,14 @@ if (circle) {
 //     skewDeg++;
 //   }
 //   let sector = document.querySelector('.sector');
-  
+
 //   sector.style.background = data.color;
 //   sector.style.transform ='rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)';
 //   var sector = $('<div>', {
 //     class: 'sector',
 //   }).css({
 //     background: data.color,
-//     transform: 
+//     transform:
 //   });
 //   container.append(sector);
 
