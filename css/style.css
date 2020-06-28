@@ -1164,17 +1164,19 @@ circle:nth-child(2n) {
 }
 .canvas {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 200px;
   position: relative;
 }
-.canvas .insert-ccal-circle {
+.box-ccal-circle {
   position: absolute;
+  text-align: center;
+}
+.box-ccal-circle .insert-ccal-circle {
+  display: block;
   font-size: 3rem;
   font-family: 'Roboto-Bold';
-  margin: auto;
-  left: 35%;
 }
 
 .unit {
