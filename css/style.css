@@ -760,13 +760,6 @@ svg .svg-text {
   position: relative;
   padding: 20px;
 }
-
-input[name='surname'],
-input[name='name'] {
-  margin-left: 60px;
-  width: 85%;
-}
-
 .avatar {
   width: 50px;
   height: 50px;
@@ -776,7 +769,7 @@ input[name='name'] {
   background-color: rgba(128, 128, 128, 0.308);
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 10px;
+
   text-align: center;
   /* background-image: url('../img/avatar.jpg');
   background-position: center;
@@ -789,7 +782,7 @@ input[name='name'] {
   color: grey;
 }
 
-.avatar + .block-input {
+.block-input.block-input-regist {
   width: 90%;
   margin-left: auto;
 }
@@ -813,7 +806,7 @@ input[name='name'] {
 }
 
 .input-param.font {
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .form-login-page .input-param::-webkit-input-placeholder {
@@ -832,19 +825,7 @@ input[name='name'] {
   color: #e9e9d6;
 }
 
-.form-login-page .input-param.font::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-
-.form-login-page .input-param.font:-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-.form-login-page .input-param.font::-ms-input-placeholder {
-  font-size: 1rem;
-}
-
-.form-login-page .input-param.font::placeholder {
+.form-login-page .input-param.font-placeholder::placeholder {
   font-size: 1rem;
 }
 
@@ -853,7 +834,7 @@ input[name='name'] {
 }
 
 .form-login-page span {
-  color: white;
+  color: #e9e9d6;
   margin-top: 10px;
 }
 
@@ -1613,7 +1594,9 @@ a.back-prof-link {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.button-change-antrop {
+  margin-top: 20px;
+}
 /* .container-svg{
    width: 300px;
     height: 300px;

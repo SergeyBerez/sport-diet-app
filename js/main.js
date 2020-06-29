@@ -11,7 +11,7 @@ const inputHeight = document.querySelector('.input-data-height');
 const inputWeight = document.querySelector('.input-data-weight');
 
 // ===== 3 inpunts from page anthropometry-predRegist
-const inputsAntrop = document.querySelectorAll('.input-param');
+const inputsParamAntrop = document.querySelectorAll('.input-param');
 const inptPersonBirthday = document.querySelector('[ name="person-birthday"]');
 const inpPersonHeight = document.querySelector('[name="person-height"]');
 const inpPersonWeight = document.querySelector('[name="person-weight"]');
@@ -45,16 +45,18 @@ if (resultTotalKkal) {
 
   resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
 }
+console.log(inpMan);
 if (inpMan !== null) {
-  inputsAntrop.forEach(elem => {
-    elem.addEventListener('click', function (e) {
-      let strParam = e.target.getAttribute('name').split('-').slice(1).join('');
+ inputsParamAntrop.forEach(elem => {
+   elem.addEventListener('click', function (e) {
+     console.log(this);
+     let strParam = e.target.getAttribute('name').split('-').slice(1).join('');
 
-      document
-        .querySelector(`.modal-data-${strParam}`)
-        .parentNode.classList.toggle('show-modal');
-    });
-  });
+     document
+       .querySelector(`.modal-data-${strParam}`)
+       .parentNode.classList.toggle('show-modal');
+   });
+ });
   //===============another approach
   // inptPersonBirthday.addEventListener('click', function (e) {
   //   let tag = e.target.dataset.birthday;
@@ -188,7 +190,7 @@ if (inpMan !== null) {
           inpFemale.nextElementSibling.classList.add('error-icon');
         }
       }
-      inputsAntrop.forEach(elem => {
+      inputsParamAntrop.forEach(elem => {
         if (elem.value == '') {
           e.preventDefault();
           console.log(elem);
@@ -203,7 +205,6 @@ if (inpMan !== null) {
       localStorage.setItem('user', JSON.stringify(objCcal));
     });
   }
- 
 
   // ==========setkkal in page profile
 }
