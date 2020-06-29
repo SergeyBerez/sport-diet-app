@@ -19,29 +19,29 @@
     </div>
 
     <div class="container">
-      <div class="box-anthropometry page-settings-user">
-       
-
-        <form action="" class="form-param form-settings-user">
+      <div class="box-anthropometry page-edit-user">
+        <form action="" class="form-param form-edit-user">
           <div class="block-avatar">
-            <div class="avatar-photo">
-          
-            </div>
+            <div class="avatar-photo"></div>
             <div class="block-avatar-wrap">
-              <div class="block-input ">
+              <div class="block-input block-input-edit">
+                <label for="input-param-settings">ИМЯ</label>
                 <input
-                  class="input-param input-param-settings"
+                  class="input-param-settings"
                   type="text"
                   name="name"
                   placeholder="ИМЯ"
+                  value="Анна"
                 />
               </div>
-              <div class="block-input">
+              <div class="block-input block-input-edit">
+                <label for="input-param-settings">фамилия</label>
                 <input
-                  class="input-param input-param-settings"
+                  class="input-param-settings"
                   type="text"
                   name="surname"
                   placeholder="ФАМИЛИЯ"
+                  value="Семенова"
                 />
               </div>
             </div>
@@ -59,24 +59,33 @@
               ><span class="span">женский</span></label
             >
           </div>
+        </form>
+      </div>
+       </div>
+      <div class="grey-row-line-edit"></div>
 
-          <!-- 5 ===== input  -->
-
-          <div class="block-input">
+      <!-- 5 ===== input  -->
+      <div class="container">
+        <form action="">
+          <div class="block-input block-input-edit">
+            <label for="input-param-settings">email</label>
             <input
-              class="input-param"
+              class="input-param-settings"
               type="email"
               name="email"
               placeholder="EMAIL"
+              value="test@gmail.com"
             />
           </div>
 
-          <div class="block-input">
+          <div class="block-input block-input-edit">
+            <label for="input-param-settings">страна</label>
             <input
-              class="input-param"
-              type="password"
-              name="password"
+              class="input-param-settings"
+              type="select"
+              name="country"
               placeholder="страна"
+              value="Украина"
             />
           </div>
 

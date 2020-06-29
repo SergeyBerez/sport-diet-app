@@ -46,6 +46,7 @@ if (resultTotalKkal) {
   resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
 }
 console.log(inpMan);
+// show and hide modal in page 
 if (inpMan !== null) {
  inputsParamAntrop.forEach(elem => {
    elem.addEventListener('click', function (e) {
