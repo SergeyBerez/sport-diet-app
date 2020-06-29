@@ -95,7 +95,7 @@ if (inpMan !== null) {
     inptPersonBirthday.value = str;
     inptPersonBirthday.classList.remove('error');
     objCcal.birthday = str;
-    inptPersonBirthday.previousElementSibling.textContent = '';
+    inptPersonBirthday.nextElementSibling.textContent = '';
     if (inptPersonBirthday.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
     }
@@ -107,7 +107,7 @@ if (inpMan !== null) {
     inpPersonHeight.value = `${selectHeight.value} cm`;
     objCcal.height = +selectHeight.value;
     inpPersonHeight.classList.remove('error');
-    inpPersonHeight.previousElementSibling.textContent = '';
+    inpPersonHeight.nextElementSibling.textContent = '';
     if (selectHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
     }
@@ -120,7 +120,7 @@ if (inpMan !== null) {
     inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
     objCcal.weight = +selectWeight.value;
     inpPersonWeight.classList.remove('error');
-    inpPersonWeight.previousElementSibling.textContent = '';
+    inpPersonWeight.nextElementSibling.textContent = '';
     if (selectHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
     }
@@ -161,46 +161,49 @@ if (inpMan !== null) {
   });
 
   // ======calculate  user kkcal day  // ang go next page
-
-  buttonAntrop.addEventListener('click', function (e) {
-    console.log(objCcal);
-    if (!inpMan.checked && !inpFemale.checked) {
-      e.preventDefault();
-      inpMan.addEventListener('click', function (e) {
-        objCcal.male = true;
-        if (!inpFemale.checked) {
-          objCcal.Female = false;
-          inpFemale.nextElementSibling.classList.remove('error-icon');
-        }
-      });
-      inpFemale.addEventListener('click', function (e) {
-        objCcal.Female = true;
-        if (!inpMan.checked) {
-          objCcal.male = false;
-          inpMan.nextElementSibling.classList.remove('error-icon');
-        }
-      });
-
-      if (!inpMan.checked) {
-        inpMan.nextElementSibling.classList.add('error-icon');
-      }
-      if (!inpFemale.checked) {
-        inpFemale.nextElementSibling.classList.add('error-icon');
-      }
-    }
-    inputsAntrop.forEach(elem => {
-      if (elem.value == '') {
+  if (buttonAntrop) {
+    buttonAntrop.addEventListener('click', function (e) {
+      console.log(objCcal);
+      if (!inpMan.checked && !inpFemale.checked) {
         e.preventDefault();
-        elem.classList.add('error');
-        elem.previousElementSibling.textContent = 'заполните данные';
-      } else {
-        elem.classList.remove('error');
-        elem.previousElementSibling.textContent = '';
-      }
-    });
+        inpMan.addEventListener('click', function (e) {
+          objCcal.male = true;
+          if (!inpFemale.checked) {
+            objCcal.Female = false;
+            inpFemale.nextElementSibling.classList.remove('error-icon');
+          }
+        });
+        inpFemale.addEventListener('click', function (e) {
+          objCcal.Female = true;
+          if (!inpMan.checked) {
+            objCcal.male = false;
+            inpMan.nextElementSibling.classList.remove('error-icon');
+          }
+        });
 
-    localStorage.setItem('user', JSON.stringify(objCcal));
-  });
+        if (!inpMan.checked) {
+          inpMan.nextElementSibling.classList.add('error-icon');
+        }
+        if (!inpFemale.checked) {
+          inpFemale.nextElementSibling.classList.add('error-icon');
+        }
+      }
+      inputsAntrop.forEach(elem => {
+        if (elem.value == '') {
+          e.preventDefault();
+          console.log(elem);
+          elem.classList.add('error');
+          elem.nextElementSibling.textContent = 'заполните данные';
+        } else {
+          elem.classList.remove('error');
+          elem.nextElementSibling.textContent = '';
+        }
+      });
+
+      localStorage.setItem('user', JSON.stringify(objCcal));
+    });
+  }
+ 
 
   // ==========setkkal in page profile
 }
