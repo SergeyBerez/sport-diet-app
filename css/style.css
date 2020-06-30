@@ -32,7 +32,7 @@
 :root {
   --green: #1b8506;
   --font-color: #4b4b4b;
-  --height: 95vh;
+  --height: 80vh;
 }
 
 html {
@@ -48,6 +48,9 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+.overflow {
+  overflow: hidden;
 }
 .block-overflow {
   /* height: 100%; */
@@ -594,7 +597,7 @@ svg .svg-text {
 /* -----index-page-auth  */
 .header-index-bg {
   overflow-y: hidden;
-  /* height: 100%; */
+  height: 80vh;
   background: grey;
   background-image: -webkit-gradient(
       linear,
@@ -623,7 +626,7 @@ svg .svg-text {
     ),
     url('../img/index-bg.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top 20px center;
   background-size: cover;
 }
 
