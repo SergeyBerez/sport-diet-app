@@ -42,23 +42,26 @@ body {
   font-size: 1.6rem;
   font-family: 'Roboto-Regular', sans-serif;
   color: #4b4b4b;
-  overflow-x: hidden;
+  
+   
 }
 
 .block-overflow {
-  
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: 100vh;
-  overflow: auto;
+  /* overflow: auto; */
+  overflow-x: hidden;
+    overflow-y: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
 
 .block-overflow::-webkit-scrollbar {
   width: 0px;
- }
+  background: transparent;
+}
 
 *,
 ::before,
@@ -103,8 +106,6 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
- 
-  
 }
 
 .header-fixed {
