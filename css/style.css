@@ -593,8 +593,8 @@ svg .svg-text {
 
 /* -----index-page-auth  */
 .header-index-bg {
-  overflow: hidden;
-  height: 100vh;
+  overflow-y: hidden;
+  /* height: 100%; */
   background: grey;
   background-image: -webkit-gradient(
       linear,
