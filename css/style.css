@@ -95,12 +95,16 @@ a {
 .balance-bg {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 .header-balance-bg {
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+   display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .header-fixed {
