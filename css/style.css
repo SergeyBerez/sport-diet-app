@@ -42,18 +42,13 @@ body {
   font-size: 1.6rem;
   font-family: 'Roboto-Regular', sans-serif;
   color: #4b4b4b;
-  
-   
 }
 
 .block-overflow {
   display: flex;
   flex-direction: column;
-  /* overflow-x: hidden; */
   height: 100vh;
-  /* overflow: auto; */
-  overflow-x: hidden;
-    overflow-y: scroll;
+  overflow: auto;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   padding-bottom: 100px;
