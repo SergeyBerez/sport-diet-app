@@ -46,18 +46,19 @@ body {
 }
 
 .block-overflow {
+  
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   height: 100vh;
-  overflow: auto;
+  /* overflow: auto; */
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
 }
+
 .block-overflow::-webkit-scrollbar {
   width: 0px;
-  display: none;
-  width: 0 !important;
-}
+ }
 
 *,
 ::before,
@@ -102,9 +103,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-   display: flex;
-  height: 100vh;
-  overflow: hidden;
+ 
+  
 }
 
 .header-fixed {
@@ -385,7 +385,7 @@ label[for='input'] {
 .button-next {
   margin: 0 auto;
   display: block;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   background: #24db00;
   background: -webkit-radial-gradient(
     center,
@@ -1009,7 +1009,6 @@ svg .svg-text {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
- 
 }
 
 .block-notation-item {

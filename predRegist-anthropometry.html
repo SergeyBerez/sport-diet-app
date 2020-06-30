@@ -16,130 +16,128 @@
   </head>
 
   <body>
-    <div class="header balance-bg">
-      <!-- <div class="header-fixed fixed--green">
+    <div class="block-overflow">
+      <div class="header balance-bg">
+        <!-- <div class="header-fixed fixed--green">
         <span class="header-g">G</span> <span class="header-time"></span>
       </div> -->
-      <div class="container">
-        <div class="section-anthropometry">
-          <div class="button-back-anthropometry">
-            <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
-          </div>
-          <div class="anthropometry-title">
-            <p class="p">Достигнем цели вместе!</p>
-            <span class="span">Hачнем с простого</span>
-          </div>
+        <div class="container">
+          <div class="section-anthropometry">
+            <div class="button-back-anthropometry">
+              <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="anthropometry-title">
+              <p class="p">Достигнем цели вместе!</p>
+              <span class="span">Hачнем с простого</span>
+            </div>
 
-          <div class="box-anthropometry">
-            <form action="" class="form-param">
-              <div class="user-icon">
-                <input id="inp-man" name="user-icon" type="radio" />
-                <label for="inp-man">
-                  <i class="far fa-2x fa-user-circle"></i
-                  ><span class="span">мужской</span></label
-                >
-                <input type="radio" name="user-icon" id="inp-female" />
-                <label for="inp-female">
-                  <i class="far fa-2x fa-user-circle"></i
-                  ><span class="span">женский</span></label
-                >
-              </div>
+            <div class="box-anthropometry">
+              <form action="" class="form-param">
+                <div class="user-icon">
+                  <input id="inp-man" name="user-icon" type="radio" />
+                  <label for="inp-man">
+                    <i class="far fa-2x fa-user-circle"></i
+                    ><span class="span">мужской</span></label
+                  >
+                  <input type="radio" name="user-icon" id="inp-female" />
+                  <label for="inp-female">
+                    <i class="far fa-2x fa-user-circle"></i
+                    ><span class="span">женский</span></label
+                  >
+                </div>
 
-              <div class="block-input">
-               
-                <input
-                  data-birthday="modal-data-birthday"
-                  type="text"
-                  name="person-birthday"
-                  placeholder="дата рождения"
-                  class="input-param"
-                />
-                <label for="input"></label>
-              </div>
-              <div class="block-input">
-                
-                <input
-                  data-height="modal-data-height"
-                  type="text"
-                  placeholder="рост"
-                  name="person-height"
-                  class="input-param"
-                /><label for="input"></label>
-              </div>
-              <div class="block-input">
-                 
-                <input
-                  data-weight="modal-data-weight"
-                  type="text"
-                  name="person-weight"
-                  placeholder="текущий вес"
-                  class="input-param"
-                />
-                <label for="input"></label>
-              </div>
-            </form>
+                <div class="block-input">
+                  <input
+                    data-birthday="modal-data-birthday"
+                    type="text"
+                    name="person-birthday"
+                    placeholder="дата рождения"
+                    class="input-param"
+                  />
+                  <label for="input"></label>
+                </div>
+                <div class="block-input">
+                  <input
+                    data-height="modal-data-height"
+                    type="text"
+                    placeholder="рост"
+                    name="person-height"
+                    class="input-param"
+                  /><label for="input"></label>
+                </div>
+                <div class="block-input">
+                  <input
+                    data-weight="modal-data-weight"
+                    type="text"
+                    name="person-weight"
+                    placeholder="текущий вес"
+                    class="input-param"
+                  />
+                  <label for="input"></label>
+                </div>
+              </form>
 
-            <button class="button-total button-next button-antrop">
-              <a href="./predRegist-totalKkal.html">подолжить</a>
-            </button>
+              <button class="button-total button-next button-antrop">
+                <a href="./predRegist-totalKkal.html">подолжить</a>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- modal-data-birthday -->
-      <div class="overlay">
-        <div class="modal-data modal-data-birthday">
-          <p class="p">Дата рождения</p>
-          <input
-            data-birthday="modal-data-birthday"
-            type="date"
-            value="2000-01-01"
-            min="1970-01-01"
-            max="2010-12-31"
-            name="person-birthday"
-            class="input-data-birthday"
-          />
-          <div class="box-confirm-birthday">
-            <button class="button-form button-chancel">отменa</button>
-            <button class="button-form button-birthday button-confirm">
-              выбрать
-            </button>
+        <!-- modal-data-birthday -->
+        <div class="overlay">
+          <div class="modal-data modal-data-birthday">
+            <p class="p">Дата рождения</p>
+            <input
+              data-birthday="modal-data-birthday"
+              type="date"
+              value="2000-01-01"
+              min="1970-01-01"
+              max="2010-12-31"
+              name="person-birthday"
+              class="input-data-birthday"
+            />
+            <div class="box-confirm-birthday">
+              <button class="button-form button-chancel">отменa</button>
+              <button class="button-form button-birthday button-confirm">
+                выбрать
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- modal-height -->
-      <div class="overlay">
-        <div class="modal-data modal-data-height">
-          <p class="p">Рост</p>
-          <div class="modal-data-main">
-            <select name="height" id="input-data-height"> </select>
-            <!-- <input
+        <!-- modal-height -->
+        <div class="overlay">
+          <div class="modal-data modal-data-height">
+            <p class="p">Рост</p>
+            <div class="modal-data-main">
+              <select name="height" id="input-data-height"> </select>
+              <!-- <input
               class="input-data-height"
               min="140"
               max="200"
               type="number"
               placeholder="140"
             /> -->
-            <span class="metrics-sm">СМ</span>
-          </div>
+              <span class="metrics-sm">СМ</span>
+            </div>
 
-          <div class="modal-data-footer box-confirm-height">
-            <button class="button-form metrics-fut">ФУТЫ</button>
-            <button class="button-form button-chancel">отменa</button>
-            <button class="button-form button-height button-confirm">
-              выбрать
-            </button>
+            <div class="modal-data-footer box-confirm-height">
+              <button class="button-form metrics-fut">ФУТЫ</button>
+              <button class="button-form button-chancel">отменa</button>
+              <button class="button-form button-height button-confirm">
+                выбрать
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- modal-weight -->
-      <div class="overlay">
-        <div class="modal-data modal-data-weight">
-          <p class="p">Вес</p>
-          <div class="modal-data-main">
-            <select name="weight" id="input-data-weight"></select>
-            <span class="metrics-kg">кг</span>
-            <select name="weight" id="input-data-weight-gr"></select>
-            <!-- <input
+        <!-- modal-weight -->
+        <div class="overlay">
+          <div class="modal-data modal-data-weight">
+            <p class="p">Вес</p>
+            <div class="modal-data-main">
+              <select name="weight" id="input-data-weight"></select>
+              <span class="metrics-kg">кг</span>
+              <select name="weight" id="input-data-weight-gr"></select>
+              <!-- <input
               class="input-data-weight"
               type="number"
               placeholder="60"
@@ -154,21 +152,22 @@
               min="100"
               max="900"
             /> -->
-            <span class="metrics-kg"> гp</span>
-          </div>
+              <span class="metrics-kg"> гp</span>
+            </div>
 
-          <div class="modal-data-footer box-confirm-weight">
-            <button class="button-form metrics-funt">ФУНТЫ</button>
-            <button class="button-form button-chancel">
-              отменa
-            </button>
-            <button class="button-form button-weight button-confirm">
-              выбрать
-            </button>
+            <div class="modal-data-footer box-confirm-weight">
+              <button class="button-form metrics-funt">ФУНТЫ</button>
+              <button class="button-form button-chancel">
+                отменa
+              </button>
+              <button class="button-form button-weight button-confirm">
+                выбрать
+              </button>
+            </div>
           </div>
         </div>
+        <!-- modal end -->
       </div>
-      <!-- modal end -->
     </div>
     <script src="./js/main.js
   "></script>
