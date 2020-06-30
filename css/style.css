@@ -55,15 +55,15 @@ body {
   overflow: hidden; */
 }
 .block-overflow {
-  /* height: 100%; */
-  /* display: flex;
-  flex-direction: column; */
-  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
   box-sizing: border-box;
   overflow: auto;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-  padding-bottom: 150px;
+  /* padding-bottom: 150px; */
 }
 
 .block-overflow::-webkit-scrollbar {
@@ -102,7 +102,7 @@ a {
 .container {
   max-width: 576px;
   margin: 0 auto;
-  /* width: 90%; */
+  width: 90%;
   padding: 0 10px;
 }
 .balance-bg {
@@ -627,7 +627,7 @@ svg .svg-text {
     ),
     url('../img/index-bg.jpg');
   background-repeat: no-repeat;
-  background-position:  center;
+  background-position: center;
   background-size: cover;
 }
 
