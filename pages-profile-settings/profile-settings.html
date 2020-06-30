@@ -30,7 +30,7 @@
                   class="input-param-settings"
                   type="text"
                   name="name"
-                  placeholder="ИМЯ"
+                 
                   value="Анна"
                 />
               </div>
@@ -40,7 +40,7 @@
                   class="input-param-settings"
                   type="text"
                   name="surname"
-                  placeholder="ФАМИЛИЯ"
+                 
                   value="Семенова"
                 />
               </div>
@@ -73,52 +73,63 @@
               class="input-param-settings"
               type="email"
               name="email"
-              placeholder="EMAIL"
+              
               value="test@gmail.com"
             />
           </div>
 
           <div class="block-input block-input-edit">
             <label for="input-param-settings">страна</label>
-            <input
+
+            <select name="" id="select-country" >
+              <option class="select-country" value="Украина">Украина</option>
+              <option class="select-country"value="Россия">Россия</option>
+              <option class="select-country"value="Молдавия">Молдавия</option>
+            </select>
+            <!-- <input
               class="input-param-settings"
               type="select"
               name="country"
-              placeholder="страна"
+              
               value="Украина"
-            />
+            /> -->
           </div>
 
           <div class="block-input">
+              <label for="">дата&nbsp;рождения</label>
             <input
-              class="input-param input-param-settings"
+              class="input-param input-param-settings value-setting"
               data-birthday="modal-data-birthday"
               type="text"
               name="person-birthday"
               placeholder="дата рождения"
             /><label for="input"></label
-            ><span class="value-setting-data-birthday">ddd</span>
+            >
+            <!-- <span class="value-setting-data-birthday">ddd</span> -->
           </div>
           <div class="block-input">
+             <label for="">рост</label>
             <input
               data-height="modal-data-height"
               type="text"
               placeholder="рост"
               name="person-height"
-              class="input-param input-param-settings"
+              class="input-param input-param-settings value-setting"
             /><label for="input"></label
-            ><span class="value-setting-data-height">ddd</span>
+            >
+            <!-- <span class="value-setting-data-height">ddd</span> -->
           </div>
           <div class="block-input">
+            <label for="">текущий&nbsp;вес</label>
             <input
               data-weight="modal-data-weight"
               type="text"
               name="person-weight"
               placeholder="текущий вес"
-              class="input-param input-param-settings"
+              class="input-param input-param-settings value-setting"
             />
             <label for="input"></label>
-            <span class="value-setting-data-weight">ddd</span>
+            <!-- <span class="value-setting-data-weight">ddd</span> -->
           </div>
 
           <button class="button-total button-next button-change-antrop">

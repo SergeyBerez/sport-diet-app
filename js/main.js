@@ -12,6 +12,7 @@ const inputWeight = document.querySelector('.input-data-weight');
 
 // ===== 3 inpunts from page anthropometry-predRegist
 const inputsParamAntrop = document.querySelectorAll('.input-param');
+
 const inptPersonBirthday = document.querySelector('[ name="person-birthday"]');
 const inpPersonHeight = document.querySelector('[name="person-height"]');
 const inpPersonWeight = document.querySelector('[name="person-weight"]');
@@ -24,40 +25,54 @@ const selectHeight = document.querySelector('#input-data-height');
 const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
-// page total ccacl
+// page-app-programm  sum total ccal in svg
 const resultTotalKkal = document.querySelector('.insert-ccal-circle');
 const btnProfile = document.querySelector('.button-profile');
 
-// ==== for modal-page-profile-user
+// ==== for modal user page-app-profile
 const settingUser = document.querySelector('.fa-cog');
 const setKkal = document.querySelector('.change-kkal-link');
-//=====time
+//=====  page total-profile-settings=>> page profile-settings
+
+const inptsValueSetting = document.querySelectorAll('.value-setting');
+const selectContry = document.querySelector('#select-country');
 
 // setInterval(function () {
 //   time.textContent = new Date().toLocaleTimeString();
 // }, 1000);
 
 //  handlers inpunts from page anthropometry
-
+let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || [
+  {
+    id: 0,
+    male: false,
+    Female: true,
+    birthday: '11:11:2000',
+    height: 100,
+    weight: 40,
+  },
+];
 let objCcal = {};
+
+// show ccal in diagram page-app-porgramm
 if (resultTotalKkal) {
-  let str = JSON.parse(localStorage.getItem('user'));
+  let str = JSON.parse(localStorage.getItem('user')) || [];
 
-  resultTotalKkal.textContent = `${(str.weight * str.height) / 2}`;
+  resultTotalKkal.textContent = `${(str[0].weight * str[0].height) / 2}`;
 }
-console.log(inpMan);
-// show and hide modal in page 
-if (inpMan !== null) {
- inputsParamAntrop.forEach(elem => {
-   elem.addEventListener('click', function (e) {
-     console.log(this);
-     let strParam = e.target.getAttribute('name').split('-').slice(1).join('');
 
-     document
-       .querySelector(`.modal-data-${strParam}`)
-       .parentNode.classList.toggle('show-modal');
-   });
- });
+// show and hide modal in page predRegist-anthropometry
+if (inpMan !== null) {
+  inputsParamAntrop.forEach(elem => {
+    elem.addEventListener('click', function (e) {
+      console.log(this);
+      let strParam = e.target.getAttribute('name').split('-').slice(1).join('');
+
+      document
+        .querySelector(`.modal-data-${strParam}`)
+        .parentNode.classList.toggle('show-modal');
+    });
+  });
   //===============another approach
   // inptPersonBirthday.addEventListener('click', function (e) {
   //   let tag = e.target.dataset.birthday;
@@ -97,6 +112,8 @@ if (inpMan !== null) {
     );
     inptPersonBirthday.value = str;
     inptPersonBirthday.classList.remove('error');
+    let id = new Date().getTime();
+    objCcal.id = id;
     objCcal.birthday = str;
     inptPersonBirthday.nextElementSibling.textContent = '';
     if (inptPersonBirthday.value != '') {
@@ -166,7 +183,6 @@ if (inpMan !== null) {
   // ======calculate  user kkcal day  // ang go next page
   if (buttonAntrop) {
     buttonAntrop.addEventListener('click', function (e) {
-      console.log(objCcal);
       if (!inpMan.checked && !inpFemale.checked) {
         e.preventDefault();
         inpMan.addEventListener('click', function (e) {
@@ -194,7 +210,7 @@ if (inpMan !== null) {
       inputsParamAntrop.forEach(elem => {
         if (elem.value == '') {
           e.preventDefault();
-          console.log(elem);
+
           elem.classList.add('error');
           elem.nextElementSibling.textContent = 'заполните данные';
         } else {
@@ -203,11 +219,12 @@ if (inpMan !== null) {
         }
       });
 
-      localStorage.setItem('user', JSON.stringify(objCcal));
+      dataLocalStorage.push(objCcal);
+      localStorage.setItem('user', JSON.stringify(dataLocalStorage));
     });
   }
 
-  // ==========setkkal in page profile
+  // ==========show ang hide modal window setkkal in page profile
 }
 if (setKkal) {
   setKkal.addEventListener('click', function (e) {
@@ -219,7 +236,7 @@ if (setKkal) {
   });
 }
 
-//=============== amount kkal in circle
+//=============== drow circle and amount kkal in circle
 let circle = document.querySelector('.circle');
 
 if (circle) {
@@ -233,16 +250,35 @@ if (circle) {
     let valEl = parseFloat(i);
 
     valEl = (valEl * 408) / 100;
-    let str = JSON.parse(localStorage.getItem('user'));
+    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+
     circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray: 
     ${valEl}px 408px;" r="65" cx="-80" cy="80" />
     <text class="svg-text" text-anchor="middle" x="80" y="80" >${
-      ((str.weight * str.height) / 1000) * i
+      ((weight * height) / 1000) * i
     }</text>
                 <text text-anchor="middle" x="80" y="100">kkal</text>
     </svg>
    `;
   }, 100);
+}
+console.log();
+
+if (inptsValueSetting.length) {
+  // let str = JSON.parse(localStorage.getItem('user')) || [];
+  // console.log(inptsValueSetting);
+  console.log(dataLocalStorage[0]);
+  let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+
+  inpMan.checked = male;
+  inpFemale.checked = Female;
+  inptsValueSetting[0].value = birthday;
+  inptsValueSetting[1].value = height;
+  inptsValueSetting[2].value = weight;
+
+  inptsValueSetting.forEach(el => {
+    console.log(el);
+  });
 }
 
 //

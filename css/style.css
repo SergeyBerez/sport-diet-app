@@ -308,10 +308,12 @@ a {
   width: 100%;
 }
 .block-input label {
+  display: block;
   width: 130px;
   margin-right: 10px;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: left;
   text-transform: uppercase;
 }
 .input-param {
@@ -326,7 +328,7 @@ a {
 
 label[for='input'] {
   /* top: 0; */
- right: 0px;
+  right: 0px;
   margin: auto;
   display: block;
   position: absolute;
@@ -794,7 +796,7 @@ svg .svg-text {
 }
 
 .block-input.block-input-regist {
-  width: 80%;
+  width: 85%;
   margin-left: auto;
 }
 /* ========login-page */
@@ -1574,21 +1576,32 @@ a.back-prof-link {
   color: var(--green);
 }
 
-/* sub-page -setting -profile */
-
-.input-param-settings {
-  width: 100%;
-  height: 30px;
-  border: none;
-
-  font-size: 1.6rem;
-  font-weight: bold;
-  cursor: pointer;
-}
+/* ======sub-page -setting -profile */
+/* .block-input .input-param-settings {
+  text-align: right;
+} */
 .block-input-edit {
   /* margin-top: 20px; */
   padding: 30px 0 0 0;
 }
+.input-param-settings {
+  width: 100%;
+  height: 30px;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.input-param-settings::placeholder {
+  font-size: 1.6rem;
+  color: #222;
+  text-transform: lowercase;
+}
+
+.value-setting {
+  text-align: right;
+}
+
 label[for='input-param-settings'] {
   font-family: 'Roboto-Bold';
   color: grey;
@@ -1598,6 +1611,7 @@ label[for='input-param-settings'] {
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
 .block-avatar {
   display: flex;
   margin-bottom: 30px;
@@ -1627,6 +1641,20 @@ label[for='input-param-settings'] {
   width: 100%;
   /* margin: 10px 0; */
 }
+
+#select-country {
+  width: 100%;
+  height: 30px;
+  border: none;
+  color: grey;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  
+ 
+}
+
+
 /* .container-svg{
    width: 300px;
     height: 300px;
