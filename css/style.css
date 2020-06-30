@@ -627,7 +627,7 @@ svg .svg-text {
     ),
     url('../img/index-bg.jpg');
   background-repeat: no-repeat;
-  /* background-position:  center; */
+  background-position:  center;
   background-size: cover;
 }
 
