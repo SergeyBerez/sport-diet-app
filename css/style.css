@@ -56,6 +56,7 @@ body {
     overflow-y: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+  padding-bottom: 100px;
 }
 
 .block-overflow::-webkit-scrollbar {
@@ -945,8 +946,8 @@ svg .svg-text {
   font-size: 1.2rem;
 }
 .line-bottom {
-  width: 100%;
-  margin-bottom: 80px;
+  /* width: 100%;
+  margin-bottom: 80px; */
 }
 .menu-footer {
   width: 100%;
