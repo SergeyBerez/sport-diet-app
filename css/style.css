@@ -106,12 +106,11 @@ a {
   max-width: 576px;
   margin: 0 auto;
   width: 90%;
-  padding: 0 10px;
 }
 .balance-bg {
   /* display: flex; */
-  /* height: 100vh;
-  overflow: hidden; */
+  height: 100vh;
+  overflow: hidden;
 }
 .header-balance-bg {
   overflow: hidden;
