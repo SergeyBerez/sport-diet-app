@@ -54,27 +54,39 @@ body {
 * {
   box-sizing: border-box;
 }
-.block {
-  width: 100%;
+.container-overflow,
+.block-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.container-overflow {
+  /* width: 100%;
   padding-right: 40px;
-  overflow-x: hidden;
+  overflow-x: hidden; */
+  overflow: hidden;
   height: var(--height);
+}
+.block-scroll {
+  padding-right: 20px;
+  right: -20px;
+   overflow-y: scroll;
+  /* width: 110%;
+  overflow-x: hidden; */
+ 
 }
 .overflow {
   overflow: hidden;
   height: 100%;
 }
-.block-overflow {
-  width: 110%;
-  overflow-x: hidden;
-  /* padding-bottom: 100px; */
-}
+
 ::-webkit-scrollbar {
   width: 0 !important;
   background: transparent;
   display: none;
 }
-
 
 *,
 ::before,
