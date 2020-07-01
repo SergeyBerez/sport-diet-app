@@ -58,7 +58,7 @@ body {
   width: 100%;
   padding-right: 40px;
   overflow-x: hidden;
-  height: 90vh;
+  height: var(--height);
 }
 .overflow {
   overflow: hidden;
@@ -74,11 +74,7 @@ body {
   background: transparent;
   display: none;
 }
-/* .block-overflow::-webkit-scrollbar {
-  width: 0 !important;
-  background: transparent;
-  display: none;
-} */
+
 
 *,
 ::before,
