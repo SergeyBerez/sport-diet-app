@@ -50,25 +50,30 @@ body {
   box-sizing: border-box;
 }
 .overflow {
+  overflow: hidden;
+  height: 100vh;
   /* margin-right: -20px;
   padding: 20px;
   overflow: hidden; */
 }
 .block-overflow {
-
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 100vh;
   box-sizing: border-box;
   overflow: auto;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
-  /* padding-bottom: 150px; */
+  padding-bottom: 150px;
+ 
 }
-
-.block-overflow::-webkit-scrollbar {
-  width: 0px;
+::-webkit-scrollbar {
+  width: 0px !important;
   background: transparent;
+}
+.block-overflow::-webkit-scrollbar {
+  /* width: 0px !important;
+  background: transparent; */
 }
 
 *,
@@ -975,6 +980,7 @@ svg .svg-text {
   -ms-flex-pack: justify;
   justify-content: space-between;
   color: grey;
+  align-items: center;
 }
 
 .mav-menu a {
