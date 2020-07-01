@@ -980,7 +980,7 @@ svg .svg-text {
   -ms-flex-pack: justify;
   justify-content: space-between;
   color: grey;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .mav-menu a {
@@ -1019,7 +1019,7 @@ svg .svg-text {
 }
 
 .block-notation {
-  margin-top: 20px;
+  margin: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1854,4 +1854,4 @@ label[for='input-param-settings'] {
   color: #ffffff;
 }
 
-/* page notification */
+/* page app add program */
