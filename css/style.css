@@ -1880,6 +1880,10 @@ label[for='input-param-settings'] {
   background: rgba(255, 255, 255, 0.356);
   font-size: 1.2rem;
 }
+.button-addCcal i,
+.button-ScanCode i {
+  margin-right: 5px;
+}
 .flex-input-block {
   display: flex;
   position: relative;
@@ -1928,4 +1932,8 @@ label[for='input-param-settings'] {
   border-radius: 3px;
   background-color: white;
   box-shadow: 3px 9px 8px 3px rgba(128, 128, 128, 0.582);
+}
+.offse-left {
+  color: green;
+  margin-right: 5px;
 }
