@@ -52,13 +52,8 @@ body {
   box-sizing: border-box;
 }
 .block {
-  /* margin: 0 auto; */
-  width: 90%;
-  padding: 0 20px;
- 
- /* padding:0 20px; */
- /* margin-right: -20px; */
- 
+  width: 100%;
+  padding-right: 40px;
   overflow-x: hidden;
 }
 .overflow {
@@ -66,20 +61,16 @@ body {
   height: 100vh;
 }
 .block-overflow {
-  /* margin: 0 auto; */
-  
-  /* display: flex;
-  flex-direction: column; */
   height: 90vh;
   width: 110%;
   overflow-x: hidden;
   padding-bottom: 150px;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0 !important;
   background: transparent;
   display: none;
-} */
+}
 /* .block-overflow::-webkit-scrollbar {
   width: 0 !important;
   background: transparent;
