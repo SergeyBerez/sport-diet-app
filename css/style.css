@@ -114,6 +114,13 @@ a {
   width: 90%;
 }
 .balance-bg {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+
   /* display: flex; */
 }
 .header-balance-bg {
@@ -157,7 +164,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   justify-content: space-around;
-  height: 90vh;
+  height: 70vh;
   /* height: 100%; */
 }
 
@@ -611,7 +618,12 @@ svg .svg-text {
 
 /* -----index-page-auth  */
 .header-index-bg {
-  height: 100vh;
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
   background: grey;
   background-image: -webkit-gradient(
       linear,
