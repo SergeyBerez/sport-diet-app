@@ -114,6 +114,7 @@ a {
   overflow: hidden; */
 }
 .header-balance-bg {
+  overflow: hidden;
   height: 100vh;
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
