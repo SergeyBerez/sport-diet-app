@@ -1886,7 +1886,7 @@ label[for='input-param-settings'] {
   font-weight: normal;
   text-transform: none;
   letter-spacing: normal;
-  background: rgba(255, 255, 255, 0.356);
+  background: rgba(231, 230, 230, 0.363);
   font-size: 1.2rem;
 }
 .button-addCcal i,
@@ -1906,10 +1906,10 @@ label[for='input-param-settings'] {
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
-  padding: 20px 8px 20px 40px;
+  padding: 10px 8px 10px 40px;
 }
 .svg-arr-box {
-  position: absolute;
+  display: block;
   width: 30px;
   height: 30px;
   background-color: #757070;
@@ -1918,6 +1918,12 @@ label[for='input-param-settings'] {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 20px;
   -webkit-mask-position: left 10px center;
+  cursor: pointer;
+}
+.flex-input-block a {
+  width: 30px;
+  height: 30px;
+  position: absolute;
 }
 .block-info {
   margin-top: 5px;
