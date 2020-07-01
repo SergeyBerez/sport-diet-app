@@ -49,6 +49,7 @@ body {
   font-family: 'Roboto-Regular', sans-serif;
   color: #4b4b4b;
   height: 100%;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -116,12 +117,16 @@ a {
   /* display: flex; */
 }
 .header-balance-bg {
-  height: 100%;
-  /* min-height: 100vh; */
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .header-fixed {
@@ -152,7 +157,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   /* height: var(--height); */
-height: 100%;
+  height: 100%;
 }
 
 .box-balance {
