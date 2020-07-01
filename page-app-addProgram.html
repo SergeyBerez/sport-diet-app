@@ -14,20 +14,68 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="block">
-      <div class="block-overflow">
-         <div class="container">
+    <div class="block-addProgram">
+      <form action="" class="form-find-prod">
+        <div class="flex-input-block">
+          <div class="svg-arr-box"></div>
+          <input
+            class="input-search input-arr"
+            type="text"
+            placeholder="найти продукты"
+          />
+        </div>
 
-          
-         </div>
-          <div class="line-bottom"></div>
+        <button class="button-total button-addCcal">
+          Добавить калорий
+        </button>
+        <button class="button-total button-ScanCode">
+          Сканировать штрихкод
+        </button>
+      </form>
+      <!-- <div class="grey-row-line"></div> -->
+      <div class="block-info">
+        <div class="info-food">
+          <span class="span">Завтрак</span> <span class="span">Сегодня</span>
+        </div>
+
+        <p class="span">Для тебя оптимально <span>1579ccal</span></p>
+      </div>
+      
+      <div class="modal-info">
+        <p class="p">выбрать прием пищи</p>
+
+        <div class="block-meal ">
+          <div class="icon-meal"><i class="fas fa-egg"></i></div>
+          <div>
+            <p class="p">Завтрак</p>
+          </div>
+        </div>
+        <div class="block-meal">
+          <div class="icon-meal"><i class="fas fa-utensils"></i></div>
+          <div>
+            <p class="p">Обед</p>
+          </div>
+        </div>
+        <div class="block-meal">
+          <div class="icon-meal"><i class="fas fa-cookie-bite"></i></div>
+          <div>
+            <p class="p">Ужин</p>
+          </div>
+        </div>
+        <div class="block-meal">
+          <div class="icon-meal"><i class="fas fa-apple-alt"></i></div>
+          <div>
+            <p class="p">Перекусы</p>
+          </div>
         </div>
       </div>
-    
+
+      <div class="line-bottom"></div>
+    </div>
 
     <div class="menu-footer">
       <nav class="mav-menu">
-        <a href="./page-app-news.html" 
+        <a href="./page-app-news.html"
           ><i class="fas fa-newspaper"></i>
           <p class="p">новости</p></a
         >
@@ -35,7 +83,7 @@
           ><i class="fas fa-file-alt"></i>
           <p class="p">журнал</p>
         </a>
-        <a href="#"class="active-link"><i class="fas fa-plus"></i></a>
+        <a href="#" class="active-link"><i class="fas fa-plus"></i></a>
         <a href="./page-app-porgramm.html"
           ><i class="fas fa-calendar-check"></i>
           <p class="p">программы</p>

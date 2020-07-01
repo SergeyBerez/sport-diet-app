@@ -372,9 +372,8 @@ if (selectSingle) {
   }
 }
 
-window.addEventListener('load', function (e) {
- 
-  const block = document.querySelector('.block');
-  block.classList.add('block');
-  console.log(111);
-});
+// window.addEventListener('load', function (e) {
+//   const block = document.querySelector('.block');
+//   block.classList.add('block');
+//   console.log(111);
+// });
