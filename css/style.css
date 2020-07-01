@@ -117,7 +117,7 @@ a {
 }
 .header-balance-bg {
   height: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
   background-repeat: no-repeat;
   background-position: center;
