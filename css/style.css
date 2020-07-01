@@ -42,8 +42,6 @@ html {
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   font-size: 1.6rem;
@@ -53,33 +51,40 @@ body {
 * {
   box-sizing: border-box;
 }
+.block {
+  /* margin: 0 auto; */
+  width: 90%;
+  padding: 0 20px;
+ 
+ /* padding:0 20px; */
+ /* margin-right: -20px; */
+ 
+  overflow-x: hidden;
+}
 .overflow {
   overflow: hidden;
   height: 100vh;
-  /* margin-right: -20px;
-  padding: 20px;
-  overflow: hidden; */
 }
 .block-overflow {
+  /* margin: 0 auto; */
+  
   /* display: flex;
   flex-direction: column; */
-  overflow-y: scroll;
-  max-height: 100%;
-  width: 100%;
- 
-  background: rgba(253, 253, 253, 0.212);
-  /* height: 100vh;
-  overflow: auto; */
-  padding-bottom: 100px;
+  height: 90vh;
+  width: 110%;
+  overflow-x: hidden;
+  padding-bottom: 150px;
 }
-::-webkit-scrollbar {
-  width: 0px !important;
+/* ::-webkit-scrollbar {
+  width: 0 !important;
   background: transparent;
-}
-.block-overflow::-webkit-scrollbar {
-  /* width: 0px !important;
-  background: transparent; */
-}
+  display: none;
+} */
+/* .block-overflow::-webkit-scrollbar {
+  width: 0 !important;
+  background: transparent;
+  display: none;
+} */
 
 *,
 ::before,
