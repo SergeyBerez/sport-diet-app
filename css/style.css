@@ -55,16 +55,16 @@ body {
   width: 100%;
   padding-right: 40px;
   overflow-x: hidden;
+  height: 90vh;
 }
 .overflow {
   overflow: hidden;
   height: 100vh;
 }
 .block-overflow {
-  height: 100vh;
   width: 110%;
   overflow-x: hidden;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 ::-webkit-scrollbar {
   width: 0 !important;
@@ -112,8 +112,6 @@ a {
 }
 .balance-bg {
   /* display: flex; */
-  height: 100vh;
-  overflow: hidden;
 }
 .header-balance-bg {
   overflow: hidden;
@@ -961,6 +959,7 @@ svg .svg-text {
   font-size: 1.2rem;
 }
 .line-bottom {
+  margin-bottom: 80px;
   /* width: 100%;
   margin-bottom: 80px; */
 }

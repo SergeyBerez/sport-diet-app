@@ -374,6 +374,7 @@ if (selectSingle) {
 
 window.addEventListener('load', function (e) {
  
-  const block = document.querySelector('.block-overflow');
-  block.classList.add('block-overflow');
+  const block = document.querySelector('.block');
+  block.classList.add('block');
+  console.log(111);
 });
