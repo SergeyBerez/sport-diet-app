@@ -52,8 +52,8 @@ body {
   box-sizing: border-box;
 }
 .overflow {
-  overflow: hidden;
-  height: 100vh;
+  /* overflow: hidden;
+  height: 100vh; */
   /* margin-right: -20px;
   padding: 20px;
   overflow: hidden; */
