@@ -72,10 +72,9 @@ body {
 .block-scroll {
   padding-right: 20px;
   right: -20px;
-   overflow-y: scroll;
+  overflow-y: scroll;
   /* width: 110%;
   overflow-x: hidden; */
- 
 }
 .overflow {
   overflow: hidden;
@@ -1045,6 +1044,7 @@ svg .svg-text {
 .box-circle-notation {
   margin: 0 auto;
   margin-top: 20px;
+  background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
 }
 
 .block-notation {
@@ -1086,9 +1086,13 @@ svg .svg-text {
   font-weight: 700;
   color: grey;
 }
-
-.data-list {
+.wrap-data {
   width: 100%;
+  overflow-x: scroll;
+}
+.data-list {
+  min-width: 1000px;
+
   padding: 10px;
   /* color: white; */
   font-size: 1.3rem;
@@ -1100,9 +1104,13 @@ svg .svg-text {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  align-items: center;
+  /* justify-content: space-between; */
 }
-
+.data-list li {
+  white-space: nowrap;
+  margin-right: 70px;
+}
 .block-meal {
   display: -webkit-box;
   display: -ms-flexbox;
