@@ -1990,15 +1990,16 @@ label[for='input-param-settings'] {
 }
 .ul-block-weight li {
   text-align: center;
+  line-height: 20px;
   width: 100%;
   height: 20px;
 }
+.ul-block-height li:hover,
 .ul-block-weight li:hover {
-  border-bottom: 1px solid rgb(3, 247, 35);
+  background-color: rgba(20, 221, 13, 0.623);
 }
 
-.ul-block-height{
-  
+.ul-block-height {
 }
 /* .block-input-ul {
   position: relative;

@@ -4,6 +4,7 @@ document.addEventListener('touchmove', function (e) {
 window.addEventListener('load', function () {
   window.scrollTo(0, 0);
 });
+
 //== block fixed time
 const time = document.querySelector('.header-time');
 //======= for  modal  element
@@ -71,12 +72,29 @@ if (resultTotalKkal) {
 if (inpMan !== null) {
   inputsParamAntrop.forEach(elem => {
     elem.addEventListener('click', function (e) {
-      console.log(this);
       let strParam = e.target.getAttribute('name').split('-').slice(1).join('');
 
       document
         .querySelector(`.modal-data-${strParam}`)
         .parentNode.classList.toggle('show-modal');
+    });
+
+    selectHeight.addEventListener('click', function (e) {
+      inpPersonHeight.classList.remove('error');
+      inpPersonHeight.nextElementSibling.textContent = '';
+      objCcal.height = +e.target.textContent;
+      inpPersonHeight.value = `${objCcal.height} cm`;
+    });
+    selectWeight.addEventListener('click', function (e) {
+      inpPersonWeight.classList.remove('error');
+      inpPersonWeight.nextElementSibling.textContent = '';
+      objCcal.weight = +e.target.textContent;
+      inpPersonWeight.value = `${objCcal.weight} кг`;
+    });
+    selecWeightgr.addEventListener('click', function (e) {
+      // inpPersonWeight.value = e.target.textContent;
+      // objCcal.weight += +e.target.textContent;
+      // console.log(objCcal);
     });
   });
   //===============another approach
@@ -109,6 +127,7 @@ if (inpMan !== null) {
   });
   // set value birthday
   btnBirthd.addEventListener('click', function (e) {
+   console.log(inptPersonBirthday.nextElementSibling); 
     inptPersonBirthday.value = '';
     let str = inputBirthd.value.replace(
       /(\w+)-(\w+)-(\w+)/g,
@@ -129,52 +148,46 @@ if (inpMan !== null) {
 
   // set value height:
   buttonHight.addEventListener('click', function (e) {
-    inpPersonHeight.value = '';
-    inpPersonHeight.value = `${selectHeight.value} cm`;
-    objCcal.height = +selectHeight.value;
-    inpPersonHeight.classList.remove('error');
-    inpPersonHeight.nextElementSibling.textContent = '';
-    if (selectHeight.value != '') {
+    if (inpPersonHeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
     }
   });
 
   // set value weight
   buttonWeight.addEventListener('click', function (e) {
-    inpPersonWeight.value = '';
+    console.log(1);
+
     //inpPersonWeight.value = inputWeight.value;
-    inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
-    objCcal.weight = +selectWeight.value;
-    inpPersonWeight.classList.remove('error');
-    inpPersonWeight.nextElementSibling.textContent = '';
-    if (selectHeight.value != '') {
+    // inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
+    // objCcal.weight = +selectWeight.value;
+
+    if (inpPersonWeight.value != '') {
       e.target.parentElement.closest('.overlay').classList.toggle('show-modal');
     }
   });
 
-  //  ========== render  select Height
-  for (let i = 100; i < 220; i++) {
-    let li  =`<li>${i}</li>`;
-   
-   
-  //  selectHeight.innerHTML += `<li>${i}</li>`;
- selectHeight.insertAdjacentHTML('afterbegin', li);
-   }
-  // for (let i = 40; i < 170; i++) {
-  //   let op = document.createElement('option');
-  //   op.value = i;
-  //   op.textContent = i;
-  //   selectWeight.insertAdjacentElement('afterbegin', op);
-  // }
-  // let j = 100;
-  // for (let i = 0; i < 9; i++) {
-  //   let op = document.createElement('option');
+  //  ========== render li 
+  // selectHeight.addEventListener('click', function (e) {
+  //   console.log(e.target.textContent);
+  // });
 
-  //   op.value = j;
-  //   op.textContent = j;
-  //   j += 100;
-  //   selecWeightgr.insertAdjacentElement('afterbegin', op);
-  // }
+  for (let i = 100; i < 220; i++) {
+    let li = `<li>${i}</li>`;
+
+    selectHeight.insertAdjacentHTML('beforeend', li);
+  }
+  for (let i = 40; i < 170; i++) {
+    let li = `<li>${i}</li>`;
+
+    selectWeight.insertAdjacentHTML('afterbegin', li);
+  }
+  let j = 0;
+  for (let i = 0; i < 9; i++) {
+    j += 100;
+    let li = `<li>${j}</li>`;
+
+    selecWeightgr.insertAdjacentHTML('afterbegin', li);
+  }
 
   // validation   ===========checked box
   inpMan.addEventListener('click', function (e) {
