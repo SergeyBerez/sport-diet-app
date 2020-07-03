@@ -127,8 +127,6 @@ a {
   height: 100%;
   max-height: 100vh;
   overflow-y: auto;
-
-  /* display: flex; */
 }
 .header-balance-bg {
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
@@ -1042,9 +1040,12 @@ svg .svg-text {
 }
 
 .box-circle-notation {
+  max-width: 576px;
   margin: 0 auto;
   margin-top: 20px;
   background-image: url('../img/depositphotos_361720584-stock-photo-flat-lay-composition-different-fruits.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .block-notation {
@@ -1088,17 +1089,20 @@ svg .svg-text {
 }
 .wrap-data {
   width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+
   overflow-x: scroll;
 }
 .data-list {
-  min-width: 1000px;
+}
+
+.data-list {
+  margin: 0 auto;
 
   padding: 10px;
   /* color: white; */
   font-size: 1.3rem;
-}
-
-.data-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1365,6 +1369,8 @@ circle:nth-child(2n) {
 }
 
 /* ====page-profile-user */
+.block-profile {
+}
 .block-user {
   background-color: white;
   margin-top: 20px;
