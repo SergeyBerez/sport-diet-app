@@ -1992,15 +1992,18 @@ input[type='number'] {
 }
 
 .ul-bolck-select {
+  border-top: 1px solid rgb(56, 250, 7);
+  border-bottom: 1px solid rgb(3, 247, 35);
   display: block;
-  height: 50px;
+  height: 60px;
   width: 200px;
-  border: 1px solid #000;
-  overflow-x:scroll;
+
+  overflow-y: scroll;
 }
 .ul-bolck-select li {
   width: 100%;
-  border: 1px solid rgb(231, 16, 16);
+  height: 20px;
+ 
 }
 .ul-bolck-select li:hover {
   background-color: grey;
