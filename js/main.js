@@ -377,3 +377,4 @@ if (selectSingle) {
 //   block.classList.add('block');
 //   console.log(111);
 // });
+document.querySelector('[type="number"]').value = 50;

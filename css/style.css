@@ -1986,3 +1986,7 @@ label[for='input-param-settings'] {
   color: green;
   margin-right: 5px;
 }
+
+input[type='number'] {
+  height: 40px;
+}
