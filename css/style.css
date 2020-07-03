@@ -1990,3 +1990,18 @@ label[for='input-param-settings'] {
 input[type='number'] {
   height: 40px;
 }
+
+.ul-bolck-select {
+  display: block;
+  height: 50px;
+  width: 200px;
+  border: 1px solid #000;
+  overflow-x:scroll;
+}
+.ul-bolck-select li {
+  width: 100%;
+  border: 1px solid rgb(231, 16, 16);
+}
+.ul-bolck-select li:hover {
+  background-color: grey;
+}
