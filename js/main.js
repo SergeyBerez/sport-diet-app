@@ -26,7 +26,7 @@ const inpPersonWeight = document.querySelector('[name="person-weight"]');
 const inpMan = document.querySelector('#inp-man');
 const inpFemale = document.querySelector('#inp-female');
 const buttonAntrop = document.querySelector('.button-antrop a');
-//select
+//select-ul custom
 const selectHeight = document.querySelector('#input-data-height');
 const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
@@ -153,13 +153,13 @@ if (inpMan !== null) {
   });
 
   //  ========== render  select Height
-  // for (let i = 100; i < 220; i++) {
-  //   let op = document.createElement('option');
-  //   op.value = i;
-  //   op.textContent = i;
-
-  //   selectHeight.insertAdjacentElement('afterbegin', op);
-  // }
+  for (let i = 100; i < 220; i++) {
+    let li  =`<li>${i}</li>`;
+   
+   
+  //  selectHeight.innerHTML += `<li>${i}</li>`;
+ selectHeight.insertAdjacentHTML('afterbegin', li);
+   }
   // for (let i = 40; i < 170; i++) {
   //   let op = document.createElement('option');
   //   op.value = i;
