@@ -1,3 +1,9 @@
+document.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+});
+window.addEventListener('load', function () {
+  window.scrollTo(0, 0);
+});
 //== block fixed time
 const time = document.querySelector('.header-time');
 //======= for  modal  element
@@ -147,28 +153,28 @@ if (inpMan !== null) {
   });
 
   //  ========== render  select Height
-  for (let i = 100; i < 220; i++) {
-    let op = document.createElement('option');
-    op.value = i;
-    op.textContent = i;
+  // for (let i = 100; i < 220; i++) {
+  //   let op = document.createElement('option');
+  //   op.value = i;
+  //   op.textContent = i;
 
-    selectHeight.insertAdjacentElement('afterbegin', op);
-  }
-  for (let i = 40; i < 170; i++) {
-    let op = document.createElement('option');
-    op.value = i;
-    op.textContent = i;
-    selectWeight.insertAdjacentElement('afterbegin', op);
-  }
-  let j = 100;
-  for (let i = 0; i < 9; i++) {
-    let op = document.createElement('option');
+  //   selectHeight.insertAdjacentElement('afterbegin', op);
+  // }
+  // for (let i = 40; i < 170; i++) {
+  //   let op = document.createElement('option');
+  //   op.value = i;
+  //   op.textContent = i;
+  //   selectWeight.insertAdjacentElement('afterbegin', op);
+  // }
+  // let j = 100;
+  // for (let i = 0; i < 9; i++) {
+  //   let op = document.createElement('option');
 
-    op.value = j;
-    op.textContent = j;
-    j += 100;
-    selecWeightgr.insertAdjacentElement('afterbegin', op);
-  }
+  //   op.value = j;
+  //   op.textContent = j;
+  //   j += 100;
+  //   selecWeightgr.insertAdjacentElement('afterbegin', op);
+  // }
 
   // validation   ===========checked box
   inpMan.addEventListener('click', function (e) {
@@ -378,8 +384,8 @@ if (selectSingle) {
 //   console.log(111);
 // });
 
-let blcInput = document.querySelector('.block-input-ul');
-let ulBlock = document.querySelector('.ul-bolck-select');
-blcInput.addEventListener('click', function (e) {
-  ulBlock.classList.toggle('show-modal-ul');
-});
+// let blcInput = document.querySelector('.block-input-ul');
+// let ulBlock = document.querySelector('.ul-bolck-select');
+// blcInput.addEventListener('click', function (e) {
+//   ulBlock.classList.toggle('show-modal-ul');
+// });

@@ -1466,6 +1466,11 @@ circle:nth-child(2n) {
 .button-profile {
   margin: 0 auto;
 }
+.modal-data-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .modal-data-main .total-norm-kkal {
   margin: 0;
 }
@@ -1973,33 +1978,29 @@ label[for='input-param-settings'] {
   margin-right: 5px;
 }
 
-input[type='number'] {
-  height: 40px;
-}
-
-.ul-bolck-select {
-  display: none;
-  left: 20%;
-  background-color: white;
-  position: absolute;
-  margin: 0 auto;
-  border: 1px solid rgb(165, 161, 161);
-
+.ul-block-weight {
+  display: block;
+  margin-right: 30px;
+  border-top: 1px solid rgb(56, 250, 7);
+  border-bottom: 1px solid rgb(3, 247, 35);
   height: 60px;
-  width: 200px;
+  width: 30px;
   transition: 0.5s;
   overflow-y: scroll;
 }
-.ul-bolck-select li {
-  border-top: 1px solid rgb(56, 250, 7);
-  /* border-bottom: 1px solid rgb(3, 247, 35); */
+.ul-block-weight li {
+  text-align: center;
   width: 100%;
   height: 20px;
 }
-.ul-bolck-select li:hover {
-  background-color: grey;
+.ul-block-weight li:hover {
+  border-bottom: 1px solid rgb(3, 247, 35);
 }
-.block-input-ul {
+
+.ul-block-height{
+  
+}
+/* .block-input-ul {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -2007,7 +2008,7 @@ input[type='number'] {
   border-bottom: 1px solid rgba(172, 169, 169, 0.678);
   width: 100%;
   height: 30px;
-}
+} */
 
 /*====== ======style for handler js====== */
 .show-modal {
@@ -2015,7 +2016,7 @@ input[type='number'] {
   display: -ms-flexbox;
   display: flex;
 }
-.show-modal-ul{
+.show-modal-ul {
   display: block;
 }
 .error {

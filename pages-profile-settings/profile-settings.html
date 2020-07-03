@@ -139,6 +139,7 @@
           <div class="block-input">
             <label for="">дата&nbsp;рождения</label>
             <input
+              readonly
               class="input-param input-param-settings value-setting"
               data-birthday="modal-data-birthday"
               type="text"
@@ -149,7 +150,9 @@
           </div>
           <div class="block-input">
             <label for="">рост</label>
+
             <input
+              readonly
               data-height="modal-data-height"
               type="text"
               placeholder="text"
@@ -160,6 +163,7 @@
           <div class="block-input">
             <label for="">текущий&nbsp;вес</label>
             <input
+              readonly
               data-weight="modal-data-weight"
               type="text"
               name="person-weight"
@@ -168,17 +172,17 @@
             />
           </div>
 
-          <div class="block-input-ul">
+          <!-- <div class="block-input-ul">
             вес
             <ul class="ul-bolck-select">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                  </ul>
-          </div>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+            </ul>
+          </div> -->
 
           <!-- <div class="__select" data-state="">
     <div class="__select__title p" data-default="Option 0"><span>Страна</span> </div>
@@ -227,8 +231,17 @@
           <div class="modal-data modal-data-height">
             <p class="p">Рост</p>
             <div class="modal-data-main">
-              <select name="height" id="input-data-height"> </select>
-              <span class="metrics-sm">СМ</span>
+               <ul class="ul-block-weight">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+              </ul>
+                 <span class="metrics-sm">СМ</span>
+              <!-- <select name="height" id="input-data-height"> </select>
+              <span class="metrics-sm">СМ</span> -->
             </div>
             <div class="modal-data-footer box-confirm-height">
               <button class="button-form metrics-fut">ФУТЫ</button>
@@ -245,12 +258,31 @@
           <div class="modal-data modal-data-weight">
             <p class="p">Вес</p>
             <div class="modal-data-main">
-              <select name="weight" id="input-data-weight"></select>
+              <ul class="ul-block-weight">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+              </ul>
+              <ul class="ul-block-weight">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+              </ul>
               <span class="metrics-kg">кг</span>
+
+              <!-- <select name="weight" id="input-data-weight"></select>
+             
               <select name="weight" id="input-data-weight-gr"></select>
 
-              <span class="metrics-kg"> гp</span>
+              <span class="metrics-kg"> гp</span> -->
             </div>
+
             <div class="modal-data-footer box-confirm-weight">
               <button class="button-form metrics-funt">ФУНТЫ</button>
               <button class="button-form button-chancel">
