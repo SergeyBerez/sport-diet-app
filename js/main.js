@@ -377,4 +377,9 @@ if (selectSingle) {
 //   block.classList.add('block');
 //   console.log(111);
 // });
-document.querySelector('[type="number"]').value = 50;
+
+let blcInput = document.querySelector('.block-input-ul');
+let ulBlock = document.querySelector('.ul-bolck-select');
+blcInput.addEventListener('click', function (e) {
+  ulBlock.classList.toggle('show-modal-ul');
+});
