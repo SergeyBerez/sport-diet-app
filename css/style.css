@@ -505,16 +505,18 @@ label[for='input'] {
   margin-right: 30px;
   border-top: 1px solid rgb(56, 250, 7);
   border-bottom: 1px solid rgb(3, 247, 35);
-  height: 60px;
+  height: 90px;
   width: 30px;
   transition: 0.5s;
   overflow-y: scroll;
 }
 .ul-block-weight li {
   text-align: center;
-  line-height: 20px;
+
+  line-height: 30px;
   width: 100%;
-  height: 20px;
+
+  height: 30px;
 }
 .ul-block-height li:hover,
 .ul-block-weight li:hover {
@@ -1108,6 +1110,20 @@ svg .svg-text {
   display: inline-block;
   margin: 5px 5px 5px 0;
 }
+
+.circle {
+}
+circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke: rgb(155, 141, 141);
+  stroke-width: 5;
+  stroke-dasharray: 408px 408px;
+}
+circle:nth-child(2n) {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #30e73f;
+  stroke-width: 5;
+}
 .equal-gr {
   font-size: 1.3rem;
   font-weight: 700;
@@ -1261,19 +1277,7 @@ svg .svg-text {
   display: flex;
   align-items: center;
 }
-.circle {
-}
-circle {
-  fill: rgba(0, 0, 0, 0);
-  stroke: rgb(155, 141, 141);
-  stroke-width: 5;
-  stroke-dasharray: 408px 408px;
-}
-circle:nth-child(2n) {
-  fill: rgba(0, 0, 0, 0);
-  stroke: #30e73f;
-  stroke-width: 5;
-}
+
 .canvas {
   display: flex;
   justify-content: center;
@@ -2003,7 +2007,7 @@ label[for='input-param-settings'] {
   color: green;
   margin-right: 5px;
 }
-/* ====page notification */
+/* =======page notification */
 
 .list-notification li {
   display: flex;
@@ -2014,20 +2018,20 @@ label[for='input-param-settings'] {
 .list-notification li span {
   margin-left: 0;
 }
-input[type='checkbox'] {
+.checkbox {
   visibility: hidden;
 }
 label {
   cursor: pointer;
 }
-input[type='checkbox'] + label:before {
+.checkbox + label:before {
   content: '\00a0';
   display: inline-block;
   width: 20px;
   height: 20px;
   background-color: rgba(0, 128, 0, 0.788);
 }
-input[type='checkbox']:checked + label:before {
+.checkbox:checked + label:before {
   background-color: green;
   color: white;
   content: '\2713';

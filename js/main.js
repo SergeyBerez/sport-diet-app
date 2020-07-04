@@ -367,7 +367,7 @@ if (inptsValueSetting.length) {
 //     );
 //   })(curr, prev);
 // }, 0);
-
+// ======== dropdown for select
 const selectSingle = document.querySelector('.__select');
 
 if (selectSingle) {
