@@ -967,17 +967,22 @@ input[type='number'] {
 }
 
 .article {
-  padding: 20px;
+  padding: 20px 0;
 }
-
-.article p {
-  font-weight: bold;
+.article:nth-child() .article p {
+  text-transform: none;
   /* margin-bottom: 10px; */
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 
 .article span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+.link-blog {
+  margin-top: 10px;
+  display: block;
+  text-transform: uppercase;
+  color: var(--green);
 }
 .line-bottom {
   margin-bottom: 80px;
@@ -2060,6 +2065,36 @@ label {
 /* input[type='checkbox']:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 } */
+
+/* page blog */
+.box-index-title-blog {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-bars,
+.fa-search {
+  color: #302e2e;
+}
+
+.logo-blog {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #302e2e;
+  width: 30px;
+  height: 30px;
+  margin-right: 0;
+}
+.logo-title-blog {
+  color: #302e2e;
+  padding-left: 0;
+}
+.logo-title-blog p {
+  vertical-align: middle;
+  display: inline-block;
+  letter-spacing: normal;
+}
 
 /*====== ======style for handler js====== */
 .show-modal {

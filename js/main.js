@@ -66,9 +66,10 @@ let objCcal = {};
 // show ccal in diagram page-app-porgramm
 
 if (spanShowTotalCcal) {
-  let str = JSON.parse(localStorage.getItem('user')) || [];
+  // let str = JSON.parse(localStorage.getItem('user')) || [];
+  let { male, Female, birthday, height, weight } = dataLocalStorage[0];
 
-  spanShowTotalCcal.textContent = `${(str[0].weight * str[0].height) / 2}`;
+  spanShowTotalCcal.textContent = `${(height - 100) * weight}`;
 }
 
 // show and hide modal in page predRegist-anthropometry
@@ -265,10 +266,9 @@ if (spanShowSumTotalCcal) {
   // let str = JSON.parse(localStorage.getItem('user')) || [];
   let { male, Female, birthday, height, weight } = dataLocalStorage[0];
   let circle = document.querySelector('.unit-green');
-  let percent= `${(height - 100) * weight}` / 100;
+  let percent = `${(height - 100) * weight}` / 100;
   let totalCcal = `${(height - 100) * weight}`;
   for (let i = 0; i <= totalCcal; i++) {
-   
     spanShowSumTotalCcal.textContent = totalCcal;
 
     if (Number.isInteger(i / percent)) {
