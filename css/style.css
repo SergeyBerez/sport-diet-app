@@ -48,8 +48,8 @@ body {
   font-size: 1.6rem;
   font-family: 'Roboto-Regular', sans-serif;
   color: #4b4b4b;
-  height: 100%;
-  overflow: hidden;
+  /* height: 100%;
+  overflow: hidden; */
 }
 * {
   box-sizing: border-box;
@@ -645,7 +645,9 @@ svg .svg-text {
 
 .box-kkal-wrap span {
   margin-bottom: 10px;
-  line-height: 30px;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
   color: gray;
 }
 
