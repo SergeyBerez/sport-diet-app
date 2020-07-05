@@ -48,8 +48,8 @@ body {
   font-size: 1.6rem;
   font-family: 'Roboto-Regular', sans-serif;
   color: #4b4b4b;
-  /* height: 100%;
-  overflow: hidden; */
+  height: 100%;
+  overflow: hidden;
 }
 * {
   box-sizing: border-box;
@@ -72,7 +72,7 @@ body {
 .block-scroll {
   padding-right: 20px;
   right: -20px;
-  overflow-y: scroll;
+  overflow-y: auto;
   /* width: 110%;
   overflow-x: hidden; */
 }
@@ -601,41 +601,6 @@ input[type='number'] {
   height: 70%;
 }
 
-/* ------  style for circle*/
-.svg-flex {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  /* display: flex; */
-  position: relative;
-  /* height: 100%; */
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-
-  /* border: 1px solid #000; */
-}
-
-.pos-abs {
-  position: absolute;
-}
-.pos-abs p {
-  margin: 0;
-  font-weight: normal;
-}
-.progress-ring {
-  /* text-align: center; */
-  /* width: 100%;
-  height: 100%; */
-}
-svg .svg-text {
-  font-size: 3rem;
-  fill: black;
-}
-
 /* ====== */
 
 .result-totalKkal {
@@ -1070,6 +1035,7 @@ svg .svg-text {
 }
 
 .box-circle-notation {
+  display: flex;
   max-width: 576px;
   margin: 0 auto;
   margin-top: 20px;
@@ -1113,20 +1079,7 @@ svg .svg-text {
   margin: 5px 5px 5px 0;
 }
 
-.circle {
-}
-circle {
-  fill: rgba(0, 0, 0, 0);
-  stroke: rgb(155, 141, 141);
-  stroke-width: 5;
-  stroke-dasharray: 408px 408px;
-}
-circle:nth-child(2n) {
-  fill: rgba(0, 0, 0, 0);
-  stroke: #30e73f;
-  stroke-width: 5;
-}
-.equal-gr {
+.equal-nutrients {
   font-size: 1.3rem;
   font-weight: 700;
   color: grey;
@@ -1280,23 +1233,32 @@ circle:nth-child(2n) {
   align-items: center;
 }
 
+/* render circle  */
+
 .canvas {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 200px;
   position: relative;
+  margin: 0 auto;
 }
 .box-ccal-circle {
   position: absolute;
   text-align: center;
 }
-.box-ccal-circle .insert-ccal-circle {
+.sum-ccal-svg,
+.show-ccal-svg {
   display: block;
   font-size: 3rem;
   font-family: 'Roboto-Bold';
+  transition: 0.9s;
 }
-
+.sum-ccal-svg + span,
+.show-ccal-svg + span {
+  margin-top: 5px;
+  display: block;
+}
 .unit {
   fill: none;
   stroke-width: 5;
@@ -1319,6 +1281,57 @@ circle:nth-child(2n) {
   stroke-dasharray: 30 100;
   stroke-dashoffset: -50;
 }
+
+/* anoter circle */
+
+.unit-green {
+  fill: none;
+  stroke-width: 2;
+  stroke: rgb(0, 255, 0);
+  stroke-dasharray: 0 100;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: 0.9s;
+}
+/* render circle */
+/* .circle {
+}
+/* ------  animated style for circle*/
+
+.svg-flex {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  position: relative;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+svg .svg-text {
+  font-size: 3rem;
+  fill: black;
+}
+
+circle {
+  fill: rgba(0, 0, 0, 0);
+  stroke: rgb(155, 141, 141);
+  stroke-width: 5;
+  stroke-dasharray: 408px 408px;
+}
+circle:nth-child(2n) {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #30e73f;
+  stroke-width: 5;
+}
+/* end ======== render circle */
+
 .box-nutrients-program span {
   margin: 0 5px;
   vertical-align: middle;

@@ -32,10 +32,12 @@ const selectHeight = document.querySelector('#input-data-height');
 const selectWeight = document.querySelector('#input-data-weight');
 const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
-// page-app-programm  sum total ccal in svg
-const resultTotalKkal = document.querySelector('.insert-ccal-circle');
+// page-app-programm  show total ccal in svg
+const spanShowTotalCcal = document.querySelector('.show-ccal-svg');
 const btnProfile = document.querySelector('.button-profile');
+//// page-app-notasion  sum total ccal in svg
 
+const spanShowSumTotalCcal = document.querySelector('.sum-ccal-svg');
 // ==== for modal user page-app-profile
 const settingUser = document.querySelector('.fa-cog');
 const setKkal = document.querySelector('.change-kkal-link');
@@ -55,17 +57,18 @@ let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || [
     male: false,
     Female: true,
     birthday: '11:11:2000',
-    height: 100,
-    weight: 40,
+    height: 150,
+    weight: 70,
   },
 ];
 let objCcal = {};
 
 // show ccal in diagram page-app-porgramm
-if (resultTotalKkal) {
+
+if (spanShowTotalCcal) {
   let str = JSON.parse(localStorage.getItem('user')) || [];
 
-  resultTotalKkal.textContent = `${(str[0].weight * str[0].height) / 2}`;
+  spanShowTotalCcal.textContent = `${(str[0].weight * str[0].height) / 2}`;
 }
 
 // show and hide modal in page predRegist-anthropometry
@@ -127,7 +130,7 @@ if (inpMan !== null) {
   });
   // set value birthday
   btnBirthd.addEventListener('click', function (e) {
-   console.log(inptPersonBirthday.nextElementSibling); 
+    console.log(inptPersonBirthday.nextElementSibling);
     inptPersonBirthday.value = '';
     let str = inputBirthd.value.replace(
       /(\w+)-(\w+)-(\w+)/g,
@@ -166,12 +169,12 @@ if (inpMan !== null) {
     }
   });
 
-  //  ========== render li 
+  //  ========== render li
   // selectHeight.addEventListener('click', function (e) {
   //   console.log(e.target.textContent);
   // });
 
-  for (let i = 100; i < 220; i++) {
+  for (let i = 150; i < 220; i++) {
     let li = `<li>${i}</li>`;
 
     selectHeight.insertAdjacentHTML('beforeend', li);
@@ -256,36 +259,56 @@ if (setKkal) {
 }
 
 //=============== drow circle and amount kkal in circle
-let circle = document.querySelector('.circle');
 
-if (circle) {
-  let i = 0;
-  let int = setInterval(function () {
-    i += 10;
-    if (i == 100) {
-      clearInterval(int);
+// show ccal in diagram page-app-porgramm
+if (spanShowSumTotalCcal) {
+  // let str = JSON.parse(localStorage.getItem('user')) || [];
+  let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+  let circle = document.querySelector('.unit-green');
+  let percent= `${(height - 100) * weight}` / 100;
+  let totalCcal = `${(height - 100) * weight}`;
+  for (let i = 0; i <= totalCcal; i++) {
+   
+    spanShowSumTotalCcal.textContent = totalCcal;
+
+    if (Number.isInteger(i / percent)) {
+      circle.style.strokeDasharray = `${i / percent} 100`;
     }
+  }
 
-    let valEl = parseFloat(i);
-
-    valEl = (valEl * 408) / 100;
-    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
-
-    circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray: 
-    ${valEl}px 408px;" r="65" cx="-80" cy="80" />
-    <text class="svg-text" text-anchor="middle" x="80" y="80" >${
-      ((weight * height) / 1000) * i
-    }</text>
-                <text text-anchor="middle" x="80" y="100">kkal</text>
-    </svg>
-   `;
-  }, 100);
+  // spanShowSumTotalCcal.textContent += tempData;
 }
-console.log();
+
+//circle.style.strokeDasharray = `100 100`;
+
+//     ${valEl}px 408px;
+// if (circle) {
+//   let i = 0;
+//   let int = setInterval(function () {
+//     i += 10;
+//     if (i == 100) {
+//       clearInterval(int);
+//     }
+
+//     let valEl = parseFloat(i);
+
+//     valEl = (valEl * 408) / 100;
+//     let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+
+//     circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:
+//     ${valEl}px 408px;" r="65" cx="-80" cy="80" />
+//     <text class="svg-text" text-anchor="middle" x="80" y="80" >${
+//       ((weight * height) / 1000) * i
+//     }</text>
+//                 <text text-anchor="middle" x="80" y="100">kkal</text>
+//     </svg>
+//    `;
+//   }, 100);
+// }
 
 if (inptsValueSetting.length) {
-  // let str = JSON.parse(localStorage.getItem('user')) || [];
-  // console.log(inptsValueSetting);
+  let str = JSON.parse(localStorage.getItem('user')) || [];
+  console.log(inptsValueSetting);
 
   let { male, Female, birthday, height, weight } = dataLocalStorage[0];
 
