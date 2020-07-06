@@ -2112,17 +2112,24 @@ label {
   position: relative;
 }
 
-.swiper-container.swiper-container-mystyle {
+/* .swiper-container.swiper-container-mystyle {
   max-width: 620px;
-
   margin-left: 0;
+} */
+.swiper-slide .span {
+  margin-top: 20px;
+  margin-left: 30px;
 }
-
+.span > b {
+  color: black;
+  margin-right: 10px;
+}
 .card {
   margin: 0 auto;
-  width: 300px;
-  height: 300px;
+  width: 80%;
+  height: 200px;
   padding: 13px;
+  margin-bottom: 20px;
 }
 
 .series1 {
@@ -2152,11 +2159,12 @@ label {
 }
 
 .arrow-right {
-  width: 32px;
-  height: 28px;
+  width: 28px;
+  height: 32px;
   cursor: pointer;
-  background-image: url('../img/next\ \(1\).svg');
-  /* background-color: rgba(0, 0, 0, 0.438); */
+  padding: 5px;
+  background-image: url('../img/next.svg');
+  background-color: rgba(0, 0, 0, 0.438);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -2166,11 +2174,11 @@ label {
   z-index: 1;
 }
 .arrow-left {
-  width: 32px;
-  height: 28px;
+  width: 28px;
+  height: 32px;
   cursor: pointer;
-  background-image: url('../img/return\ \(1\).svg');
-  /* background-color: rgba(0, 0, 0, 0.438); */
+  background-image: url('../img/prev.svg');
+  background-color: rgba(0, 0, 0, 0.438);
   background-repeat: no-repeat;
   background-position: center;
   border: none;
