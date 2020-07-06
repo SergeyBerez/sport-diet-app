@@ -2104,18 +2104,18 @@ label {
 }
 /* ---------------slider */
 
-.slider-series {
-  display: flex;
-  /* max-width: 720px; */
+.slider-blog {
+  margin-bottom: 80px;
+  /* display: flex;
+  max-width: 720px;
   align-items: center;
   margin-bottom: 60px;
-  position: relative;
+  position: relative; */
 }
 
-/* .swiper-container.swiper-container-mystyle {
-  max-width: 620px;
-  margin-left: 0;
-} */
+.swiper-container.swiper-container-mystyle {
+  overflow: visible;
+}
 .swiper-slide .span {
   margin-top: 20px;
   margin-left: 30px;
@@ -2157,7 +2157,16 @@ label {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+}
+.swiper-pagination-bullet-active {
+ background-color: #302e2e;
+}
 .arrow-right {
   width: 28px;
   height: 32px;
@@ -2187,10 +2196,12 @@ label {
   right: 90%;
   z-index: 1;
 }
-.h3{
+.subtitle-blog {
+  text-align: left;
+  line-height: 2.5rem;
   text-transform: uppercase;
-  color:black;
-  font-size: 2rem;
+  color: black;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 /*====== ======style for handler js====== */

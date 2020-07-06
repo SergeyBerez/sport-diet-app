@@ -434,8 +434,8 @@ window.addEventListener('load', function () {
   // blcInput.addEventListener('click', function (e) {
   //   ulBlock.classList.toggle('show-modal-ul');
   // });
-
-  if (true) {
+  const slider = document.querySelector('.swiper-container');
+  if (slider) {
     var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       spaceBetween: 30,
@@ -443,8 +443,12 @@ window.addEventListener('load', function () {
         prevEl: '.arrow-right',
         nextEl: '.arrow-left',
       },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
       loop: true,
-
+      
       breakpoints: {
         540: {
           slidesPerView: 1,
