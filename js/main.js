@@ -274,20 +274,16 @@ window.addEventListener('load', function () {
 
   // show ccal in diagram page-app-porgramm
   if (spanShowSumTotalCcal) {
-    
     // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
     // let circle = document.querySelector('.unit-green');
     // let percent = `${(height - 100) * weight}` / 100;
     // let totalCcal = `${(height - 100) * weight}`;
     // for (let i = 0; i <= totalCcal; i++) {
     //   spanShowSumTotalCcal.textContent = totalCcal;
-
     //   if (Number.isInteger(i / percent)) {
     //     circle.style.strokeDasharray = `${i / percent} 100`;
     //   }
     // }
-
-    
   }
 
   //circle.style.strokeDasharray = `100 100`;
@@ -438,4 +434,22 @@ window.addEventListener('load', function () {
   // blcInput.addEventListener('click', function (e) {
   //   ulBlock.classList.toggle('show-modal-ul');
   // });
+
+  if (true) {
+    var mySwiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        prevEl: '.arrow-right',
+        nextEl: '.arrow-left',
+      },
+      loop: true,
+
+      breakpoints: {
+        540: {
+          slidesPerView: 1,
+        },
+      },
+    });
+  }
 });

@@ -1297,15 +1297,14 @@ input[type='number'] {
   stroke-dashoffset: 0;
   transform: rotate(-90deg);
   transform-origin: center;
- 
+
   animation-name: render;
-  animation-duration: 1.5s; 
+  animation-duration: 1.5s;
 }
 @keyframes render {
   0% {
     stroke-dasharray: 0 100;
   }
-  
 }
 /* render circle */
 /* .circle {
@@ -2103,7 +2102,83 @@ label {
   display: inline-block;
   letter-spacing: normal;
 }
+/* ---------------slider */
 
+.slider-series {
+  display: flex;
+  /* max-width: 720px; */
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.swiper-container.swiper-container-mystyle {
+  max-width: 620px;
+
+  margin-left: 0;
+}
+
+.card {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  padding: 13px;
+}
+
+.series1 {
+  background: url('../img/slider1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.series2 {
+  background: url('../img/slider2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.series3 {
+  background: url('../img/slider3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.series4 {
+  background: url('../img/slider4.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-right {
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  background-image: url('../img/next\ \(1\).svg');
+  /* background-color: rgba(0, 0, 0, 0.438); */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  position: absolute;
+  top: 45%;
+  left: 90%;
+  z-index: 1;
+}
+.arrow-left {
+  width: 32px;
+  height: 28px;
+  cursor: pointer;
+  background-image: url('../img/return\ \(1\).svg');
+  /* background-color: rgba(0, 0, 0, 0.438); */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  position: absolute;
+  top: 45%;
+  right: 90%;
+  z-index: 1;
+}
 /*====== ======style for handler js====== */
 .show-modal {
   display: -webkit-box;
