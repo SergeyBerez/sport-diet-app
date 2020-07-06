@@ -1293,11 +1293,19 @@ input[type='number'] {
   fill: none;
   stroke-width: 2;
   stroke: rgb(0, 255, 0);
-  stroke-dasharray: 0 100;
+  stroke-dasharray: 100 100;
   stroke-dashoffset: 0;
   transform: rotate(-90deg);
   transform-origin: center;
-  transition: 0.9s;
+ 
+  animation-name: render;
+  animation-duration: 1.5s; 
+}
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  
 }
 /* render circle */
 /* .circle {
