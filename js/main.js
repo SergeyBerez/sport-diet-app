@@ -3,6 +3,12 @@ document.addEventListener('touchmove', function (e) {
 });
 window.addEventListener('load', function () {
   window.scrollTo(0, 0);
+  // == activ tab page add workout
+  const blockIcon = document.querySelector('.list-choose-workout');
+  const iconCheck = document.querySelectorAll('.icon-active');
+  const dataEqualWorkuot = document.querySelectorAll(
+    '.item-choose-workout span ',
+  );
 
   //== block fixed time
   const time = document.querySelector('.header-time');
@@ -73,7 +79,7 @@ window.addEventListener('load', function () {
     spanShowTotalCcal.textContent = `${(height - 100) * weight}`;
   }
 
-  // show and hide modal in page predRegist-anthropometry
+  //=====handle li and set value in the page predRegist-anthropometry
   if (inpMan !== null) {
     inputsParamAntrop.forEach(elem => {
       elem.addEventListener('click', function (e) {
@@ -181,7 +187,7 @@ window.addEventListener('load', function () {
       }
     });
 
-    //  ========== render li
+    //  ========== render li in modal window
     // selectHeight.addEventListener('click', function (e) {
     //   console.log(e.target.textContent);
     // });
@@ -214,7 +220,7 @@ window.addEventListener('load', function () {
       objCcal.male = false;
     });
 
-    // ======calculate  user kkcal day  // ang go next page
+    // ======calculate  user kkcal day set local storage  // ang go next page
     if (buttonAntrop) {
       buttonAntrop.addEventListener('click', function (e) {
         if (!inpMan.checked && !inpFemale.checked) {
@@ -330,73 +336,6 @@ window.addEventListener('load', function () {
     });
   }
 
-  //
-  // var dataset = [
-  //   {
-  //     value: 5,
-  //     color: '#dc3912',
-  //   },
-  //   {
-  //     value: 40,
-  //     color: '#ff9900',
-  //   },
-  //   {
-  //     value: 30,
-  //     color: '#109618',
-  //   },
-  //   {
-  //     value: 25,
-  //     color: '#990099',
-  //   },
-  // ];
-
-  // var maxValue = 25;
-  // var container = document.querySelector('.container-svg');
-
-  // var addSector = function (data, startAngle, collapse) {
-  //   var sectorDeg = 3.6 * data.value;
-  //   var skewDeg = 90 + sectorDeg;
-  //   var rotateDeg = startAngle;
-  //   if (collapse) {
-  //     skewDeg++;
-  //   }
-  //   let sector = document.querySelector('.sector');
-
-  //   sector.style.background = data.color;
-  //   sector.style.transform ='rotate(' + rotateDeg + 'deg) skewY(' + skewDeg + 'deg)';
-  //   var sector = $('<div>', {
-  //     class: 'sector',
-  //   }).css({
-  //     background: data.color,
-  //     transform:
-  //   });
-  //   container.append(sector);
-
-  //   return startAngle + sectorDeg;
-  // };
-
-  // dataset.reduce(function (prev, curr) {
-  //   return (function addPart(data, angle) {
-  //     if (data.value <= maxValue) {
-  //       return addSector(data, angle, false);
-  //     }
-
-  //     return addPart(
-  //       {
-  //         value: data.value - maxValue,
-  //         color: data.color,
-  //       },
-  //       addSector(
-  //         {
-  //           value: maxValue,
-  //           color: data.color,
-  //         },
-  //         angle,
-  //         true,
-  //       ),
-  //     );
-  //   })(curr, prev);
-  // }, 0);
   // ======== dropdown for select
   const selectSingle = document.querySelector('.__select');
 
@@ -423,11 +362,16 @@ window.addEventListener('load', function () {
     }
   }
 
-  // window.addEventListener('load', function (e) {
-  //   const block = document.querySelector('.block');
-  //   block.classList.add('block');
-  //   console.log(111);
-  // });
+  // check icon in page workout
+  blockIcon.addEventListener('click', function (e) {
+    for (const elem of iconCheck) {
+      elem.classList.remove('active-blue');
+    }
+    if (e.target.tagName == 'I') {
+   
+      e.target.closest('div').classList.add('active-blue');
+    }
+  });
 
   // let blcInput = document.querySelector('.block-input-ul');
   // let ulBlock = document.querySelector('.ul-bolck-select');
@@ -448,7 +392,7 @@ window.addEventListener('load', function () {
         type: 'bullets',
       },
       loop: true,
-      
+
       breakpoints: {
         540: {
           slidesPerView: 1,

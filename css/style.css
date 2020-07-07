@@ -940,7 +940,7 @@ input[type='number'] {
   padding: 20px 0;
   font-weight: 600;
 }
-.header-menu-title .p{
+.header-menu-title .p {
   margin-bottom: 0;
 }
 .header-menu-title .span {
@@ -1152,7 +1152,7 @@ input[type='number'] {
   width: 30px;
   height: 30px;
   color: #42a316;
-  padding: 5px;
+
   border-radius: 50%;
   border: 1px solid #42a316;
 }
@@ -2123,7 +2123,6 @@ label {
   /* overflow: visible; */
   /* margin-bottom: 50px; */
   height: 300px;
-  
 }
 .swiper-slide .span {
   margin-top: 20px;
@@ -2213,6 +2212,54 @@ label {
   font-size: 1.8rem;
   font-weight: 900;
 }
+
+/* ====page add workout */
+.list-choose-workout {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.item-choose-workout {
+  text-align: center;
+}
+.item-choose-workout span {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: gray;
+}
+/* .item-choose-workout:hover span {
+  color: rgba(56, 56, 246, 0.801);
+} */
+.icon-meal.icon-active {
+  cursor: pointer;
+  color: gray;
+  border: 1px solid gray;
+  margin: 0 auto;
+}
+.icon-active i:hover {
+  color: rgba(56, 56, 246, 0.801);
+}
+.icon-meal i {
+  line-height: 30px;
+}
+.form-set-params-workout {
+  margin-top: 30px;
+}
+.block-input.block-set-params {
+  margin-top: 30px;
+}
+.block-set-params :nth-of-type(1) {
+  text-transform: uppercase;
+  color: gray;
+}
+.icon-active.active-blue {
+  background-color: rgba(56, 56, 246, 0.801);
+  color: white;
+}
+.item-choose-workout .blue {
+  color: rgba(56, 56, 246, 0.801);
+}
+
 /*====== ======style for handler js====== */
 .show-modal {
   display: -webkit-box;
