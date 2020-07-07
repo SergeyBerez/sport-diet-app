@@ -32,7 +32,7 @@
 :root {
   --green: #1b8506;
   --font-color: #4b4b4b;
-  --height: 85vh;
+  --height: 90vh;
 }
 
 html {
@@ -70,6 +70,7 @@ body {
   height: var(--height);
 }
 .block-scroll {
+  max-height: 100vh;
   padding-right: 20px;
   right: -20px;
   overflow-y: auto;
@@ -2259,17 +2260,24 @@ label {
 .item-choose-workout .blue {
   color: rgba(56, 56, 246, 0.801);
 }
-/*  page list add workout */
-.list-choose-workout.list-workouts {
-  display: block;
-}
+/* === page list add workout */
+
 .item-workouts {
-  margin-top: 30px;
+  margin: 20px 0;
+  /* margin-top: 30px;
   display: flex;
-  align-items: center;
+  align-items: center; */
   /* justify-content: space-between; */
 }
-.item-workouts i
+.item-workouts i {
+  
+  min-width: 20px;
+  color: rgba(56, 56, 246, 0.801);
+}
+.item-workouts span {
+  margin-left: 10px;
+}
+
 /*====== ======style for handler js====== */
 .show-modal {
   display: -webkit-box;
