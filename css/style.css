@@ -2111,7 +2111,7 @@ label {
 /* ---------------slider */
 
 .slider-blog {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   /* display: flex;
   max-width: 720px;
   align-items: center;
@@ -2120,7 +2120,10 @@ label {
 }
 
 .swiper-container.swiper-container-mystyle {
-  overflow: visible;
+  /* overflow: visible; */
+  /* margin-bottom: 50px; */
+  height: 300px;
+  
 }
 .swiper-slide .span {
   margin-top: 20px;
@@ -2166,9 +2169,9 @@ label {
 .swiper-container-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-  bottom: -30px;
+  /* bottom: -30px;
   left: 0;
-  width: 100%;
+  width: 100%; */
 }
 .swiper-pagination-bullet-active {
   background-color: #302e2e;
