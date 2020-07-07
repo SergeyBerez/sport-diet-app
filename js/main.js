@@ -363,22 +363,23 @@ window.addEventListener('load', function () {
   }
 
   // check icon in page workout
-  blockIcon.addEventListener('click', function (e) {
-    for (const elem of iconCheck) {
-      elem.classList.remove('active-blue');
-    }
-    if (e.target.tagName == 'I') {
+  if (blockIcon){ blockIcon.addEventListener('click', function (e) {
+                    for (const elem of iconCheck) {
+                      elem.classList.remove('active-blue');
+                    }
+                    if (e.target.tagName == 'I') {
+                      e.target.closest('div').classList.add('active-blue');
+                    }
+                  });
+}
    
-      e.target.closest('div').classList.add('active-blue');
-    }
-  });
-
   // let blcInput = document.querySelector('.block-input-ul');
   // let ulBlock = document.querySelector('.ul-bolck-select');
   // blcInput.addEventListener('click', function (e) {
   //   ulBlock.classList.toggle('show-modal-ul');
   // });
   const slider = document.querySelector('.swiper-container');
+  console.log(slider);
   if (slider) {
     var mySwiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
