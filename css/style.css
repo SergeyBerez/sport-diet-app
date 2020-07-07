@@ -2259,7 +2259,17 @@ label {
 .item-choose-workout .blue {
   color: rgba(56, 56, 246, 0.801);
 }
-
+/*  page list add workout */
+.list-choose-workout.list-workouts {
+  display: block;
+}
+.item-workouts {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.item-workouts i
 /*====== ======style for handler js====== */
 .show-modal {
   display: -webkit-box;
