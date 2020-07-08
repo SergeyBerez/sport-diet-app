@@ -595,7 +595,7 @@ input[type='number'] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 }
 
 .totalKkal-title {
@@ -699,7 +699,7 @@ input[type='number'] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: var(--height);
+  height: 85vh;
 }
 
 .box-index-title {

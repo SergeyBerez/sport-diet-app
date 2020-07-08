@@ -53,8 +53,6 @@ window.addEventListener('load', function () {
   const inptsValueSetting = document.querySelectorAll('.value-setting');
   const selectContry = document.querySelector('#select-country');
 
-  
-
   //  =====handlers inpunts from page anthropometry
   let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || [
     {
@@ -278,16 +276,16 @@ window.addEventListener('load', function () {
 
   // show ccal in diagram page-app-porgramm
   if (spanShowSumTotalCcal) {
-    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
-    // let circle = document.querySelector('.unit-green');
-    // let percent = `${(height - 100) * weight}` / 100;
-    // let totalCcal = `${(height - 100) * weight}`;
-    // for (let i = 0; i <= totalCcal; i++) {
-    //   spanShowSumTotalCcal.textContent = totalCcal;
-    //   if (Number.isInteger(i / percent)) {
-    //     circle.style.strokeDasharray = `${i / percent} 100`;
-    //   }
-    // }
+    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    let circle = document.querySelector('.unit-green');
+    let percent = `${(height - 100) * weight}` / 100;
+    let totalCcal = `${(height - 100) * weight}`;
+    for (let i = 0; i <= totalCcal; i++) {
+      spanShowSumTotalCcal.textContent = totalCcal;
+      if (Number.isInteger(i / percent)) {
+        circle.style.strokeDasharray = `${i / percent} 100`;
+      }
+    }
   }
 
   //circle.style.strokeDasharray = `100 100`;
@@ -318,10 +316,11 @@ window.addEventListener('load', function () {
   // }
 
   if (inptsValueSetting.length) {
-    let str = JSON.parse(localStorage.getItem('user')) || [];
-    console.log(inptsValueSetting);
+    // let str = JSON.parse(localStorage.getItem('user')) || [];
+    // console.log(inptsValueSetting);
 
     let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    console.log(dataLocalStorage[0]);
 
     inpMan.checked = male;
     inpFemale.checked = Female;
