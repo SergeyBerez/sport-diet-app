@@ -1,8 +1,8 @@
-document.addEventListener('touchmove', function (e) {
-  e.preventDefault();
-});
+// document.addEventListener('touchmove', function (e) {
+//   e.preventDefault();
+// });
 window.addEventListener('load', function () {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   // == activ tab page add workout
   const blockIcon = document.querySelector('.list-choose-workout');
   const iconCheck = document.querySelectorAll('.icon-active');
@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
   );
 
   //== block fixed time
-  const time = document.querySelector('.header-time');
+  // const time = document.querySelector('.header-time');
   //======= for  modal  element
   const btnChancelAll = document.querySelectorAll('.button-chancel');
   const btnBirthd = document.querySelector('.button-birthday');
@@ -53,11 +53,9 @@ window.addEventListener('load', function () {
   const inptsValueSetting = document.querySelectorAll('.value-setting');
   const selectContry = document.querySelector('#select-country');
 
-  // setInterval(function () {
-  //   time.textContent = new Date().toLocaleTimeString();
-  // }, 1000);
+  
 
-  //  handlers inpunts from page anthropometry
+  //  =====handlers inpunts from page anthropometry
   let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || [
     {
       id: 0,
