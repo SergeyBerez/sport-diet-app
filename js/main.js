@@ -54,23 +54,21 @@ window.addEventListener('load', function () {
   const selectContry = document.querySelector('#select-country');
 
   //  =====handlers inpunts from page anthropometry
-  let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || [
-    {
-      id: 0,
-      male: false,
-      Female: true,
-      birthday: '11:11:2000',
-      height: 150,
-      weight: 70,
-    },
-  ];
+  let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || {};
+
+  let male = dataLocalStorage.male || false;
+  let Female = dataLocalStorage.Female || false;
+  let birthday = dataLocalStorage?.birthday || '';
+  let height = dataLocalStorage?.height || '';
+  let weight = dataLocalStorage?.weight || '';
+  // let { male, Female, birthday, height, weight } = dataLocalStorage;
   let objCcal = {};
 
   // show ccal in diagram page-app-porgramm
 
   if (spanShowTotalCcal) {
     // let str = JSON.parse(localStorage.getItem('user')) || [];
-    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
 
     spanShowTotalCcal.textContent = `${(height - 100) * weight}`;
   }
@@ -208,18 +206,26 @@ window.addEventListener('load', function () {
 
     // validation   ===========checked box
     inpMan.addEventListener('click', function (e) {
-      objCcal.male = true;
-      objCcal.Female = false;
+      male = true;
+      Female = false;
     });
     inpFemale.addEventListener('click', function (e) {
-      objCcal.Female = true;
-      objCcal.male = false;
+      Female = true;
+      male = false;
     });
-
+    inpMan.checked = male;
+    inpFemale.checked = Female;
+    inptPersonBirthday.value = birthday;
+    inpPersonHeight.value = height;
+    inpPersonWeight.value = weight;
     // ======calculate  user kkcal day set local storage  // ang go next page
     if (buttonAntrop) {
       buttonAntrop.addEventListener('click', function (e) {
+        inpMan.checked = male;
+        inpFemale.checked = Female;
+
         if (!inpMan.checked && !inpFemale.checked) {
+          console.log(11111);
           e.preventDefault();
           inpMan.addEventListener('click', function (e) {
             objCcal.male = true;
@@ -255,7 +261,9 @@ window.addEventListener('load', function () {
           }
         });
 
-        dataLocalStorage.push(objCcal);
+        Object.assign(dataLocalStorage, objCcal);
+       
+        
         localStorage.setItem('user', JSON.stringify(dataLocalStorage));
       });
     }
@@ -276,7 +284,7 @@ window.addEventListener('load', function () {
 
   // show ccal in diagram page-app-porgramm
   if (spanShowSumTotalCcal) {
-    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
     let circle = document.querySelector('.unit-green');
     let percent = `${(height - 100) * weight}` / 100;
     let totalCcal = `${(height - 100) * weight}`;
@@ -319,8 +327,7 @@ window.addEventListener('load', function () {
     // let str = JSON.parse(localStorage.getItem('user')) || [];
     // console.log(inptsValueSetting);
 
-    let { male, Female, birthday, height, weight } = dataLocalStorage[0];
-    console.log(dataLocalStorage[0]);
+    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
 
     inpMan.checked = male;
     inpFemale.checked = Female;
