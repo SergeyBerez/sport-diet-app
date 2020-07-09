@@ -23,6 +23,7 @@ window.addEventListener('load', function () {
   const inputWeight = document.querySelector('.input-data-weight');
 
   // ===== 3 inpunts from page anthropometry-predRegist
+  const formParam = document.querySelector('.form-param');
   const inputsParamAntrop = document.querySelectorAll('.input-param');
 
   const inptPersonBirthday = document.querySelector(
@@ -75,7 +76,41 @@ window.addEventListener('load', function () {
 
   //=====handle li and set value in the page predRegist-anthropometry
   if (inpMan !== null) {
+    selectHeight.addEventListener('click', function (e) {
+      inpPersonHeight.classList.remove('error');
+      inpPersonHeight.nextElementSibling.textContent = '';
+      objCcal.height = +e.target.textContent;
+
+      for (const elem of selectHeight.querySelectorAll('li')) {
+        elem.style.background = '';
+      }
+
+      e.target.style.background = 'green';
+      inpPersonHeight.value = `${objCcal.height} cm`;
+    });
+    selectWeight.addEventListener('click', function (e) {
+      inpPersonWeight.classList.remove('error');
+      inpPersonWeight.nextElementSibling.textContent = '';
+      objCcal.weight = +e.target.textContent;
+
+      for (const elem of selectWeight.querySelectorAll('li')) {
+        elem.style.background = '';
+      }
+
+      e.target.style.background = 'green';
+
+      inpPersonWeight.value = `${objCcal.weight} кг`;
+    });
+    selecWeightgr.addEventListener('click', function (e) {
+      // inpPersonWeight.value = e.target.textContent;
+      // objCcal.weight += +e.target.textContent;
+      // console.log(objCcal);
+    });
+
+    //  ------open and hide modal overlay
+
     inputsParamAntrop.forEach(elem => {
+      console.log(elem);
       elem.addEventListener('click', function (e) {
         let strParam = e.target
           .getAttribute('name')
@@ -86,24 +121,6 @@ window.addEventListener('load', function () {
         document
           .querySelector(`.modal-data-${strParam}`)
           .parentNode.classList.toggle('show-modal');
-      });
-
-      selectHeight.addEventListener('click', function (e) {
-        inpPersonHeight.classList.remove('error');
-        inpPersonHeight.nextElementSibling.textContent = '';
-        objCcal.height = +e.target.textContent;
-        inpPersonHeight.value = `${objCcal.height} cm`;
-      });
-      selectWeight.addEventListener('click', function (e) {
-        inpPersonWeight.classList.remove('error');
-        inpPersonWeight.nextElementSibling.textContent = '';
-        objCcal.weight = +e.target.textContent;
-        inpPersonWeight.value = `${objCcal.weight} кг`;
-      });
-      selecWeightgr.addEventListener('click', function (e) {
-        // inpPersonWeight.value = e.target.textContent;
-        // objCcal.weight += +e.target.textContent;
-        // console.log(objCcal);
       });
     });
     //===============another approach
@@ -262,8 +279,7 @@ window.addEventListener('load', function () {
         });
 
         Object.assign(dataLocalStorage, objCcal);
-       
-        
+
         localStorage.setItem('user', JSON.stringify(dataLocalStorage));
       });
     }
