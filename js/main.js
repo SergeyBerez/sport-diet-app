@@ -17,7 +17,13 @@ window.addEventListener('load', function () {
   const btnBirthd = document.querySelector('.button-birthday');
   const buttonHight = document.querySelector('.button-height');
   const buttonWeight = document.querySelector('.button-weight');
-  // inputs modal
+
+  // inputs modal andselect-ul custom
+  const selectHeight = document.querySelector('#input-data-height');
+  const selectWeight = document.querySelector('#input-data-weight');
+  const selecWeightgr = document.querySelector('#input-data-weight-gr');
+  const metricsFut = document.querySelector('.metrics-fut');
+  const metricsCm = document.querySelector('.metrics-sm');
   const inputBirthd = document.querySelector('.input-data-birthday');
   const inputHeight = document.querySelector('.input-data-height');
   const inputWeight = document.querySelector('.input-data-weight');
@@ -35,10 +41,6 @@ window.addEventListener('load', function () {
   const inpMan = document.querySelector('#inp-man');
   const inpFemale = document.querySelector('#inp-female');
   const buttonAntrop = document.querySelector('.button-antrop a');
-  //select-ul custom
-  const selectHeight = document.querySelector('#input-data-height');
-  const selectWeight = document.querySelector('#input-data-weight');
-  const selecWeightgr = document.querySelector('#input-data-weight-gr');
 
   // page-app-programm  show total ccal in svg
   const spanShowTotalCcal = document.querySelector('.show-ccal-svg');
@@ -76,41 +78,8 @@ window.addEventListener('load', function () {
 
   //=====handle li and set value in the page predRegist-anthropometry
   if (inpMan !== null) {
-    selectHeight.addEventListener('click', function (e) {
-      inpPersonHeight.classList.remove('error');
-      inpPersonHeight.nextElementSibling.textContent = '';
-      objCcal.height = +e.target.textContent;
-
-      for (const elem of selectHeight.querySelectorAll('li')) {
-        elem.style.background = '';
-      }
-
-      e.target.style.background = 'green';
-      inpPersonHeight.value = `${objCcal.height} cm`;
-    });
-    selectWeight.addEventListener('click', function (e) {
-      inpPersonWeight.classList.remove('error');
-      inpPersonWeight.nextElementSibling.textContent = '';
-      objCcal.weight = +e.target.textContent;
-
-      for (const elem of selectWeight.querySelectorAll('li')) {
-        elem.style.background = '';
-      }
-
-      e.target.style.background = 'green';
-
-      inpPersonWeight.value = `${objCcal.weight} кг`;
-    });
-    selecWeightgr.addEventListener('click', function (e) {
-      // inpPersonWeight.value = e.target.textContent;
-      // objCcal.weight += +e.target.textContent;
-      // console.log(objCcal);
-    });
-
-    //  ------open and hide modal overlay
-
+    //  ------open and hide modal overlay when click on input
     inputsParamAntrop.forEach(elem => {
-      console.log(elem);
       elem.addEventListener('click', function (e) {
         let strParam = e.target
           .getAttribute('name')
@@ -122,6 +91,54 @@ window.addEventListener('load', function () {
           .querySelector(`.modal-data-${strParam}`)
           .parentNode.classList.toggle('show-modal');
       });
+    });
+
+    // click select on height in modal
+    selectHeight.addEventListener('click', function (e) {
+      inpPersonHeight.classList.remove('error');
+      inpPersonHeight.nextElementSibling.textContent = '';
+      objCcal.height = +e.target.textContent;
+
+      for (const elem of selectHeight.querySelectorAll('li')) {
+        elem.style.background = '';
+      }
+
+      e.target.style.background = 'green';
+      inpPersonHeight.value = `${objCcal.height}`;
+    });
+
+    // click select on Weight in modal
+    selectWeight.addEventListener('click', function (e) {
+      inpPersonWeight.classList.remove('error');
+      inpPersonWeight.nextElementSibling.textContent = '';
+      objCcal.weight = +e.target.textContent;
+
+      for (const elem of selectWeight.querySelectorAll('li')) {
+        elem.style.background = '';
+      }
+      e.target.style.background = 'green';
+      inpPersonWeight.value = `${objCcal.weight} кг`;
+    });
+
+    selecWeightgr.addEventListener('click', function (e) {
+      console.log(11);
+      for (const elem of selecWeightgr.querySelectorAll('li')) {
+        elem.style.background = '';
+      }
+      e.target.style.background = 'green';
+      // inpPersonWeight.value = e.target.textContent;
+      // objCcal.weight += +e.target.textContent;
+      // console.log(objCcal);
+    });
+
+    metricsFut.addEventListener('click', function (e) {
+      if (metricsCm.textContent == 'СМ') {
+        metricsCm.textContent = 'Fut';
+        renderFut();
+      } else {
+        metricsCm.textContent = 'СМ';
+        renderCm();
+      }
     });
     //===============another approach
     // inptPersonBirthday.addEventListener('click', function (e) {
@@ -145,7 +162,7 @@ window.addEventListener('load', function () {
     // });
 
     // =======handlers modal inpunt
-    //close  modal
+    //---------close  modal
     btnChancelAll.forEach(element => {
       element.addEventListener('click', function (e) {
         e.target.closest('.overlay').classList.toggle('show-modal');
@@ -185,8 +202,6 @@ window.addEventListener('load', function () {
 
     // set value weight
     buttonWeight.addEventListener('click', function (e) {
-      console.log(1);
-
       //inpPersonWeight.value = inputWeight.value;
       // inpPersonWeight.value = `${selectWeight.value}.${selecWeightgr.value} kg`;
       // objCcal.weight = +selectWeight.value;
@@ -202,12 +217,30 @@ window.addEventListener('load', function () {
     // selectHeight.addEventListener('click', function (e) {
     //   console.log(e.target.textContent);
     // });
+    function renderCm() {
+      selectHeight.textContent = '';
+       metricsFut.textContent = 'Fut';
+      for (let i = 150; i < 220; i++) {
+        let li = `<li>${i}</li>`;
 
-    for (let i = 150; i < 220; i++) {
-      let li = `<li>${i}</li>`;
-
-      selectHeight.insertAdjacentHTML('beforeend', li);
+        selectHeight.insertAdjacentHTML('beforeend', li);
+      }
     }
+    renderCm();
+
+    function renderFut(arguments) {
+      let h = 3.9;
+       metricsFut.textContent = 'Cм';
+      selectHeight.textContent = '';
+      for (let i = 0; i < 36; i++) {
+        h += 0.1;
+        console.log(h.toFixed(1));
+        let li = `<li>${h.toFixed(1)}</li>`;
+
+        selectHeight.insertAdjacentHTML('beforeend', li);
+      }
+    }
+
     for (let i = 40; i < 170; i++) {
       let li = `<li>${i}</li>`;
 
