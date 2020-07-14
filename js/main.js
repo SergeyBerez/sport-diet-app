@@ -32,9 +32,7 @@ window.addEventListener('load', function () {
   const formParam = document.querySelector('.form-param');
   const inputsParamAntrop = document.querySelectorAll('.input-param');
 
-  const inptPersonBirthday = document.querySelector(
-    '[ name="person-birthday"]',
-  );
+  const inptPersonBirthday = document.querySelector('[name="person-birthday"]');
   const inpPersonHeight = document.querySelector('[name="person-height"]');
   const inpPersonWeight = document.querySelector('[name="person-weight"]');
   // ===============check box
@@ -57,23 +55,24 @@ window.addEventListener('load', function () {
   const selectContry = document.querySelector('#select-country');
 
   //  =====handlers inpunts from page anthropometry
-  let dataLocalStorage = JSON.parse(localStorage.getItem('user')) || {};
+  let objCcal = getLocalStorage();
+  console.log(objCcal);
 
-  let male = dataLocalStorage.male || false;
-  let Female = dataLocalStorage.Female || false;
-  let birthday = dataLocalStorage?.birthday || '';
-  let height = dataLocalStorage?.height || '';
-  let weight = dataLocalStorage?.weight || '';
-  // let { male, Female, birthday, height, weight } = dataLocalStorage;
-  let objCcal = {};
+  // let male = objCcal.male || false;
+  // let Female = objCcal.Female || false;
+  // let birthday = objCcal.birthday || '';
+  // let height = objCcal.height || '';
+  // let weight = objCcal.weight || '';
+
+  let { male, Female, birthday, height, weight } = objCcal;
 
   // show ccal in diagram page-app-porgramm
 
   if (spanShowTotalCcal) {
     // let str = JSON.parse(localStorage.getItem('user')) || [];
-    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    // let { male, Female, birthday, height, weight } = objCcal[0];
 
-    spanShowTotalCcal.textContent = `${(height - 100) * weight}`;
+    spanShowTotalCcal.textContent = `${weight * 30}`;
   }
 
   //=====handle li and set value in the page predRegist-anthropometry
@@ -104,7 +103,7 @@ window.addEventListener('load', function () {
       }
 
       e.target.style.background = 'green';
-      inpPersonHeight.value = `${objCcal.height}`;
+      inpPersonHeight.value = `${objCcal.height} ${metricsCm.textContent}`;
     });
 
     // click select on Weight in modal
@@ -180,8 +179,8 @@ window.addEventListener('load', function () {
       );
       inptPersonBirthday.value = str;
       inptPersonBirthday.classList.remove('error');
-      let id = new Date().getTime();
-      objCcal.id = id;
+      let date = new Date().getTime();
+      objCcal.date = date;
       objCcal.birthday = str;
       inptPersonBirthday.nextElementSibling.textContent = '';
       if (inptPersonBirthday.value != '') {
@@ -219,7 +218,7 @@ window.addEventListener('load', function () {
     // });
     function renderCm() {
       selectHeight.textContent = '';
-       metricsFut.textContent = 'Fut';
+      metricsFut.textContent = 'Fut';
       for (let i = 150; i < 220; i++) {
         let li = `<li>${i}</li>`;
 
@@ -230,7 +229,7 @@ window.addEventListener('load', function () {
 
     function renderFut(arguments) {
       let h = 3.9;
-       metricsFut.textContent = 'Cм';
+      metricsFut.textContent = 'Cм';
       selectHeight.textContent = '';
       for (let i = 0; i < 36; i++) {
         h += 0.1;
@@ -254,44 +253,46 @@ window.addEventListener('load', function () {
       selecWeightgr.insertAdjacentHTML('afterbegin', li);
     }
 
-    // validation   ===========checked box
+    // validation   ===========checked box add obj male femail
     inpMan.addEventListener('click', function (e) {
       male = true;
       Female = false;
+      objCcal.male = true;
+      if (!inpFemale.checked) {
+        objCcal.Female = false;
+        inpFemale.nextElementSibling.classList.remove('error-icon');
+      }
     });
     inpFemale.addEventListener('click', function (e) {
       Female = true;
       male = false;
+
+      objCcal.Female = true;
+      if (!inpMan.checked) {
+        objCcal.male = false;
+        inpMan.nextElementSibling.classList.remove('error-icon');
+      }
     });
-    inpMan.checked = male;
-    inpFemale.checked = Female;
-    inptPersonBirthday.value = birthday;
-    inpPersonHeight.value = height;
-    inpPersonWeight.value = weight;
+
     // ======calculate  user kkcal day set local storage  // ang go next page
     if (buttonAntrop) {
+      function renderUserData() {
+        if (Object.keys(objCcal).length != 0) {
+          inpMan.checked = objCcal.male;
+          inpFemale.checked = objCcal.Female;
+          inptPersonBirthday.value = objCcal.birthday;
+          inpPersonHeight.value = objCcal.height;
+          inpPersonWeight.value = objCcal.weight;
+        }
+      }
+      renderUserData();
+
       buttonAntrop.addEventListener('click', function (e) {
         inpMan.checked = male;
         inpFemale.checked = Female;
 
         if (!inpMan.checked && !inpFemale.checked) {
-          console.log(11111);
           e.preventDefault();
-          inpMan.addEventListener('click', function (e) {
-            objCcal.male = true;
-            if (!inpFemale.checked) {
-              objCcal.Female = false;
-              inpFemale.nextElementSibling.classList.remove('error-icon');
-            }
-          });
-          inpFemale.addEventListener('click', function (e) {
-            objCcal.Female = true;
-            if (!inpMan.checked) {
-              objCcal.male = false;
-              inpMan.nextElementSibling.classList.remove('error-icon');
-            }
-          });
-
           if (!inpMan.checked) {
             inpMan.nextElementSibling.classList.add('error-icon');
           }
@@ -299,6 +300,25 @@ window.addEventListener('load', function () {
             inpFemale.nextElementSibling.classList.add('error-icon');
           }
         }
+        // inpMan.addEventListener('click', function (e) {
+        //   console.log(1);
+        //   objCcal.male = true;
+        //   if (!inpFemale.checked) {
+        //     objCcal.Female = false;
+        //     inpFemale.nextElementSibling.classList.remove('error-icon');
+        //   }
+        // });
+        // inpFemale.addEventListener('click', function (e) {
+        //   console.log(2);
+        //   objCcal.Female = true;
+        //   if (!inpMan.checked) {
+        //     objCcal.male = false;
+        //     inpMan.nextElementSibling.classList.remove('error-icon');
+        //   }
+        // });
+
+        let err = 0;
+
         inputsParamAntrop.forEach(elem => {
           if (elem.value == '') {
             e.preventDefault();
@@ -308,12 +328,14 @@ window.addEventListener('load', function () {
           } else {
             elem.classList.remove('error');
             elem.nextElementSibling.textContent = '';
+            err += 1;
           }
         });
+        if (err == 3) {
+          e.preventDefault();
 
-        Object.assign(dataLocalStorage, objCcal);
-
-        localStorage.setItem('user', JSON.stringify(dataLocalStorage));
+          createUserParam(objCcal);
+        }
       });
     }
 
@@ -333,12 +355,13 @@ window.addEventListener('load', function () {
 
   // show ccal in diagram page-app-porgramm
   if (spanShowSumTotalCcal) {
-    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    // let { male, Female, birthday, height, weight } = objCcal[0];
     let circle = document.querySelector('.unit-green');
-    let percent = `${(height - 100) * weight}` / 100;
-    let totalCcal = `${(height - 100) * weight}`;
+    let percent = `${ weight*30}` / 100;
+    let totalCcal = `${weight * 30}`;
+    spanShowSumTotalCcal.textContent = 0;
     for (let i = 0; i <= totalCcal; i++) {
-      spanShowSumTotalCcal.textContent = totalCcal;
+      spanShowSumTotalCcal.textContent = i;
       if (Number.isInteger(i / percent)) {
         circle.style.strokeDasharray = `${i / percent} 100`;
       }
@@ -359,7 +382,7 @@ window.addEventListener('load', function () {
   //     let valEl = parseFloat(i);
 
   //     valEl = (valEl * 408) / 100;
-  //     let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+  //     let { male, Female, birthday, height, weight } = objCcal[0];
 
   //     circle.innerHTML = `<svg width="160" height="160"><circle transform="rotate(-90)" r="65" cx="-80" cy="80" /><circle transform="rotate(-90)" style="stroke-dasharray:
   //     ${valEl}px 408px;" r="65" cx="-80" cy="80" />
@@ -376,17 +399,13 @@ window.addEventListener('load', function () {
     // let str = JSON.parse(localStorage.getItem('user')) || [];
     // console.log(inptsValueSetting);
 
-    // let { male, Female, birthday, height, weight } = dataLocalStorage[0];
+    // let { male, Female, birthday, height, weight } = objCcal[0];
 
     inpMan.checked = male;
     inpFemale.checked = Female;
     inptsValueSetting[0].value = birthday;
     inptsValueSetting[1].value = height;
     inptsValueSetting[2].value = weight;
-
-    inptsValueSetting.forEach(el => {
-      console.log(el);
-    });
   }
 
   // ======== dropdown for select
@@ -454,5 +473,36 @@ window.addEventListener('load', function () {
         },
       },
     });
+  }
+
+  //const url = 'https://sport-app-3af9a.firebaseio.com/';
+
+  function createUserParam(user) {
+    user.id = null;
+    return fetch('https://sport-app-3af9a.firebaseio.com/userparams.json', {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+        user.id = response.name;
+
+        return user;
+      })
+      .then(user => {
+        addLocalStorage(user);
+        window.location.href = buttonAntrop;
+      });
+  }
+  function addLocalStorage(user) {
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+  function getLocalStorage(user) {
+    return JSON.parse(localStorage.getItem('user')) || {};
   }
 });
