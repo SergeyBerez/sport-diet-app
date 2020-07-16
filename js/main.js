@@ -1,8 +1,20 @@
+'use strict';
 // document.addEventListener('touchmove', function (e) {
 //   e.preventDefault();
 // });
 window.addEventListener('load', function () {
   // window.scrollTo(0, 0);
+  // == form create user param
+  const formParam = document.querySelector('.form-param-anthropometry');
+  const link = document.querySelector('[href="./predRegist-totalKkal.html"]');
+
+  // ==auth form
+  const formAuth = document.querySelector('.form-regist');
+  const btnLogin = document.querySelector('.button-login');
+  const name = document.querySelector('[name="name"]');
+  const email = document.querySelector('[name="email"]');
+  const password = document.querySelector('[name="password"]');
+
   // == activ tab page add workout
   const blockIcon = document.querySelector('.list-choose-workout');
   const iconCheck = document.querySelectorAll('.icon-active');
@@ -29,7 +41,7 @@ window.addEventListener('load', function () {
   const inputWeight = document.querySelector('.input-data-weight');
 
   // ===== 3 inpunts from page anthropometry-predRegist
-  const formParam = document.querySelector('.form-param');
+  // const formParam = document.querySelector('.form-param');
   const inputsParamAntrop = document.querySelectorAll('.input-param');
 
   const inptPersonBirthday = document.querySelector('[name="person-birthday"]');
@@ -38,7 +50,7 @@ window.addEventListener('load', function () {
   // ===============check box
   const inpMan = document.querySelector('#inp-man');
   const inpFemale = document.querySelector('#inp-female');
-  const buttonAntrop = document.querySelector('.button-antrop a');
+  const buttonAntrop = document.querySelector('.button-antrop');
 
   // page-app-programm  show total ccal in svg
   const spanShowTotalCcal = document.querySelector('.show-ccal-svg');
@@ -56,7 +68,29 @@ window.addEventListener('load', function () {
 
   //  =====handlers inpunts from page anthropometry
   let objCcal = getLocalStorage();
+
   console.log(objCcal);
+  function renderUserData() {
+    if (
+      (Object.keys(objCcal).length != 0 && buttonAntrop) ||
+      (Object.keys(objCcal).length != 0 && inptsValueSetting)
+    ) {
+      inpMan.checked = objCcal.male;
+      inpFemale.checked = objCcal.Female;
+      inptPersonBirthday.value = objCcal.birthday;
+      inpPersonHeight.value = objCcal.height;
+      inpPersonWeight.value = objCcal.weight;
+    }
+
+    // inpMan.checked = objCcal.male;
+    // inpFemale.checked = objCcal.Female;
+    // inptsValueSetting[0].value = objCcal.birthday;
+    // inptsValueSetting[1].value = objCcal.height;
+    // inptsValueSetting[2].value = objCcal.weight;
+  }
+  if (inpMan) {
+    renderUserData();
+  }
 
   // let male = objCcal.male || false;
   // let Female = objCcal.Female || false;
@@ -106,7 +140,7 @@ window.addEventListener('load', function () {
       inpPersonHeight.value = `${objCcal.height} ${metricsCm.textContent}`;
     });
 
-    // click select on Weight in modal
+    //=== handler events click select on Weight in modal
     selectWeight.addEventListener('click', function (e) {
       inpPersonWeight.classList.remove('error');
       inpPersonWeight.nextElementSibling.textContent = '';
@@ -227,13 +261,13 @@ window.addEventListener('load', function () {
     }
     renderCm();
 
-    function renderFut(arguments) {
+    function renderFut() {
       let h = 3.9;
       metricsFut.textContent = 'Cм';
       selectHeight.textContent = '';
       for (let i = 0; i < 36; i++) {
         h += 0.1;
-        console.log(h.toFixed(1));
+
         let li = `<li>${h.toFixed(1)}</li>`;
 
         selectHeight.insertAdjacentHTML('beforeend', li);
@@ -258,86 +292,25 @@ window.addEventListener('load', function () {
       male = true;
       Female = false;
       objCcal.male = true;
-      if (!inpFemale.checked) {
-        objCcal.Female = false;
-        inpFemale.nextElementSibling.classList.remove('error-icon');
-      }
+      objCcal.Female = false;
+      inpFemale.nextElementSibling.classList.remove('error-icon');
+      // if (!inpFemale.checked) {
+      //   objCcal.Female = false;
+      //   inpFemale.nextElementSibling.classList.remove('error-icon');
+      // }
     });
     inpFemale.addEventListener('click', function (e) {
       Female = true;
       male = false;
+      objCcal.male = false;
+      inpMan.nextElementSibling.classList.remove('error-icon');
 
       objCcal.Female = true;
-      if (!inpMan.checked) {
-        objCcal.male = false;
-        inpMan.nextElementSibling.classList.remove('error-icon');
-      }
+      // if (!inpMan.checked) {
+      //   objCcal.male = false;
+      //   inpMan.nextElementSibling.classList.remove('error-icon');
+      // }
     });
-
-    // ======calculate  user kkcal day set local storage  // ang go next page
-    if (buttonAntrop) {
-      function renderUserData() {
-        if (Object.keys(objCcal).length != 0) {
-          inpMan.checked = objCcal.male;
-          inpFemale.checked = objCcal.Female;
-          inptPersonBirthday.value = objCcal.birthday;
-          inpPersonHeight.value = objCcal.height;
-          inpPersonWeight.value = objCcal.weight;
-        }
-      }
-      renderUserData();
-
-      buttonAntrop.addEventListener('click', function (e) {
-        inpMan.checked = male;
-        inpFemale.checked = Female;
-
-        if (!inpMan.checked && !inpFemale.checked) {
-          e.preventDefault();
-          if (!inpMan.checked) {
-            inpMan.nextElementSibling.classList.add('error-icon');
-          }
-          if (!inpFemale.checked) {
-            inpFemale.nextElementSibling.classList.add('error-icon');
-          }
-        }
-        // inpMan.addEventListener('click', function (e) {
-        //   console.log(1);
-        //   objCcal.male = true;
-        //   if (!inpFemale.checked) {
-        //     objCcal.Female = false;
-        //     inpFemale.nextElementSibling.classList.remove('error-icon');
-        //   }
-        // });
-        // inpFemale.addEventListener('click', function (e) {
-        //   console.log(2);
-        //   objCcal.Female = true;
-        //   if (!inpMan.checked) {
-        //     objCcal.male = false;
-        //     inpMan.nextElementSibling.classList.remove('error-icon');
-        //   }
-        // });
-
-        let err = 0;
-
-        inputsParamAntrop.forEach(elem => {
-          if (elem.value == '') {
-            e.preventDefault();
-
-            elem.classList.add('error');
-            elem.nextElementSibling.textContent = 'заполните данные';
-          } else {
-            elem.classList.remove('error');
-            elem.nextElementSibling.textContent = '';
-            err += 1;
-          }
-        });
-        if (err == 3) {
-          e.preventDefault();
-
-          createUserParam(objCcal);
-        }
-      });
-    }
 
     // ==========show ang hide modal window setkkal in page profile
   }
@@ -357,7 +330,7 @@ window.addEventListener('load', function () {
   if (spanShowSumTotalCcal) {
     // let { male, Female, birthday, height, weight } = objCcal[0];
     let circle = document.querySelector('.unit-green');
-    let percent = `${ weight*30}` / 100;
+    let percent = `${weight * 30}` / 100;
     let totalCcal = `${weight * 30}`;
     spanShowSumTotalCcal.textContent = 0;
     for (let i = 0; i <= totalCcal; i++) {
@@ -394,19 +367,6 @@ window.addEventListener('load', function () {
   //    `;
   //   }, 100);
   // }
-
-  if (inptsValueSetting.length) {
-    // let str = JSON.parse(localStorage.getItem('user')) || [];
-    // console.log(inptsValueSetting);
-
-    // let { male, Female, birthday, height, weight } = objCcal[0];
-
-    inpMan.checked = male;
-    inpFemale.checked = Female;
-    inptsValueSetting[0].value = birthday;
-    inptsValueSetting[1].value = height;
-    inptsValueSetting[2].value = weight;
-  }
 
   // ======== dropdown for select
   const selectSingle = document.querySelector('.__select');
@@ -478,7 +438,7 @@ window.addEventListener('load', function () {
   //const url = 'https://sport-app-3af9a.firebaseio.com/';
 
   function createUserParam(user) {
-    user.id = null;
+    // user.id = null;
     return fetch('https://sport-app-3af9a.firebaseio.com/userparams.json', {
       method: 'POST',
       body: JSON.stringify(user),
@@ -491,12 +451,11 @@ window.addEventListener('load', function () {
       })
       .then(response => {
         user.id = response.name;
-
         return user;
       })
       .then(user => {
         addLocalStorage(user);
-        window.location.href = buttonAntrop;
+        window.location.href = link;
       });
   }
   function addLocalStorage(user) {
@@ -504,5 +463,66 @@ window.addEventListener('load', function () {
   }
   function getLocalStorage(user) {
     return JSON.parse(localStorage.getItem('user')) || {};
+  }
+
+  function AuthWithEmailPassword(email, password) {
+    const API_KEY = '"AIzaSyAFZnyGJA5RGOPCD1o11PBPYOdyqXln5ns"';
+    fetch(
+      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          email,
+          password,
+          returnSecureToken: true,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      },
+    )
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
+  }
+
+  if (formAuth) {
+    formAuth.addEventListener('submit', function (e) {
+      e.preventDefault();
+      console.log(email.value, password.value);
+      AuthWithEmailPassword(email.value, password.value);
+    });
+  }
+
+  // ======calculate  user kkcal form ang execute   createUserParam(objCcal) go next page
+  if (formParam) {
+    formParam.addEventListener('submit', function (e) {
+      e.preventDefault();
+      inpMan.checked = male;
+      inpFemale.checked = Female;
+
+      if (!inpMan.checked && !inpFemale.checked) {
+        inpMan.nextElementSibling.classList.add('error-icon');
+        inpFemale.nextElementSibling.classList.add('error-icon');
+      }
+      let err = 0;
+      inputsParamAntrop.forEach(elem => {
+        if (elem.value == '') {
+          elem.classList.add('error');
+          elem.nextElementSibling.textContent = 'заполните данные';
+        } else {
+          elem.classList.remove('error');
+          elem.nextElementSibling.textContent = '';
+          err += 1;
+        }
+      });
+      if (err == 3) {
+        buttonAntrop.disabled = true;
+        createUserParam(objCcal);
+      }
+    });
   }
 });
