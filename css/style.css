@@ -216,6 +216,13 @@ a {
   font-size: 2rem;
 }
 
+.fb_iframe_widget {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px;
+}
 .box-balance p {
   letter-spacing: 1rem;
   font-size: 2.5rem;
@@ -806,6 +813,7 @@ input[type='number'] {
   -webkit-transition: background, color, 0.5s;
   -o-transition: background, color, 0.5s;
   transition: background, color, 0.5s;
+  width: 100%;
 }
 
 .button-regist:hover {
@@ -833,7 +841,7 @@ input[type='number'] {
 
 .register-button {
   color: #1151c8;
-  width: 45%;
+  width: 100%;
 }
 
 /* ----- regist page --- */

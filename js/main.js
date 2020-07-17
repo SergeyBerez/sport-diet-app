@@ -466,7 +466,7 @@ window.addEventListener('load', function () {
   }
 
   function AuthWithEmailPassword(email, password) {
-    const API_KEY = '"AIzaSyAFZnyGJA5RGOPCD1o11PBPYOdyqXln5ns"';
+    const API_KEY = "AIzaSyAFZnyGJA5RGOPCD1o11PBPYOdyqXln5ns";
     fetch(
       `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
       {
@@ -525,4 +525,22 @@ window.addEventListener('load', function () {
       }
     });
   }
+
+  var firebaseConfig = {
+    apiKey: 'AIzaSyAFZnyGJA5RGOPCD1o11PBPYOdyqXln5ns',
+    authDomain: 'sport-app-3af9a.firebaseapp.com',
+    databaseURL: 'https://sport-app-3af9a.firebaseio.com',
+    projectId: 'sport-app-3af9a',
+    storageBucket: 'sport-app-3af9a.appspot.com',
+    messagingSenderId: '952427490535',
+    appId: '1:952427490535:web:17b8f5c820039530b4c642',
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+   
+  
+
+  
 });
