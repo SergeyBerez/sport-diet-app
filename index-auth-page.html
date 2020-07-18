@@ -72,10 +72,11 @@
       crossorigin="anonymous"
       src="https://connect.facebook.net/en_US/sdk.js"
     ></script>
-    <!-- The JS SDK Login Button -->
 
-    <!-- <div id="status"></div> -->
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=278954513174269&autoLogAppEvents=1" nonce="u0IfbsRr"></script>
 
+   
     <!-- Load the JS SDK asynchronously -->
    
     <div class="overflow">
@@ -100,26 +101,17 @@
               <button class="button-regist register-button">
                 <a href="./regist.html">Регистрация</a>
               </button>
-                 <div
-                style="border-radius: 20px; width: 100%;"
-                class="fb-login-button"
-              >
-                <fb:login-button
-                  scope="public_profile,email"
-                  onlogin="checkLoginState();"
-                >
-                </fb:login-button>
-              </div>
-              <!-- <div
-                style="border-radius: 20px; width: 100%;"
+              <div
                 class="fb-login-button"
                 data-size="large"
                 data-button-type="continue_with"
-                data-layout="default"
+                data-layout="rounded"
                 data-auto-logout-link="false"
-                data-use-continue-as="false"
+                data-use-continue-as="true"
                 data-width=""
-              ></div> -->
+                onlogin="checkLoginState()"
+              ></div>
+             
               <p class="p">У меня нет учетной записи</p>
               <a class="log-in" href="./login.html">войти</a>
             </div>
