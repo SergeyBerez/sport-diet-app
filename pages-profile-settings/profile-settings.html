@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="balance-bg">
+      <div class="container">
+        <div class="header-menu">
+          <a class="back-prof-link" href="total-profile-settings.html"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <span class="header-menu-title profile-settings">Профиль</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="box-anthropometry page-edit-user">
+          <form action="" class="form-param form-edit-user">
+            <div class="block-avatar">
+              <div class="avatar-photo"></div>
+              <div class="block-avatar-wrap">
+                <div class="block-input block-input-edit">
+                  <label for="input-param-settings">ИМЯ</label>
+                  <input
+                    class="input-param-settings"
+                    type="text"
+                    name="name"
+                    value="Анна"
+                  />
+                </div>
+                <div class="block-input block-input-edit">
+                  <label for="input-param-settings">фамилия</label>
+                  <input
+                    class="input-param-settings"
+                    type="text"
+                    name="surname"
+                    value="Семенова"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="user-icon">
+              <input id="inp-man" name="user-icon" type="radio" />
+              <label for="inp-man">
+                <i class="far fa-2x fa-user-circle"></i
+                ><span class="span">мужской</span></label
+              >
+              <input type="radio" name="user-icon" id="inp-female" />
+              <label for="inp-female">
+                <i class="far fa-2x fa-user-circle"></i
+                ><span class="span">женский</span></label
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="grey-row-line-edit"></div>
+
+      <!-- 5 ===== input  -->
+      <div class="container">
+        <form action="">
+          <div class="block-input block-input-edit">
+            <label for="input-param-settings">email</label>
+            <input
+              class="input-param-settings"
+              type="email"
+              name="email"
+              value="test@gmail.com"
+            />
+          </div>
+
+          <div class="block-input block-input-edit">
+            <label for="input-param-settings">страна</label>
+
+            <div class="__select" data-state="">
+              <div class="__select__title" data-default="Option 0">Украина</div>
+              <div class="__select__content">
+                <input
+                  id="singleSelect0"
+                  class="__select__input"
+                  type="radio"
+                  name="singleSelect"
+                  checked
+                />
+                <label for="singleSelect0" class="__select__label"
+                  >Option 0</label
+                >
+                <input
+                  id="singleSelect1"
+                  class="__select__input"
+                  type="radio"
+                  name="singleSelect"
+                />
+                <label for="singleSelect1" class="__select__label"
+                  >Украина</label
+                >
+                <input
+                  id="singleSelect3"
+                  class="__select__input"
+                  type="radio"
+                  name="singleSelect"
+                />
+                <label for="singleSelect3" class="__select__label"
+                  >Россия</label
+                >
+                <input
+                  id="singleSelect4"
+                  class="__select__input"
+                  type="radio"
+                  name="singleSelect"
+                />
+                <label for="singleSelect4" class="__select__label"
+                  >Молдавия</label
+                >
+              </div>
+            </div>
+
+            <!-- <select name="" id="select-country" >
+              <option class="select-country" value="Украина">Украина</option>
+              <option class="select-country"value="Россия">Россия</option>
+              <option class="select-country"value="Молдавия">Молдавия</option>
+            </select> -->
+            <!-- <input
+              class="input-param-settings"
+              type="select"
+              name="country"
+              
+              value="Украина"
+            /> -->
+          </div>
+
+          <div class="block-input">
+            <label for="">дата&nbsp;рождения</label>
+            <input
+              readonly
+              class="input-param input-param-settings value-setting"
+              data-birthday="modal-data-birthday"
+              type="text"
+              name="person-birthday"
+              placeholder="дата рождения"
+            />
+            <span class="value-setting-data-birthday"></span>
+          </div>
+          <div class="block-input">
+            <label for="">рост</label>
+
+            <input
+              readonly
+              data-height="modal-data-height"
+              type="text"
+              placeholder="рост"
+              name="person-height"
+              class="input-param input-param-settings value-setting"
+            />
+             <span class="value-setting-data-birthday"></span>
+          </div>
+          <div class="block-input">
+            <label for="">текущий&nbsp;вес</label>
+            <input
+              readonly
+              data-weight="modal-data-weight"
+              type="text"
+              name="person-weight"
+              placeholder="текущий вес"
+              class="input-param input-param-settings value-setting"
+            />
+             <span class="value-setting-data-birthday"></span>
+          </div>
+
+       
+
+          <!-- <div class="__select" data-state="">
+    <div class="__select__title p" data-default="Option 0"><span>Страна</span> </div>
+    <div class="__select__content">
+      <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" checked />
+      <label for="singleSelect0" class="__select__label">Option 0</label>
+      <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+      <label for="singleSelect1" class="__select__label">Украина</label>
+      
+      <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+      <label for="singleSelect3" class="__select__label">Россия</label>
+      <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+      <label for="singleSelect4" class="__select__label">Молдавия</label>
+    </div>
+  </div>
+</form> -->
+          <button class="button-total button-next button-change-antrop">
+            <a href="./predRegist-totalKkal.html">установить</a>
+          </button>
+        </form>
+
+        <!-- modal-data-birthday -->
+        <div class="overlay">
+          <div class="modal-data modal-data-birthday">
+            <p class="p">Дата рождения</p>
+            <input
+              data-birthday="modal-data-birthday"
+              type="date"
+              value="2000-01-01"
+              min="1970-01-01"
+              max="2010-12-31"
+              name="person-birthday"
+              class="input-data-birthday"
+            />
+            <div class="box-confirm-birthday">
+              <button class="button-form button-chancel">отменa</button>
+              <button class="button-form button-birthday button-confirm">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal-height -->
+        <div class="overlay">
+          <div class="modal-data modal-data-height">
+            <p class="p">Рост</p>
+            <div class="modal-data-main">
+                 <div class="modal-data-main">
+              <ul class="ul-block-weight" id="input-data-height"></ul>
+              <span class="metrics-sm">СМ</span>
+            </div>
+              <!-- <select name="height" id="input-data-height"> </select>
+              <span class="metrics-sm">СМ</span> -->
+            </div>
+            <div class="modal-data-footer box-confirm-height">
+              <button class="button-form metrics-fut">ФУТЫ</button>
+              <button class="button-form button-chancel">отменa</button>
+              <button class="button-form button-height button-confirm">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal-weight -->
+        <div class="overlay">
+          <div class="modal-data modal-data-weight">
+            <p class="p">Вес</p>
+            <div class="modal-data-main">
+               <ul class="ul-block-weight" id="input-data-weight"></ul>
+              <ul class="ul-block-weight" id="input-data-weight-gr"></ul>
+              <span class="metrics-kg">кг</span>
+
+              <!-- <select name="weight" id="input-data-weight"></select>
+             
+              <select name="weight" id="input-data-weight-gr"></select>
+
+              <span class="metrics-kg"> гp</span> -->
+            </div>
+
+            <div class="modal-data-footer box-confirm-weight">
+              <button class="button-form metrics-funt">ФУНТЫ</button>
+              <button class="button-form button-chancel">
+                отменa
+              </button>
+              <button class="button-form button-weight button-confirm">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

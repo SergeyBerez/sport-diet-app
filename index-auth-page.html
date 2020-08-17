@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-scope" content="profile email" />
+
+    <meta
+      name="google-signin-client_id"
+      content="952427490535-6ha7c2sjcr7jjjt118g5b8u0l50m5fas.apps.googleusercontent.com"
+    />
+    <script src="https://apis.google.com/js/platform.js"></script>
+
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
+  
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=278954513174269&autoLogAppEvents=1"
+      nonce="6Om1GIrm"
+    ></script>
+   
+
+   
+
+    <div class="overflow">
+      <div class="header-index-bg">
+        <div class="container">
+          <div class="index-page">
+            <div class="box-index-title">
+              <div class="logo"></div>
+              <div class="logo-tille">
+                <span>rustatic</span>
+                <p class="p">BALANCE</p>
+              </div>
+            </div>
+
+            <div class="section-index-auth">
+              <div id="share">
+                <div class="share-box">
+                  <div class="facebook-share">
+                    Bойти с <i class="fab fa-facebook"></i>
+                  </div>
+                </div>
+              </div>
+            
+              <div
+                class="g-signin2"
+                data-onsuccess="onSignIn"
+                data-theme="dark"
+              ></div>
+
+              <button class="button-regist register-button">
+                <a href="./regist.html">Регистрация</a>
+              </button>
+              <div>
+                <p class="p">У меня нет учетной записи</p>
+                <a class="log-in" href="./login.html">ВОЙТИ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log('ID Token: ' + id_token);
+      }
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
