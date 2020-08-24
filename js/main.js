@@ -441,7 +441,7 @@ window.addEventListener('load', function () {
         console.log(userParamfromLocalStorage);
       });
   }
-  // getUserParam();
+  //getUserParam();
 
   function createUserParamInFirebase(user) {
     return fetch('https://sport-app-3af9a.firebaseio.com/userparams.json', {
@@ -606,14 +606,15 @@ window.addEventListener('load', function () {
   };
   if (facebookButton) {
     facebookButton.addEventListener('click', function (e) {
-    
       FB.login(function (response) {
-        console.log(11111,response);
+        console.log(response);
         if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ');
           FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
           });
+          facebookButton.textContent = 'продолжить';
+            window.location.href = '/page-app-news.html';
         } else {
           console.log('User cancelled login or did not fully authorize.');
         }
@@ -623,6 +624,9 @@ window.addEventListener('load', function () {
 
   exitProfile &&
     exitProfile.addEventListener('click', function (e) {
-      console.log('exit');
+      console.log('logout');
+      FB.logout(function (response) {
+        console.log(response);
+      });
     });
 });

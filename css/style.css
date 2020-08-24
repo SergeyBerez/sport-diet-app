@@ -2479,6 +2479,7 @@ label {
 }
 .abcRioButton.abcRioButtonBlue {
   border-radius: 30px;
+  border:none;
 }
 .abcRioButtonContents {
   line-height: 30px;
